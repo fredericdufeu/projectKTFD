@@ -26,3 +26,4 @@ SoundNodeObject::~SoundNodeObject()
     delete soundFile;
     delete graphicsItem;
 }
+
