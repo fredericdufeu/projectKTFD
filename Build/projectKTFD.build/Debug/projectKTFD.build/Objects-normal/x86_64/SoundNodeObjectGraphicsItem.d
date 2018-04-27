@@ -136,6 +136,10 @@ dependencies: \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtGui.framework/Headers/QDropEvent \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtGui.framework/Headers/QDragEnterEvent \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtGui.framework/Headers/QDragMoveEvent \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/IRiMaS_Utility/IRUtilities.hpp \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/IRiMaS_Utility/FileIO/IRFileUtility.hpp \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/IRiMaS_Utility/FileIO/IRFileTypeEnum.hpp \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/IRiMaS_Utility/DataType/IRDataStructure.h \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/Windows/MainWindow/CentralWidget/CentralWidget.hpp \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/QHBoxLayout \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qboxlayout.h \

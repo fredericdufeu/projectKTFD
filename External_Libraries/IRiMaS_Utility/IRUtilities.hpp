@@ -11,5 +11,7 @@
 #include "IRFileUtility.hpp"
 #include "IRFileTypeEnum.hpp"
 
+#include "IRDataStructure.h"
+
 
 #endif /* IRUtilities_h */

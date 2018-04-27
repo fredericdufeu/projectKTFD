@@ -18,6 +18,9 @@
 
 #include "CentralWidget.hpp"
 
+#include "kNodeUI.h"
+#include "IRUtilities.hpp"
+
 
 GraphicsView::GraphicsView(GraphicsScene *scene, QWidget *parent)
 : QGraphicsView(scene, parent)
@@ -44,7 +47,9 @@ void GraphicsView::dragEnterEvent(QDragEnterEvent *event) // THIS WORKS
 
 void GraphicsView::dragMoveEvent(QDragMoveEvent *event)
 {
-    
+    std::cout << "mainView mousePosition : " << event->pos().x() << " , " << event->pos().y() << std::endl;
+    this->mPos.x = event->pos().x();
+    this->mPos.y = event->pos().y();
 }
 
 
@@ -56,6 +61,8 @@ void GraphicsView::dropEvent(QDropEvent *event)
     
     int index = parentCentralWidget->database->numSoundNodes;
     
+    
+    /*
     // NodeObject *nodeObject = new NodeObject(path)
     SoundNodeObject *soundNodeObject = new SoundNodeObject(path);
     
@@ -71,6 +78,14 @@ void GraphicsView::dropEvent(QDropEvent *event)
     
     std::cout << "num sound nodes is now " << parentCentralWidget->database->numSoundNodes << std::endl;
     
+     
     scene()->addItem(soundNodeObject->graphicsItem);
+     */
+    
+    struct IR::Frame objFrame = { {this->mPos.x, this->mPos.y}, {22, 100} };
+    kNodeObject *obj = new kNodeObject(IR_Object::NOTYPE, IR_Object::NONAME,objFrame);
+    scene()->addItem(obj);
+    
+    std::cout << "object position = " << obj->getFrame().origin.x << " , " << obj->getFrame().origin.y << " set by mouse position " << this->mPos.x << " , " << this->mPos.y << std::endl;
 }
 

@@ -134,6 +134,10 @@ dependencies: \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtGui.framework/Headers/qtouchdevice.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtGui.framework/Headers/QDragEnterEvent \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtGui.framework/Headers/QDragMoveEvent \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/IRiMaS_Utility/IRUtilities.hpp \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/IRiMaS_Utility/FileIO/IRFileUtility.hpp \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/IRiMaS_Utility/FileIO/IRFileTypeEnum.hpp \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/IRiMaS_Utility/DataType/IRDataStructure.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/QTextEdit \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qtextedit.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtGui.framework/Headers/qtextdocument.h \

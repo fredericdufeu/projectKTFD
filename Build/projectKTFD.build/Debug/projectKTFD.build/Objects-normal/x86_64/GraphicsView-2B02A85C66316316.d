@@ -109,6 +109,10 @@ dependencies: \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtGui.framework/Headers/qtouchdevice.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtGui.framework/Headers/QDragEnterEvent \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtGui.framework/Headers/QDragMoveEvent \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/IRiMaS_Utility/IRUtilities.hpp \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/IRiMaS_Utility/FileIO/IRFileUtility.hpp \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/IRiMaS_Utility/FileIO/IRFileTypeEnum.hpp \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/IRiMaS_Utility/DataType/IRDataStructure.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/QAbstractItemView \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qabstractitemview.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtCore.framework/Headers/qabstractitemmodel.h \
@@ -162,4 +166,9 @@ dependencies: \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/GlobalDatabase/GlobalDatabase.hpp \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/Windows/EditorWindow/EditorWindow.hpp \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/Windows/EditorWindow/EditorWindowGraphicsView/EditorWindowGraphicsView.hpp \
-  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/Windows/EditorWindow/EditorWindowGraphicsScene/EditorWindowGraphicsScene.hpp
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/Windows/EditorWindow/EditorWindowGraphicsScene/EditorWindowGraphicsScene.hpp \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/kNodeUI.h \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/NodeObject/NodeBase/kIRNodeBase.hpp \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/NodeObject/NodeObjectClass.hpp \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/NodeObject/ObjectType/IRDataType.h \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/NodeObject/ObjectType/IRObjectName.h

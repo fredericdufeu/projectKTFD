@@ -16,7 +16,7 @@
 #include <QDragEnterEvent>
 #include <QDragMoveEvent>
 
-
+#include "IRUtilities.hpp"
 
 class CentralWidget;
 
@@ -34,6 +34,9 @@ public:
     void dropEvent(QDropEvent *event) override;
     
     CentralWidget *parentCentralWidget;
+    
+private:
+    IR::Point mPos;
 };
 
 

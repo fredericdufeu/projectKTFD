@@ -46,7 +46,8 @@ CentralWidget::CentralWidget(QWidget *parent, GlobalDataBase *refDatabase)
     fileExplorer->setFixedWidth(200);
     
     scene = new GraphicsScene;
-    scene->setSceneRect(-100, -100, 200, 200);
+    
+    scene->setSceneRect(0, 0, 640, 1000);
     scene->addLine(0, 0, 100, 100);
     
     view = new GraphicsView(scene, this);
