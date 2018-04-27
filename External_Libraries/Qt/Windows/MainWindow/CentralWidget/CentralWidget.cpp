@@ -47,7 +47,8 @@ CentralWidget::CentralWidget(QWidget *parent, GlobalDataBase *refDatabase)
     
     scene = new GraphicsScene;
     
-    scene->setSceneRect(0, 0, 640, 1000);
+    std::cout << "height = " << this->height() << " : width = " << this->width() << std::endl;
+    scene->setSceneRect(0, 0,this->height(), this->width());
     scene->addLine(0, 0, 100, 100);
     
     view = new GraphicsView(scene, this);

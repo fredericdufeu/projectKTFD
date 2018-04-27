@@ -86,6 +86,6 @@ void GraphicsView::dropEvent(QDropEvent *event)
     kNodeObject *obj = new kNodeObject(IR_Object::NOTYPE, IR_Object::NONAME,objFrame);
     scene()->addItem(obj);
     
-    std::cout << "object position = " << obj->getFrame().origin.x << " , " << obj->getFrame().origin.y << " set by mouse position " << this->mPos.x << " , " << this->mPos.y << std::endl;
+    //std::cout << "object position = " << obj->getFrame().origin.x << " , " << obj->getFrame().origin.y << " set by mouse position " << this->mPos.x << " , " << this->mPos.y << std::endl;
 }
 
