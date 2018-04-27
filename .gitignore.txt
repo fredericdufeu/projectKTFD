@@ -1,0 +1,12 @@
+#ignore Qt creator project files
+
+*.pro
+*.pro.user
+
+#ignore the Build folder
+
+/Build/
+
+#ignore the automatically generated moc file
+
+moc_MainWindow.cpp
