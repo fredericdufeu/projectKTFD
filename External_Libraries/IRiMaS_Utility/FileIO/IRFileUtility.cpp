@@ -24,7 +24,6 @@ IRFileUtility::IRFileUtility()
         {"mov",         IR_FILE::TYPE::EXT_MOVIE_MOV},
         {"mp4",         IR_FILE::TYPE::EXT_MOVIE_MP4},
     };
-   
 }
 
 IRFileUtility::~IRFileUtility()
