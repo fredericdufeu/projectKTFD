@@ -48,23 +48,30 @@ void kIRNodeBase::paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWi
 {
     
     QPen pen(Qt::darkRed);
+    pen.setColor(Qt::black);
     painter->setPen(pen);
     
-    painter->drawRect(this->frame.origin.x, this->frame.origin.y, this->frame.size.width, this->frame.size.height);
+    float x = this->frame.origin.x - this->frame.size.width/2;
+    float y = this->frame.origin.y - this->frame.size.height/2;
+
+    painter->drawRect(x, y, this->frame.size.width, this->frame.size.height);
+    painter->fillRect(x, y, this->frame.size.width, this->frame.size.height, Qt::lightGray);
+    
+    //painter->drawRect(0,0,100,200);
+
     
     printf("paint called! :: object made in %f, %f", this->frame.origin.x, this->frame.origin.y);
-
 }
 
 QRectF kIRNodeBase::boundingRect() const
 {
-    return QRectF(-1, -1, 600 + 1, 100 + 1);
+    return QRectF(-1, -1, this->frame.size.width + 1, this->frame.size.height + 1);
 }
 
 QPainterPath kIRNodeBase::shape() const
 {
     QPainterPath path;
-    path.addRect(-1, -1, 600 + 1, 100 + 1);
+    path.addRect(0 - 0.5, 0 - 0.5, 800 + 1, 800 + 1);
     return path;
 }
 

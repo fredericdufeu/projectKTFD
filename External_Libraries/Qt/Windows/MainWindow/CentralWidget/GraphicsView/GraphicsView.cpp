@@ -62,7 +62,7 @@ void GraphicsView::dropEvent(QDropEvent *event)
     int index = parentCentralWidget->database->numSoundNodes;
     
     
-    /*
+ /*
     // NodeObject *nodeObject = new NodeObject(path)
     SoundNodeObject *soundNodeObject = new SoundNodeObject(path);
     
@@ -80,12 +80,13 @@ void GraphicsView::dropEvent(QDropEvent *event)
     
      
     scene()->addItem(soundNodeObject->graphicsItem);
-     */
+   */
     
-    struct IR::Frame objFrame = { {this->mPos.x, this->mPos.y}, {22, 100} };
+    struct IR::Frame objFrame = { {this->mPos.x, this->mPos.y}, {100, 20} };
     kNodeObject *obj = new kNodeObject(IR_Object::NOTYPE, IR_Object::NONAME,objFrame);
     scene()->addItem(obj);
-    
+    scene()->update();
+     
     //std::cout << "object position = " << obj->getFrame().origin.x << " , " << obj->getFrame().origin.y << " set by mouse position " << this->mPos.x << " , " << this->mPos.y << std::endl;
 }
 
