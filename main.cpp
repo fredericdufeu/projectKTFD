@@ -14,16 +14,7 @@ int main(int argc, char *argv[])
     
     // CLEANUP RESPONSIBILITY PASSED TO MAIN WINDOW
     QObject::connect(&mainApplication, &QApplication::aboutToQuit, &w, &MainWindow::cleanUpOnQuit);
-    
-    std::string test = "tokot/ttt/aa.wav";
-    IRFileUtility u;
-    auto ex = u.checkFileType(test);
-    std::cout << ex << std::endl;
-    
-    if(ex == IR_FILE::TYPE::EXT_AUDIO_WAV) {
-        std::cout << ex << std::endl;
 
-    }
     
     return mainApplication.exec();
 }
