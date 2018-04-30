@@ -45,3 +45,10 @@ IR::Frame kNodeObject::getFrame()
     return this->frame;
 }
 
+void kNodeObject::mouseMoveEvent(QGraphicsSceneMouseEvent *event)
+{
+    std::cout << "test" << std::endl;
+    kIRNodeBase::mouseMoveEvent(event);
+}
+
+
