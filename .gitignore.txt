@@ -5,7 +5,7 @@
 
 #ignore the Build folder
 
-/Build/
+Build/
 
 #ignore the automatically generated moc file
 
