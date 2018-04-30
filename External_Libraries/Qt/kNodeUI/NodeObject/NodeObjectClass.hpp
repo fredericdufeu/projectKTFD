@@ -11,6 +11,7 @@
 #include <stdio.h>
 #include <iostream>
 
+#include <QObject>
 #include <QWidget>
 
 #include "IRDataType.h"
@@ -23,7 +24,7 @@
 class kNodeObject : public kIRNodeBase
 {
 public:
-    kNodeObject(IR_Object::Type type, IR_Object::Name name, IR::Frame frame, QWidget *parent);
+    kNodeObject(IR_Object::Type type, IR_Object::Name name, IR::Frame frame);
     ~kNodeObject();
     
     virtual void createObj();
@@ -45,8 +46,6 @@ private:
     IR_Object::Name objectName;
     
     IR::Frame frame;
-    
-    QWidget *parent;
 };
 
 

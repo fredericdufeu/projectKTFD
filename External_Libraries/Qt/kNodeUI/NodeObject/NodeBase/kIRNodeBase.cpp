@@ -7,11 +7,10 @@
 
 #include "kIRNodeBase.hpp"
 
-kIRNodeBase::kIRNodeBase(IR::Frame frame, QWidget *parent)
+kIRNodeBase::kIRNodeBase(IR::Frame frame)
 : QGraphicsItem()
 {
     this->frame = frame;
-    this->parent = parent;
     
     //this->editorWindow = new kEditorWindow(this->parent);
 

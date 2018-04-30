@@ -8,10 +8,9 @@
 #include "WaveformNodeObject.hpp"
 
 
-WaveformNodeObject::WaveformNodeObject(IR_Object::Name name, IR::Frame frame, QWidget *parent)
-: kNodeObject(IR_Object::Type::AUDIO, name,frame,parent)
+WaveformNodeObject::WaveformNodeObject(IR_Object::Name name, IR::Frame frame)
+: kNodeObject(IR_Object::Type::AUDIO, name,frame)
 {
-    this->parent = parent;
     
 }
 

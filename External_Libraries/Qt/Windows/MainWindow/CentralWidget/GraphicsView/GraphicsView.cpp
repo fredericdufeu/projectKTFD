@@ -91,7 +91,7 @@ void GraphicsView::dropEvent(QDropEvent *event)
    */
     
     struct IR::Frame objFrame = { { static_cast<float>(pointInSceneCoordinates.x()), static_cast<float>(pointInSceneCoordinates.y()) }, {150, 40} };
-    kNodeObject *obj = new kNodeObject(IR_Object::NOTYPE, IR_Object::NONAME, objFrame, this->parent);
+    kNodeObject *obj = new kNodeObject(IR_Object::NOTYPE, IR_Object::NONAME, objFrame);
     scene()->addItem(obj);
     scene()->update();
      

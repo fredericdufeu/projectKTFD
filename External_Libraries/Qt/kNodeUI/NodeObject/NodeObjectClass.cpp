@@ -9,11 +9,10 @@
 #include "NodeObjectClass.hpp"
 
 
-kNodeObject::kNodeObject(IR_Object::Type type, IR_Object::Name name, IR::Frame frame, QWidget *parent)
-: kIRNodeBase(frame,parent)
+kNodeObject::kNodeObject(IR_Object::Type type, IR_Object::Name name, IR::Frame frame)
+: kIRNodeBase(frame)
 {
     this->frame = frame;
-    this->parent = parent;
     this->objectType = type;
     this->objectName = name;
     

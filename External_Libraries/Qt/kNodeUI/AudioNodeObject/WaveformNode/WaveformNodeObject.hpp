@@ -16,11 +16,10 @@
 class WaveformNodeObject : public kNodeObject
 {
 public:
-    WaveformNodeObject(IR_Object::Name name, IR::Frame frame, QWidget *parent);
+    WaveformNodeObject(IR_Object::Name name, IR::Frame frame);
     ~WaveformNodeObject();
     
 private:
-    QWidget *parent;
     
 };
 

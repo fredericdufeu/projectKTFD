@@ -53,9 +53,6 @@
 		7DD22CDC20972D9E00B7B535 /* kEditorWindowScene.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7DD22CDA20972D9E00B7B535 /* kEditorWindowScene.cpp */; };
 		7DD22CDD209732A000B7B535 /* kEditorWindowScene.hpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7DD22CDB20972D9E00B7B535 /* kEditorWindowScene.hpp */; };
 		7DD22CDE209732A900B7B535 /* kEditorWindow.hpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7DD22CD820972C4C00B7B535 /* kEditorWindow.hpp */; };
-		7DD22CE0209740E400B7B535 /* NodeObjectClass.hpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7DD705FC209364CE00495EDA /* NodeObjectClass.hpp */; };
-		7DD22CE12097412300B7B535 /* WaveformNodeObject.hpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7DD22CD4209728D400B7B535 /* WaveformNodeObject.hpp */; };
-		7DD22CE2209741FC00B7B535 /* kIRNodeBase.hpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7DD7061D20936C0A00495EDA /* kIRNodeBase.hpp */; };
 		7DD705E42093511500495EDA /* IRFileUtility.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7DD705E22093511500495EDA /* IRFileUtility.cpp */; };
 		7DD705FD209364CE00495EDA /* NodeObjectClass.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7DD705FB209364CE00495EDA /* NodeObjectClass.cpp */; };
 		7DD7061E20936C0A00495EDA /* kIRNodeBase.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7DD7061C20936C0A00495EDA /* kIRNodeBase.cpp */; };
@@ -711,7 +708,6 @@
 				10C26FFD2093431400175F44 /* SoundNodeObject.cpp in Compile Sources */,
 				10DBDF53209341CA0091DD1B /* soundFilePlayer.cpp in Compile Sources */,
 				7DD7061E20936C0A00495EDA /* kIRNodeBase.cpp in Compile Sources */,
-				7DD22CE2209741FC00B7B535 /* kIRNodeBase.hpp in Compile Sources */,
 				10C2700E2093435000175F44 /* EditorWindowGraphicsView.cpp in Compile Sources */,
 				10C26FFB2093431400175F44 /* NodeObject.cpp in Compile Sources */,
 				10C270202093439500175F44 /* GraphicsView.cpp in Compile Sources */,
@@ -719,10 +715,8 @@
 				7DD705E42093511500495EDA /* IRFileUtility.cpp in Compile Sources */,
 				105CBF3E2092387F0084B3FF /* dummy.cpp in Compile Sources */,
 				7DD705FD209364CE00495EDA /* NodeObjectClass.cpp in Compile Sources */,
-				7DD22CE0209740E400B7B535 /* NodeObjectClass.hpp in Compile Sources */,
 				10C2701F2093439500175F44 /* CentralWidget.cpp in Compile Sources */,
 				7DD22CD5209728D400B7B535 /* WaveformNodeObject.cpp in Compile Sources */,
-				7DD22CE12097412300B7B535 /* WaveformNodeObject.hpp in Compile Sources */,
 				7DD22CD920972C4C00B7B535 /* kEditorWindow.cpp in Compile Sources */,
 				7DD22CDE209732A900B7B535 /* kEditorWindow.hpp in Compile Sources */,
 				7DD22CDC20972D9E00B7B535 /* kEditorWindowScene.cpp in Compile Sources */,

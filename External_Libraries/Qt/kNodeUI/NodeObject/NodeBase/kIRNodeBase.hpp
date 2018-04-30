@@ -10,6 +10,7 @@
 
 #include <stdio.h>
 #include <iostream>
+
 #include <QGraphicsItem>
 #include <QRectF>
 #include <QPainterPath>
@@ -26,8 +27,9 @@
 
 class kIRNodeBase : public QGraphicsItem
 {
+    
 public:
-    kIRNodeBase(IR::Frame frame, QWidget *parent);
+    kIRNodeBase(IR::Frame frame);
     ~kIRNodeBase();
     
     QRectF boundingRect() const override;
@@ -53,7 +55,6 @@ public:
 
 private:
     IR::Frame frame;
-    QWidget *parent;
     
     
 };
