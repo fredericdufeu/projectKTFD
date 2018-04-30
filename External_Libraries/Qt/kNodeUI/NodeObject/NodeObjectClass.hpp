@@ -33,6 +33,10 @@ public:
     
     IR::Frame getFrame();
     
+    void mouseMoveEvent(QGraphicsSceneMouseEvent *event) override;
+    
+
+    
 private:
     IR_Object::Type objectType;
     IR_Object::Name objectName;
