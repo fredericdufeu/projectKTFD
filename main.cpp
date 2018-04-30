@@ -14,6 +14,7 @@ int main(int argc, char *argv[])
     
     // CLEANUP RESPONSIBILITY PASSED TO MAIN WINDOW
     QObject::connect(&mainApplication, &QApplication::aboutToQuit, &w, &MainWindow::cleanUpOnQuit);
+
     
     return mainApplication.exec();
 }

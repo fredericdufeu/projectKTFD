@@ -11,6 +11,7 @@
 #include <QWidget>
 
 #include <QHBoxLayout>
+#include <QScrollBar>
 
 #include "TreeView.hpp"
 
@@ -22,6 +23,7 @@
 #include "GlobalDatabase.hpp"
 
 #include "EditorWindow.hpp"
+
 
 
 // NOW, WHAT IF MY CENTRAL WIDGET NEEDS TO DO STUFF ON A MAINWINDOW?
@@ -48,6 +50,9 @@ public:
     
     void setIsFileExplorerHidden(bool hidden);
     void setIsObjectInspectorHidden(bool hidden);
+    
+    void resizeEvent(QResizeEvent *event) override;
+
     
     GlobalDataBase *database;
     

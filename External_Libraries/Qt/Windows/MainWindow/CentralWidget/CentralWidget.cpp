@@ -46,10 +46,14 @@ CentralWidget::CentralWidget(QWidget *parent, GlobalDataBase *refDatabase)
     fileExplorer->setFixedWidth(200);
     
     scene = new GraphicsScene;
-    scene->setSceneRect(-100, -100, 200, 200);
-    scene->addLine(0, 0, 100, 100);
     
+    //std::cout << "height = " << this->height() << " : width = " << this->width() << std::endl;
+    scene->setSceneRect(0, 0,this->width(), this->height());
+    //scene->addLine(0, 0, 100, 100);
+    //scene->addLine(0, 200, 100, 100);
+
     view = new GraphicsView(scene, this);
+    //view->verticalScrollBar()->setEnabled(false);
     
     objectInspector = new QTextEdit; // of course, this later will be a custom widget
     objectInspector->setFixedWidth(200);
@@ -128,6 +132,18 @@ void CentralWidget::setIsObjectInspectorHidden(bool hidden)
     else
         objectInspector->show();
     // NOW, MORE CHALLENGING: CHANGE THE STRING IN MENU... DOING FROM MAIN WINDOW - THIS CANNOT BE AWARE OF PARENT CLASS...
+}
+
+void CentralWidget::resizeEvent(QResizeEvent *event)
+{
+    std::cout << "widget resized!! " << this->width() << " , " << this->height() << std::endl;
+    std::cout << "view resized!! " << this->view->width() << " , " << this->view->height() << std::endl;
+
+    /* change all */
+    
+    this->scene->setSceneRect(0,0,this->view->width(),this->view->height());
+    std::cout << "scene resized!! " << this->scene->width() << " , " << this->scene->height() << std::endl;
+
 }
 
 

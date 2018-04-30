@@ -17,6 +17,7 @@
 #include "GlobalDatabase.hpp"
 #include "CentralWidget.hpp"
 
+#include "IRUtilities.hpp"
 
 
 

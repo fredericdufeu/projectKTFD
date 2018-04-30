@@ -48,6 +48,10 @@
 		10DBDF53209341CA0091DD1B /* soundFilePlayer.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 10DBDF51209341CA0091DD1B /* soundFilePlayer.cpp */; };
 		33B99A0E19B259F120678B7C /* QtCore.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = A276135214031EC866DC47DF /* QtCore.framework */; };
 		57C2655F445FCF94CA12E45A /* QtGui.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = BFC4FAE7BD427160C6DA4607 /* QtGui.framework */; };
+		7DD705E42093511500495EDA /* IRFileUtility.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7DD705E22093511500495EDA /* IRFileUtility.cpp */; };
+		7DD705FD209364CE00495EDA /* NodeObjectClass.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7DD705FB209364CE00495EDA /* NodeObjectClass.cpp */; };
+		7DD7061E20936C0A00495EDA /* kIRNodeBase.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7DD7061C20936C0A00495EDA /* kIRNodeBase.cpp */; };
+		7DD7062320936EB400495EDA /* kIRDrawSquareObjClass.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7DD7062120936EB400495EDA /* kIRDrawSquareObjClass.cpp */; };
 		8771A8C96E9C391044035D99 /* OpenGL.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = D4B32C2222F82AC56BADEB21 /* OpenGL.framework */; };
 		8D267F2E4776F0ECA2F49DC8 /* IOKit.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = A1A67BEAA744704B29168D39 /* IOKit.framework */; };
 		8EC4A3F260064EF4A062EA0F /* MainWindow.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 95B82C14B1D3D95A2BBD8972 /* MainWindow.cpp */; settings = {ATTRIBUTES = (); }; };
@@ -134,6 +138,20 @@
 		5E9CD4D1FE5969E394D0B5B3 /* dummy.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = dummy.cpp; path = mkspecs/features/data/dummy.cpp; sourceTree = QT_CLANG64_PATH; };
 		60D12DD5AF98EB30B3EBD182 /* QtWidgets.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtWidgets.framework; path = lib/QtWidgets.framework; sourceTree = QT_CLANG64_PATH; };
 		6F2B3C2C86CCB77D25B3DAE6 /* .qmake.stash */ = {isa = PBXFileReference; lastKnownFileType = text; path = .qmake.stash; sourceTree = USER_DIRECTORY; };
+		7DD705E22093511500495EDA /* IRFileUtility.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IRFileUtility.cpp; sourceTree = "<group>"; };
+		7DD705E32093511500495EDA /* IRFileUtility.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IRFileUtility.hpp; sourceTree = "<group>"; };
+		7DD705E52093515A00495EDA /* IRFileTypeEnum.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; path = IRFileTypeEnum.hpp; sourceTree = "<group>"; };
+		7DD705E820935C7B00495EDA /* IRUtilities.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IRUtilities.hpp; sourceTree = "<group>"; };
+		7DD705F9209364B200495EDA /* IRObjectName.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IRObjectName.h; sourceTree = "<group>"; };
+		7DD705FA209364B300495EDA /* IRDataType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IRDataType.h; sourceTree = "<group>"; };
+		7DD705FB209364CE00495EDA /* NodeObjectClass.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NodeObjectClass.cpp; sourceTree = "<group>"; };
+		7DD705FC209364CE00495EDA /* NodeObjectClass.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = NodeObjectClass.hpp; sourceTree = "<group>"; };
+		7DD7061C20936C0A00495EDA /* kIRNodeBase.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = kIRNodeBase.cpp; sourceTree = "<group>"; };
+		7DD7061D20936C0A00495EDA /* kIRNodeBase.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = kIRNodeBase.hpp; sourceTree = "<group>"; };
+		7DD7062120936EB400495EDA /* kIRDrawSquareObjClass.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = kIRDrawSquareObjClass.cpp; sourceTree = "<group>"; };
+		7DD7062220936EB400495EDA /* kIRDrawSquareObjClass.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = kIRDrawSquareObjClass.hpp; sourceTree = "<group>"; };
+		7DD70624209372DC00495EDA /* kNodeUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kNodeUI.h; sourceTree = "<group>"; };
+		7DD706262093770800495EDA /* IRDataStructure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IRDataStructure.h; sourceTree = "<group>"; };
 		7FC82CA4CCE0DB9B649A5B84 /* MainWindow.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MainWindow.hpp; sourceTree = "<group>"; };
 		8D9815BDB5BD9F90D2BC05C5 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
 		95B82C14B1D3D95A2BBD8972 /* MainWindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MainWindow.cpp; sourceTree = "<group>"; };
@@ -178,6 +196,7 @@
 		105CBF4320923A0C0084B3FF /* External_Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				7DD705DF209350E400495EDA /* IRiMaS_Utility */,
 				105CBF4520923A3E0084B3FF /* LibSndFile */,
 				105CBF4420923A380084B3FF /* LibPortAudio */,
 				10C26FF1209342ED00175F44 /* Qt */,
@@ -206,6 +225,7 @@
 		10C26FF1209342ED00175F44 /* Qt */ = {
 			isa = PBXGroup;
 			children = (
+				7DD705F42093645000495EDA /* kNodeUI */,
 				10C26FF22093431400175F44 /* NodeObject */,
 				10C26FFE2093433100175F44 /* GlobalDatabase */,
 				10C270022093435000175F44 /* Windows */,
@@ -397,6 +417,106 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7DD705DF209350E400495EDA /* IRiMaS_Utility */ = {
+			isa = PBXGroup;
+			children = (
+				7DD70625209376FC00495EDA /* DataType */,
+				7DD705E0209350F300495EDA /* FileIO */,
+				7DD705E820935C7B00495EDA /* IRUtilities.hpp */,
+			);
+			path = IRiMaS_Utility;
+			sourceTree = "<group>";
+		};
+		7DD705E0209350F300495EDA /* FileIO */ = {
+			isa = PBXGroup;
+			children = (
+				7DD705E22093511500495EDA /* IRFileUtility.cpp */,
+				7DD705E32093511500495EDA /* IRFileUtility.hpp */,
+				7DD705E52093515A00495EDA /* IRFileTypeEnum.hpp */,
+			);
+			path = FileIO;
+			sourceTree = "<group>";
+		};
+		7DD705F42093645000495EDA /* kNodeUI */ = {
+			isa = PBXGroup;
+			children = (
+				7DD7061F20936E9D00495EDA /* GraphicsClassLib */,
+				7DD705F72093646700495EDA /* ImageNodeObject */,
+				7DD705F62093645F00495EDA /* AudioNodeObject */,
+				7DD705F52093645900495EDA /* NodeObject */,
+				7DD70624209372DC00495EDA /* kNodeUI.h */,
+			);
+			path = kNodeUI;
+			sourceTree = "<group>";
+		};
+		7DD705F52093645900495EDA /* NodeObject */ = {
+			isa = PBXGroup;
+			children = (
+				7DD7061820936BE600495EDA /* NodeBase */,
+				7DD705F82093649500495EDA /* ObjectType */,
+				7DD705FB209364CE00495EDA /* NodeObjectClass.cpp */,
+				7DD705FC209364CE00495EDA /* NodeObjectClass.hpp */,
+			);
+			path = NodeObject;
+			sourceTree = "<group>";
+		};
+		7DD705F62093645F00495EDA /* AudioNodeObject */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AudioNodeObject;
+			sourceTree = "<group>";
+		};
+		7DD705F72093646700495EDA /* ImageNodeObject */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ImageNodeObject;
+			sourceTree = "<group>";
+		};
+		7DD705F82093649500495EDA /* ObjectType */ = {
+			isa = PBXGroup;
+			children = (
+				7DD705FA209364B300495EDA /* IRDataType.h */,
+				7DD705F9209364B200495EDA /* IRObjectName.h */,
+			);
+			path = ObjectType;
+			sourceTree = "<group>";
+		};
+		7DD7061820936BE600495EDA /* NodeBase */ = {
+			isa = PBXGroup;
+			children = (
+				7DD7061C20936C0A00495EDA /* kIRNodeBase.cpp */,
+				7DD7061D20936C0A00495EDA /* kIRNodeBase.hpp */,
+			);
+			path = NodeBase;
+			sourceTree = "<group>";
+		};
+		7DD7061F20936E9D00495EDA /* GraphicsClassLib */ = {
+			isa = PBXGroup;
+			children = (
+				7DD7062020936EA500495EDA /* drawSquareObj */,
+			);
+			path = GraphicsClassLib;
+			sourceTree = "<group>";
+		};
+		7DD7062020936EA500495EDA /* drawSquareObj */ = {
+			isa = PBXGroup;
+			children = (
+				7DD7062120936EB400495EDA /* kIRDrawSquareObjClass.cpp */,
+				7DD7062220936EB400495EDA /* kIRDrawSquareObjClass.hpp */,
+			);
+			path = drawSquareObj;
+			sourceTree = "<group>";
+		};
+		7DD70625209376FC00495EDA /* DataType */ = {
+			isa = PBXGroup;
+			children = (
+				7DD706262093770800495EDA /* IRDataStructure.h */,
+			);
+			path = DataType;
+			sourceTree = "<group>";
+		};
 		AF39DD055C3EF8226FBE929D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -545,6 +665,7 @@
 				10C27024209343CF00175F44 /* SoundFile.cpp in Compile Sources */,
 				A2C703BB415706F6735302F6 /* main.cpp in Compile Sources */,
 				10C2701E2093439500175F44 /* GraphicsScene.cpp in Compile Sources */,
+				7DD7062320936EB400495EDA /* kIRDrawSquareObjClass.cpp in Compile Sources */,
 				10C2701D2093439500175F44 /* TreeView.cpp in Compile Sources */,
 				10C2700F2093435000175F44 /* EditorWindow.cpp in Compile Sources */,
 				8EC4A3F260064EF4A062EA0F /* MainWindow.cpp in Compile Sources */,
@@ -553,11 +674,14 @@
 				ABA692EC7D08616105FA9500 /* moc_MainWindow.cpp in Compile Sources */,
 				10C26FFD2093431400175F44 /* SoundNodeObject.cpp in Compile Sources */,
 				10DBDF53209341CA0091DD1B /* soundFilePlayer.cpp in Compile Sources */,
+				7DD7061E20936C0A00495EDA /* kIRNodeBase.cpp in Compile Sources */,
 				10C2700E2093435000175F44 /* EditorWindowGraphicsView.cpp in Compile Sources */,
 				10C26FFB2093431400175F44 /* NodeObject.cpp in Compile Sources */,
 				10C270202093439500175F44 /* GraphicsView.cpp in Compile Sources */,
 				10C26FFC2093431400175F44 /* SoundNodeObjectGraphicsItem.cpp in Compile Sources */,
+				7DD705E42093511500495EDA /* IRFileUtility.cpp in Compile Sources */,
 				105CBF3E2092387F0084B3FF /* dummy.cpp in Compile Sources */,
+				7DD705FD209364CE00495EDA /* NodeObjectClass.cpp in Compile Sources */,
 				10C2701F2093439500175F44 /* CentralWidget.cpp in Compile Sources */,
 			);
 			name = "Compile Sources";
