@@ -38,6 +38,23 @@ GraphicsView::~GraphicsView()
 }
 
 
+void GraphicsView::mousePressEvent(QMouseEvent *mouseEvent)
+{
+    std::cout << "graphics view mouse press event called: " << mouseEvent->pos().x() << ", " << mouseEvent->pos().y() << std::endl;
+    
+    QPoint pointInViewCoordinates = mouseEvent->pos();
+    QPointF pointInSceneCoordinates = mapToScene(pointInViewCoordinates);
+    
+    mPos.x = mouseEvent->pos().x();
+    mPos.y = mouseEvent->pos().y();
+    
+    mPosScene.x = pointInSceneCoordinates.x();
+    mPosScene.y = pointInSceneCoordinates.y();
+    
+    QGraphicsView::mousePressEvent(mouseEvent);
+}
+
+
 void GraphicsView::dragEnterEvent(QDragEnterEvent *event) // THIS WORKS
 {
     // std::cout << "entered drag event..." << std::endl;
@@ -53,13 +70,24 @@ void GraphicsView::dragMoveEvent(QDragMoveEvent *event)
 }
 
 
+IR::Point GraphicsView::getMPos() const
+{
+    return mPos;
+}
+
+
+IR::Point GraphicsView::getMPosScene() const
+{
+    return mPosScene;
+}
+
+
 void GraphicsView::dropEvent(QDropEvent *event)
 {
     event->acceptProposedAction();
     
     std::string path(event->mimeData()->text().toStdString());
     
-    scene();
     QPoint pointInViewCoordinates = event->pos();
     QPointF pointInSceneCoordinates = mapToScene(pointInViewCoordinates);
     

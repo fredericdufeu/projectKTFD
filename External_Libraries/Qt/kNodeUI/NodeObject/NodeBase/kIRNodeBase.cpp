@@ -25,8 +25,9 @@ kIRNodeBase::~kIRNodeBase()
 
 void kIRNodeBase::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
-    std::cout << "mouse pressed " << event->scenePos().x() << std::endl;
-
+    
+    std::cout << "item mouse pressed at " << event->pos().x() << ", " << event->pos().y() << std::endl;
+    update(); // for selection check
 }
 
 void kIRNodeBase::mouseMoveEvent(QGraphicsSceneMouseEvent *event)
@@ -50,18 +51,20 @@ void kIRNodeBase::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event)
 void kIRNodeBase::paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWidget *)
 {
     
-    QPen pen(Qt::darkRed);
+    QPen pen;
     pen.setColor(Qt::black);
     painter->setPen(pen);
     
-    float x = this->frame.origin.x - this->frame.size.width/2;
-    float y = this->frame.origin.y - this->frame.size.height/2;
+    float x = this->frame.origin.x - this->frame.size.width * 0.5;
+    float y = this->frame.origin.y - this->frame.size.height * 0.5;
 
     painter->drawRect(x, y, this->frame.size.width, this->frame.size.height);
-    painter->fillRect(x, y, this->frame.size.width, this->frame.size.height, Qt::lightGray);
+    painter->fillRect(x, y, this->frame.size.width, this->frame.size.height, isSelected() ? Qt::red : Qt::lightGray);
     
+    /*
     printf("paint called! :: object made in %f, %f", this->frame.origin.x, this->frame.origin.y);
     printf("\n");
+     */
 }
 
 QRectF kIRNodeBase::boundingRect() const

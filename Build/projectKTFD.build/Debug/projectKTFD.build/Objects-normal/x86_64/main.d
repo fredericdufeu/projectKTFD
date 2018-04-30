@@ -110,6 +110,7 @@ dependencies: \
   /Users/fredericdufeu/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qgraphicsscene.h \
   /Users/fredericdufeu/Desktop/IRiMaS_Software_Development/Current/3_projectKTFD/projectKTFD/External_Libraries/Qt/Windows/MainWindow/CentralWidget/GraphicsScene/GraphicsScene.hpp \
   /Users/fredericdufeu/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/QGraphicsScene \
+  /Users/fredericdufeu/Qt/5.10.1/clang_64/lib/QtGui.framework/Headers/QPainterPath \
   /Users/fredericdufeu/Qt/5.10.1/clang_64/lib/QtGui.framework/Headers/QDropEvent \
   /Users/fredericdufeu/Qt/5.10.1/clang_64/lib/QtGui.framework/Headers/qevent.h \
   /Users/fredericdufeu/Qt/5.10.1/clang_64/lib/QtCore.framework/Headers/qset.h \
@@ -128,7 +129,6 @@ dependencies: \
   /Users/fredericdufeu/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/QGraphicsItem \
   /Users/fredericdufeu/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qgraphicsitem.h \
   /Users/fredericdufeu/Qt/5.10.1/clang_64/lib/QtCore.framework/Headers/QRectF \
-  /Users/fredericdufeu/Qt/5.10.1/clang_64/lib/QtGui.framework/Headers/QPainterPath \
   /Users/fredericdufeu/Qt/5.10.1/clang_64/lib/QtGui.framework/Headers/QPainter \
   /Users/fredericdufeu/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/QStyleOptionGraphicsItem \
   /Users/fredericdufeu/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qstyleoption.h \

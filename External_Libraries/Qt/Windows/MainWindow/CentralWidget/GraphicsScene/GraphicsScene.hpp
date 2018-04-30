@@ -11,7 +11,10 @@
 #include <QObject>
 #include <QWidget>
 #include <QGraphicsScene>
+#include <QPainterPath>
 
+
+class GraphicsView;
 
 class GraphicsScene : public QGraphicsScene
 {
@@ -20,6 +23,14 @@ class GraphicsScene : public QGraphicsScene
 public:
     GraphicsScene();
     ~GraphicsScene();
+    
+    void mousePressEvent(QGraphicsSceneMouseEvent *mouseEvent) override;
+    void mouseMoveEvent(QGraphicsSceneMouseEvent *mouseEvent) override;
+    
+    GraphicsView *getView();
+    
+private:
+    // QPainterPath *selectionPainterPath;
 };
 
 #endif /* GraphicsScene_hpp */

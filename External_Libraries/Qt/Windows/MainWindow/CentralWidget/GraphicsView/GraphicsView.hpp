@@ -33,10 +33,16 @@ public:
     void dragMoveEvent(QDragMoveEvent *event) override; // empty function but needed to accept the drop
     void dropEvent(QDropEvent *event) override;
     
+    void mousePressEvent(QMouseEvent *mouseEvent) override;
+    
     CentralWidget *parentCentralWidget;
+    
+    IR::Point getMPos() const;
+    IR::Point getMPosScene() const;
     
 private:
     IR::Point mPos;
+    IR::Point mPosScene;
 };
 
 
