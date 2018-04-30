@@ -11,17 +11,19 @@
 #include <stdio.h>
 #include <iostream>
 
+#include <QWidget>
 
 #include "IRDataType.h"
 #include "IRObjectName.h"
 #include "kIRNodeBase.hpp"
 #include "IRUtilities.hpp"
+#include "kEditorWindow.hpp"
 
 
 class kNodeObject : public kIRNodeBase
 {
 public:
-    kNodeObject(IR_Object::Type type, IR_Object::Name name, IR::Frame frame);
+    kNodeObject(IR_Object::Type type, IR_Object::Name name, IR::Frame frame, QWidget *parent);
     ~kNodeObject();
     
     virtual void createObj();
@@ -33,15 +35,18 @@ public:
     
     IR::Frame getFrame();
     
-    void mouseMoveEvent(QGraphicsSceneMouseEvent *event) override;
-    
-
+    virtual void mouseMoveEvent(QGraphicsSceneMouseEvent *event) override;
+    virtual void mousePressEvent(QGraphicsSceneMouseEvent *event) override;
+    virtual void mouseReleaseEvent(QGraphicsSceneMouseEvent *event) override;
+    virtual void mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event) override;
     
 private:
     IR_Object::Type objectType;
     IR_Object::Name objectName;
     
     IR::Frame frame;
+    
+    QWidget *parent;
 };
 
 

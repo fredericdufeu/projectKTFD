@@ -37,6 +37,8 @@ public:
     
 private:
     IR::Point mPos;
+    QWidget *parent;
+    
 };
 
 

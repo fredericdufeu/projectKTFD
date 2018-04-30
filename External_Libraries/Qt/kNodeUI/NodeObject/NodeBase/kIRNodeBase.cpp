@@ -7,10 +7,13 @@
 
 #include "kIRNodeBase.hpp"
 
-kIRNodeBase::kIRNodeBase(IR::Frame frame) :
-    QGraphicsItem()
+kIRNodeBase::kIRNodeBase(IR::Frame frame, QWidget *parent)
+: QGraphicsItem()
 {
     this->frame = frame;
+    this->parent = parent;
+    
+    //this->editorWindow = new kEditorWindow(this->parent);
 
     setFlags(QGraphicsItem::ItemIsMovable | QGraphicsItem::ItemIsSelectable | QGraphicsItem::ItemIsFocusable);
 }
@@ -44,7 +47,8 @@ void kIRNodeBase::mouseReleaseEvent(QGraphicsSceneMouseEvent *event)
 
 void kIRNodeBase::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event)
 {
-    
+    if(this->isOpenEditorWindow == true) {
+    }
 }
 
 void kIRNodeBase::paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWidget *)
@@ -93,5 +97,7 @@ int kIRNodeBase::getY(){
 void kIRNodeBase::setFrameSize(IR::Frame frame)
 {
     this->frame = frame;
+    update();
 }
+
 

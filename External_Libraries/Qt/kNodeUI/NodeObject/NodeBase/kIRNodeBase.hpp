@@ -20,12 +20,14 @@
 #include <QColor>
 #include <QKeyEvent>
 
-#include "IRUtilities.hpp"
+#include "kEditorWindow.hpp"
+
+
 
 class kIRNodeBase : public QGraphicsItem
 {
 public:
-    kIRNodeBase(IR::Frame frame);
+    kIRNodeBase(IR::Frame frame, QWidget *parent);
     ~kIRNodeBase();
     
     QRectF boundingRect() const override;
@@ -43,9 +45,16 @@ public:
     int getY();
     
     virtual void setFrameSize(IR::Frame frame);
+    
+    /* enable to open an editor window when double clickled*/
+    bool isOpenEditorWindow = false;
+    //kEditorWindow getEditorWindow();
+
 
 private:
     IR::Frame frame;
+    QWidget *parent;
+    
     
 };
 #endif /* kIRNodeBase_hpp */

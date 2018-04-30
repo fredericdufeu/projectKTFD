@@ -9,12 +9,14 @@
 #include "NodeObjectClass.hpp"
 
 
-kNodeObject::kNodeObject(IR_Object::Type type, IR_Object::Name name, IR::Frame frame)
-: kIRNodeBase(frame)
+kNodeObject::kNodeObject(IR_Object::Type type, IR_Object::Name name, IR::Frame frame, QWidget *parent)
+: kIRNodeBase(frame,parent)
 {
     this->frame = frame;
+    this->parent = parent;
     this->objectType = type;
     this->objectName = name;
+    
 }
 
 kNodeObject::~kNodeObject() {
@@ -37,7 +39,8 @@ IR_Object::Name kNodeObject::getObjectName() {
 
 void kNodeObject::setFrameSize(IR::Frame frame)
 {
-    
+    // call superclass to set frame and update.
+    kIRNodeBase::setFrameSize(frame);
 }
 
 IR::Frame kNodeObject::getFrame()
@@ -49,6 +52,20 @@ void kNodeObject::mouseMoveEvent(QGraphicsSceneMouseEvent *event)
 {
     std::cout << "test" << std::endl;
     kIRNodeBase::mouseMoveEvent(event);
+}
+
+void kNodeObject::mousePressEvent(QGraphicsSceneMouseEvent *event)
+{
+    kIRNodeBase::mousePressEvent(event);
+}
+
+void kNodeObject::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event)
+{
+    kIRNodeBase::mouseDoubleClickEvent(event);
+}
+void kNodeObject::mouseReleaseEvent(QGraphicsSceneMouseEvent *event)
+{
+    kIRNodeBase::mouseReleaseEvent(event);
 }
 
 

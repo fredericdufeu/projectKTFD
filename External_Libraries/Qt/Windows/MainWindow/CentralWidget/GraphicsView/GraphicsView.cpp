@@ -25,6 +25,7 @@
 GraphicsView::GraphicsView(GraphicsScene *scene, QWidget *parent)
 : QGraphicsView(scene, parent)
 {
+    this->parent = parent;
     parentCentralWidget = static_cast<CentralWidget *>(parent);
     
     setAcceptDrops(true);
@@ -89,8 +90,8 @@ void GraphicsView::dropEvent(QDropEvent *event)
     scene()->addItem(soundNodeObject->graphicsItem);
    */
     
-    struct IR::Frame objFrame = { { static_cast<float>(pointInSceneCoordinates.x()), static_cast<float>(pointInSceneCoordinates.y()) }, {100, 20} };
-    kNodeObject *obj = new kNodeObject(IR_Object::NOTYPE, IR_Object::NONAME, objFrame);
+    struct IR::Frame objFrame = { { static_cast<float>(pointInSceneCoordinates.x()), static_cast<float>(pointInSceneCoordinates.y()) }, {150, 40} };
+    kNodeObject *obj = new kNodeObject(IR_Object::NOTYPE, IR_Object::NONAME, objFrame, this->parent);
     scene()->addItem(obj);
     scene()->update();
      
