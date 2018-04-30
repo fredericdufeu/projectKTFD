@@ -59,7 +59,7 @@ void GraphicsView::dropEvent(QDropEvent *event)
     
     std::string path(event->mimeData()->text().toStdString());
     
-    int index = parentCentralWidget->database->numSoundNodes;
+    // int index = parentCentralWidget->database->numSoundNodes;
     
     
  /*
@@ -83,7 +83,7 @@ void GraphicsView::dropEvent(QDropEvent *event)
    */
     
     struct IR::Frame objFrame = { {this->mPos.x, this->mPos.y}, {100, 20} };
-    kNodeObject *obj = new kNodeObject(IR_Object::NOTYPE, IR_Object::NONAME,objFrame);
+    kNodeObject *obj = new kNodeObject(IR_Object::NOTYPE, IR_Object::NONAME, objFrame);
     scene()->addItem(obj);
     scene()->update();
      
