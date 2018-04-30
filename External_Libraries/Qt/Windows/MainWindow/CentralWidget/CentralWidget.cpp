@@ -31,6 +31,9 @@ CentralWidget::CentralWidget(QWidget *parent, GlobalDataBase *refDatabase)
     
     // JUST TO TEST: LET US DO SOMETHING WITH A DUMMY PARAM OF MY MAIN WINDOW
     
+    const long defaultSceneWidth = 5000;
+    const long defaultSceneHeight = 5000;
+    
     editorWindow = new EditorWindow(this);
     
     
@@ -48,11 +51,13 @@ CentralWidget::CentralWidget(QWidget *parent, GlobalDataBase *refDatabase)
     scene = new GraphicsScene;
     
     //std::cout << "height = " << this->height() << " : width = " << this->width() << std::endl;
-    scene->setSceneRect(0, 0,this->width(), this->height());
+    // scene->setSceneRect(0, 0, this->width(), this->height());
+    scene->setSceneRect(-defaultSceneWidth * 0.5, -defaultSceneHeight * 0.5, defaultSceneWidth, defaultSceneHeight);
     //scene->addLine(0, 0, 100, 100);
     //scene->addLine(0, 200, 100, 100);
 
     view = new GraphicsView(scene, this);
+    std::cout << "view coordonates: " << view->x() << ", " << view->y() << ", " << view->width() << ", " << view->height() << "\n";
     //view->verticalScrollBar()->setEnabled(false);
     
     objectInspector = new QTextEdit; // of course, this later will be a custom widget
@@ -141,7 +146,7 @@ void CentralWidget::resizeEvent(QResizeEvent *event)
 
     /* change all */
     
-    this->scene->setSceneRect(0,0,this->view->width(),this->view->height());
+    // this->scene->setSceneRect(0,0,this->view->width(),this->view->height());
     std::cout << "scene resized!! " << this->scene->width() << " , " << this->scene->height() << std::endl;
 
 }

@@ -59,6 +59,13 @@ void GraphicsView::dropEvent(QDropEvent *event)
     
     std::string path(event->mimeData()->text().toStdString());
     
+    scene();
+    QPoint pointInViewCoordinates = event->pos();
+    QPointF pointInSceneCoordinates = mapToScene(pointInViewCoordinates);
+    
+    std::cout << "drop coordonates (view): " << event->pos().x() << ", " << event->pos().y() << "\n";
+    std::cout << "drop coordonates (scene): " << pointInSceneCoordinates.x() << ", " << pointInSceneCoordinates.y() << "\n";
+    
     // int index = parentCentralWidget->database->numSoundNodes;
     
     
@@ -82,7 +89,7 @@ void GraphicsView::dropEvent(QDropEvent *event)
     scene()->addItem(soundNodeObject->graphicsItem);
    */
     
-    struct IR::Frame objFrame = { {this->mPos.x, this->mPos.y}, {100, 20} };
+    struct IR::Frame objFrame = { { static_cast<float>(pointInSceneCoordinates.x()), static_cast<float>(pointInSceneCoordinates.y()) }, {100, 20} };
     kNodeObject *obj = new kNodeObject(IR_Object::NOTYPE, IR_Object::NONAME, objFrame);
     scene()->addItem(obj);
     scene()->update();
