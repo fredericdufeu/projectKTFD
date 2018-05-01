@@ -25,10 +25,11 @@ IRProjectWindow::IRProjectWindow(QWidget *parent)
     
     this->layout->addWidget(this->workspace);
     
-    QPushButton *button = new QPushButton("close");
-    this->layout->addWidget(button);
     
     setLayout(this->layout);
+    
+    
+    this->layout->setSpacing(0);
     
     show();
 

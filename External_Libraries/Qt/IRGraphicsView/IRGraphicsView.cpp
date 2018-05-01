@@ -11,7 +11,7 @@
 IRGraphicsView::IRGraphicsView(QGraphicsScene *scene, QWidget *parent)
 : QGraphicsView(scene, parent)
 {
-    
+    setAcceptDrops(true);
 }
 
 IRGraphicsView::~IRGraphicsView()
@@ -22,15 +22,18 @@ IRGraphicsView::~IRGraphicsView()
 
 void IRGraphicsView::dragEnterEvent(QDragEnterEvent *event)
 {
-    
+    event->acceptProposedAction();
+    std::cout << "dragEnterEvent \n"<< std::endl;
 }
 
 void IRGraphicsView::dragMoveEvent(QDragMoveEvent *event)
 {
-    
+    std::cout << "dragMoveEvent \n"<< std::endl;
+
 }
 
 void IRGraphicsView::dropEvent(QDropEvent *event)
 {
-    
+    std::cout << "drop Event \n"<< std::endl;
+
 }

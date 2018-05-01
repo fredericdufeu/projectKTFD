@@ -69,6 +69,7 @@
 		7DD705FD209364CE00495EDA /* NodeObjectClass.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7DD705FB209364CE00495EDA /* NodeObjectClass.cpp */; };
 		7DD7061E20936C0A00495EDA /* kIRNodeBase.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7DD7061C20936C0A00495EDA /* kIRNodeBase.cpp */; };
 		7DD7062320936EB400495EDA /* kIRDrawSquareObjClass.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7DD7062120936EB400495EDA /* kIRDrawSquareObjClass.cpp */; };
+		7DF2CE3C2098AA3700438628 /* LeftArea.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7DF2CE3A2098AA3700438628 /* LeftArea.cpp */; };
 		8771A8C96E9C391044035D99 /* OpenGL.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = D4B32C2222F82AC56BADEB21 /* OpenGL.framework */; };
 		8D267F2E4776F0ECA2F49DC8 /* IOKit.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = A1A67BEAA744704B29168D39 /* IOKit.framework */; };
 		8EC4A3F260064EF4A062EA0F /* MainWindow.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 95B82C14B1D3D95A2BBD8972 /* MainWindow.cpp */; settings = {ATTRIBUTES = (); }; };
@@ -192,6 +193,8 @@
 		7DD7062220936EB400495EDA /* kIRDrawSquareObjClass.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = kIRDrawSquareObjClass.hpp; sourceTree = "<group>"; };
 		7DD70624209372DC00495EDA /* kNodeUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kNodeUI.h; sourceTree = "<group>"; };
 		7DD706262093770800495EDA /* IRDataStructure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IRDataStructure.h; sourceTree = "<group>"; };
+		7DF2CE3A2098AA3700438628 /* LeftArea.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LeftArea.cpp; sourceTree = "<group>"; };
+		7DF2CE3B2098AA3700438628 /* LeftArea.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LeftArea.hpp; sourceTree = "<group>"; };
 		7FC82CA4CCE0DB9B649A5B84 /* MainWindow.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MainWindow.hpp; sourceTree = "<group>"; };
 		8D9815BDB5BD9F90D2BC05C5 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
 		95B82C14B1D3D95A2BBD8972 /* MainWindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MainWindow.cpp; sourceTree = "<group>"; };
@@ -318,6 +321,7 @@
 		10C270022093435000175F44 /* Windows */ = {
 			isa = PBXGroup;
 			children = (
+				7DF2CE392098AA2400438628 /* LeftArea */,
 				7D617B932098736000E270EE /* WorkSpace */,
 				10C270032093435000175F44 /* EditorWindow */,
 				10C270102093438600175F44 /* MainWindow */,
@@ -660,6 +664,15 @@
 			path = DataType;
 			sourceTree = "<group>";
 		};
+		7DF2CE392098AA2400438628 /* LeftArea */ = {
+			isa = PBXGroup;
+			children = (
+				7DF2CE3A2098AA3700438628 /* LeftArea.cpp */,
+				7DF2CE3B2098AA3700438628 /* LeftArea.hpp */,
+			);
+			path = LeftArea;
+			sourceTree = "<group>";
+		};
 		AF39DD055C3EF8226FBE929D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -800,6 +813,7 @@
 				10C270252093449A00175F44 /* EditorWindow.hpp in Compile Sources */,
 				10C270262093449D00175F44 /* EditorWindowGraphicsScene.hpp in Compile Sources */,
 				10C270272093449F00175F44 /* EditorWindowGraphicsView.hpp in Compile Sources */,
+				7DF2CE3C2098AA3700438628 /* LeftArea.cpp in Compile Sources */,
 				10C27028209344A300175F44 /* CentralWidget.hpp in Compile Sources */,
 				10C27029209344A500175F44 /* TreeView.hpp in Compile Sources */,
 				10C2702A209344A700175F44 /* GraphicsScene.hpp in Compile Sources */,

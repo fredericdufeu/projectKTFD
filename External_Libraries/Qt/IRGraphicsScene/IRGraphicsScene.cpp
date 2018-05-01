@@ -7,7 +7,8 @@
 
 #include "IRGraphicsScene.hpp"
 
-IRGraphicsScene::IRGraphicsScene()
+IRGraphicsScene::IRGraphicsScene(QWidget *parent)
+: QGraphicsScene(parent)
 {
     
 }

@@ -16,7 +16,7 @@ class IRGraphicsScene : public QGraphicsScene
 {
     Q_OBJECT
 public:
-    IRGraphicsScene();
+    IRGraphicsScene(QWidget *parent);
     ~IRGraphicsScene();
 };
 

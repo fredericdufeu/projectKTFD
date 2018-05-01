@@ -33,6 +33,10 @@ private:
     IRGraphicsView *view;
     IRGraphicsScene *scene;
     
+    IRGraphicsView *InspectorView;
+    IRGraphicsScene *InspectorScene;
+    
+    QHBoxLayout *layout;
     
 };
 

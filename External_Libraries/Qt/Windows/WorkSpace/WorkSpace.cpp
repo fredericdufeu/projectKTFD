@@ -9,23 +9,22 @@
 
 
 WorkSpace::WorkSpace(QWidget *parent)
+: QWidget(parent)
 {
     
     std::cout << "workspace made" << std::endl;
-    setGeometry(20, 20, 11, 300);
     
+    this->layout = new QHBoxLayout(this);
+    this->scene = new IRGraphicsScene(this);
+    this->view = new IRGraphicsView(this->scene, this);
+    this->layout->addWidget(this->view);
     
-    //resize(250, 250);
-    //move(20,20);
-    //setStyleSheet("background-color:black;");
+    this->InspectorScene = new IRGraphicsScene(this);
+    this->InspectorView = new IRGraphicsView(this->InspectorScene,this);
+    this->layout->addWidget(this->InspectorView);
     
+    this->layout->setSpacing(4);
     
-    QHBoxLayout *layout = new QHBoxLayout(this);
-    QPushButton *button = new QPushButton("hello");
-    layout->addWidget(button);
-    setLayout(layout);
-    
-    show();
 }
 
 WorkSpace::~WorkSpace()
