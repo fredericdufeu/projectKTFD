@@ -48,6 +48,8 @@
 		10DBDF53209341CA0091DD1B /* soundFilePlayer.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 10DBDF51209341CA0091DD1B /* soundFilePlayer.cpp */; };
 		33B99A0E19B259F120678B7C /* QtCore.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = A276135214031EC866DC47DF /* QtCore.framework */; };
 		57C2655F445FCF94CA12E45A /* QtGui.framework in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = BFC4FAE7BD427160C6DA4607 /* QtGui.framework */; };
+		7D617B8D2097741300E270EE /* ProjectData.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7D617B8B2097741300E270EE /* ProjectData.cpp */; };
+		7D617B9220986B0500E270EE /* IRiMaSPreferences.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7D617B9020986B0500E270EE /* IRiMaSPreferences.cpp */; };
 		7DD22CD5209728D400B7B535 /* WaveformNodeObject.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7DD22CD3209728D400B7B535 /* WaveformNodeObject.cpp */; };
 		7DD22CD920972C4C00B7B535 /* kEditorWindow.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7DD22CD720972C4C00B7B535 /* kEditorWindow.cpp */; };
 		7DD22CDC20972D9E00B7B535 /* kEditorWindowScene.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7DD22CDA20972D9E00B7B535 /* kEditorWindowScene.cpp */; };
@@ -143,6 +145,11 @@
 		5E9CD4D1FE5969E394D0B5B3 /* dummy.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = dummy.cpp; path = mkspecs/features/data/dummy.cpp; sourceTree = QT_CLANG64_PATH; };
 		60D12DD5AF98EB30B3EBD182 /* QtWidgets.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtWidgets.framework; path = lib/QtWidgets.framework; sourceTree = QT_CLANG64_PATH; };
 		6F2B3C2C86CCB77D25B3DAE6 /* .qmake.stash */ = {isa = PBXFileReference; lastKnownFileType = text; path = .qmake.stash; sourceTree = USER_DIRECTORY; };
+		7D617B8B2097741300E270EE /* ProjectData.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ProjectData.cpp; sourceTree = "<group>"; };
+		7D617B8C2097741300E270EE /* ProjectData.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ProjectData.hpp; sourceTree = "<group>"; };
+		7D617B8E2097751900E270EE /* IRiMaSFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IRiMaSFoundation.h; sourceTree = "<group>"; };
+		7D617B9020986B0500E270EE /* IRiMaSPreferences.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IRiMaSPreferences.cpp; sourceTree = "<group>"; };
+		7D617B9120986B0500E270EE /* IRiMaSPreferences.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IRiMaSPreferences.hpp; sourceTree = "<group>"; };
 		7DD22CD3209728D400B7B535 /* WaveformNodeObject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = WaveformNodeObject.cpp; sourceTree = "<group>"; };
 		7DD22CD4209728D400B7B535 /* WaveformNodeObject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = WaveformNodeObject.hpp; sourceTree = "<group>"; };
 		7DD22CD720972C4C00B7B535 /* kEditorWindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = kEditorWindow.cpp; sourceTree = "<group>"; };
@@ -207,6 +214,7 @@
 		105CBF4320923A0C0084B3FF /* External_Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				7D617B8F20986AD900E270EE /* Preferences */,
 				7DD705DF209350E400495EDA /* IRiMaS_Utility */,
 				105CBF4520923A3E0084B3FF /* LibSndFile */,
 				105CBF4420923A380084B3FF /* LibPortAudio */,
@@ -238,7 +246,9 @@
 			children = (
 				7DD705F42093645000495EDA /* kNodeUI */,
 				10C26FF22093431400175F44 /* NodeObject */,
+				7D617B8A209773F600E270EE /* ProjectDataSet */,
 				10C26FFE2093433100175F44 /* GlobalDatabase */,
+				7D617B932098736000E270EE /* WorkSpace */,
 				10C270022093435000175F44 /* Windows */,
 			);
 			path = Qt;
@@ -332,6 +342,7 @@
 			isa = PBXGroup;
 			children = (
 				10C270112093439500175F44 /* CentralWidget */,
+				7D617B8E2097751900E270EE /* IRiMaSFoundation.h */,
 			);
 			path = MainWindow;
 			sourceTree = "<group>";
@@ -426,6 +437,31 @@
 				6F2B3C2C86CCB77D25B3DAE6 /* .qmake.stash */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7D617B8A209773F600E270EE /* ProjectDataSet */ = {
+			isa = PBXGroup;
+			children = (
+				7D617B8B2097741300E270EE /* ProjectData.cpp */,
+				7D617B8C2097741300E270EE /* ProjectData.hpp */,
+			);
+			path = ProjectDataSet;
+			sourceTree = "<group>";
+		};
+		7D617B8F20986AD900E270EE /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				7D617B9020986B0500E270EE /* IRiMaSPreferences.cpp */,
+				7D617B9120986B0500E270EE /* IRiMaSPreferences.hpp */,
+			);
+			path = Preferences;
+			sourceTree = "<group>";
+		};
+		7D617B932098736000E270EE /* WorkSpace */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = WorkSpace;
 			sourceTree = "<group>";
 		};
 		7DD22CD2209728C500B7B535 /* WaveformNode */ = {
@@ -710,11 +746,13 @@
 				7DD7061E20936C0A00495EDA /* kIRNodeBase.cpp in Compile Sources */,
 				10C2700E2093435000175F44 /* EditorWindowGraphicsView.cpp in Compile Sources */,
 				10C26FFB2093431400175F44 /* NodeObject.cpp in Compile Sources */,
+				7D617B8D2097741300E270EE /* ProjectData.cpp in Compile Sources */,
 				10C270202093439500175F44 /* GraphicsView.cpp in Compile Sources */,
 				10C26FFC2093431400175F44 /* SoundNodeObjectGraphicsItem.cpp in Compile Sources */,
 				7DD705E42093511500495EDA /* IRFileUtility.cpp in Compile Sources */,
 				105CBF3E2092387F0084B3FF /* dummy.cpp in Compile Sources */,
 				7DD705FD209364CE00495EDA /* NodeObjectClass.cpp in Compile Sources */,
+				7D617B9220986B0500E270EE /* IRiMaSPreferences.cpp in Compile Sources */,
 				10C2701F2093439500175F44 /* CentralWidget.cpp in Compile Sources */,
 				7DD22CD5209728D400B7B535 /* WaveformNodeObject.cpp in Compile Sources */,
 				7DD22CD920972C4C00B7B535 /* kEditorWindow.cpp in Compile Sources */,

@@ -26,7 +26,7 @@ GraphicsView::GraphicsView(GraphicsScene *scene, QWidget *parent)
 : QGraphicsView(scene, parent)
 {
     this->parent = parent;
-    parentCentralWidget = static_cast<CentralWidget *>(parent);
+    //parentCentralWidget = static_cast<CentralWidget *>(parent);
     
     setAcceptDrops(true);
     // setDragDropMode(QAbstractItemView::DragDrop);

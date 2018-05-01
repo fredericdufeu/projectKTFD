@@ -6,16 +6,14 @@
 // THIS CANNOT BE CHANGED BECAUSE IT IS THE TOP-LEVEL Q_OBJECT, WITH MOC SET FOR IT
 
 
+#include <iostream>
 
 
 #include <QMainWindow>
+#include <QtWidgets>
+#include "portaudio.h" // INITIALIZING PA IN CONSTRUCTOR OF MAINWINDOW
 
-#include <QWidget>
-#include <QMenu>
-#include <QAction>
 
-#include "GlobalDatabase.hpp"
-#include "CentralWidget.hpp"
 
 #include "IRUtilities.hpp"
 
@@ -27,49 +25,31 @@ class MainWindow : public QMainWindow
     Q_OBJECT
     
 public:
-    MainWindow(QWidget *parent = 0, GlobalDataBase *refDataBase = nullptr);
+    MainWindow(QWidget *parent = 0);
     ~MainWindow();
     
     void createNewProject();
-    void createNewProjectFromSoundFile();
-    void createNewProjectFromFolder();
     void openProject();
-    
-    GlobalDataBase *dataBase;
-    
-    int someValueToTestForwardDeclaration;
-    
-    void someDummyFunctionToTestForwardDeclaration();
     
     void cleanUpOnQuit();
     
 private:
     void createMenus();
-    
-    void toggleFileExplorerHiddenAction();
-    void toggleObjectInspectorHiddenAction();
-    
-    // MENUS and Actions
-    
-    // File menu
+    void hideFileNavigator();
+    void hideNodeObjInspector();
     
     QMenu *fileMenu;
-    QMenu *fileMenuNew;
-    QAction *newProjectAction;
-    QAction *newProjectFromSoundFileAction;
-    QAction *newProjectFromFolderAction;
+    QMenu *newFileMenu;
     
+    QAction *newProjectAction;
     QAction *openProjectAction;
     
-    // Window menu
-    
     QMenu *windowMenu;
-    QAction *toggleFileExplorerHidden;
-    QAction *toggleObjectInspectorHidden;
+    QAction *hideFileNavigatorAction;
+    QAction *hideNodeObjInspectorAction;
     
-    // CENTRAL WIDGET
-    
-    CentralWidget *widget;
+    //widget
+
 };
 
 #endif // MAINWINDOW_H

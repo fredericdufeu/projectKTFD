@@ -88,7 +88,7 @@ void SoundNodeObjectGraphicsItem::keyPressEvent(QKeyEvent *event)
 void SoundNodeObjectGraphicsItem::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *)
 {
     GraphicsView *view = static_cast<GraphicsView *>(scene()->views()[0]);
-    view->parentCentralWidget->editorWindow->show();
+    //view->parentCentralWidget->editorWindow->show();
 }
 
 
