@@ -16,6 +16,7 @@
 
 
 #include "IRUtilities.hpp"
+#include "ProjectWindow.hpp"
 
 
 
@@ -37,9 +38,13 @@ private:
     void createMenus();
     void hideFileNavigator();
     void hideNodeObjInspector();
+    void newWorkSpaceActionFunc();
     
     QMenu *fileMenu;
     QMenu *newFileMenu;
+    QMenu *newWorkSpace;
+    
+    QAction *newWorkSpaceAction;
     
     QAction *newProjectAction;
     QAction *openProjectAction;

@@ -7,13 +7,18 @@ MainWindow::MainWindow(QWidget *parent)
 : QMainWindow(parent)
 {
    /* set window size */
-    setMinimumSize(1000, 750);
+    setMinimumSize(100, 100);
+    move(0,0);
     /* create menuws */
     createMenus();
     
+    show();
+
     /* connect actions */
+    connect(newWorkSpaceAction, &QAction::triggered, this, &MainWindow::newWorkSpaceActionFunc);
+    this->newWorkSpaceAction->setShortcut(Qt::CTRL + Qt::Key_N);
     connect(newProjectAction, &QAction::triggered, this, &MainWindow::createNewProject);
-    this->newProjectAction->setShortcut(Qt::CTRL + Qt::Key_N); // set shortcuts (windows control+n, mac commando+n)
+    this->newProjectAction->setShortcut(Qt::CTRL + Qt::SHIFT + Qt::Key_N); // set shortcuts (windows control+n, mac commando+n)
     connect(openProjectAction, &QAction::triggered, this, &MainWindow::openProject);
     this->openProjectAction->setShortcut(Qt::CTRL + Qt::Key_O); // set shortcuts (windows control+o, mac commando+o)
     connect(hideFileNavigatorAction, &QAction::triggered, this, &MainWindow::hideFileNavigator);
@@ -31,7 +36,9 @@ void MainWindow::createMenus()
     //file menus
     this->fileMenu = menuBar()->addMenu(tr("&File"));
     this->newFileMenu = this->fileMenu->addMenu("New");
+    this->newWorkSpaceAction = this->newFileMenu->addAction("new Workspace");
     this->newProjectAction = this->newFileMenu->addAction("IRiMaS Project... ");
+    
     this->newFileMenu->addSeparator();
     this->fileMenu->addSeparator();
     this->openProjectAction = this->fileMenu->addAction("Open IRiMaS Project... ");
@@ -48,10 +55,17 @@ void MainWindow::createNewProject()
 {
     std::cout << "create new project" << std::endl;
     
-    
+    IRProjectWindow *win = new IRProjectWindow(0);
     
     
 }
+
+void MainWindow::newWorkSpaceActionFunc()
+{
+    std::cout << "create new workspace" << std::endl;
+
+}
+
 
 void MainWindow::openProject()
 {
@@ -74,3 +88,4 @@ void MainWindow::cleanUpOnQuit()
 {
 
 }
+

@@ -11,26 +11,30 @@
 #include <QtWidgets>
 
 #include "IRiMaSFoundation.h"
+#include "CentralWidget.hpp"
 
 // NOW, WHAT IF MY CENTRAL WIDGET NEEDS TO DO STUFF ON A MAINWINDOW?
 // OBVIOUSLY WON'T INCLUDE, BUT FORWARD DECLARE
-
-
-
 
 class MainWidgetController : public QWidget
 {
     Q_OBJECT
     
 public:
-    MainWidgetController(QWidget *parent, ProjectData *data);
+    MainWidgetController(QWidget *parent);
     ~MainWidgetController();
    
 
-    ProjectData *p_data;
+    ProjectData *getProjectData();
     
     
 private:
+    
+    /* Project Data contains all essential data for a project. */
+    ProjectData *p_data;
+    
+    
+    
     QHBoxLayout *layout;
     
     bool isFileNavigatorHidden;

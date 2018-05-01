@@ -9,13 +9,20 @@
 #include "CentralWidget.hpp"
 
 
-MainWidgetController::MainWidgetController(QWidget *parent, ProjectData *data)
+MainWidgetController::MainWidgetController(QWidget *parent)
 : QWidget(parent)
 {
-    this->data = p_data;
+    /* create project data */
+    this->p_data = new ProjectData();
 }
 
 MainWidgetController::~MainWidgetController()
 {
     
+}
+
+
+ProjectData* MainWidgetController::getProjectData()
+{
+    return this->p_data;
 }

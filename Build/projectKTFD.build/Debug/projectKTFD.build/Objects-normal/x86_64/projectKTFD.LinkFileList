@@ -6,6 +6,8 @@
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/GraphicsScene_moc.o
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/GraphicsView_moc.o
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/readSoundFileAtPath.o
+/Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/WorkSpace-4AE5A3524F39E14F.o
+/Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/WorkSpace_moc.o
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/SoundFile.o
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/main.o
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/GraphicsScene-84F232621490A30A.o
@@ -18,9 +20,14 @@
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/moc_MainWindow.o
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/SoundNodeObject.o
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/soundFilePlayer.o
+/Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/ProjectWindow-50D4B0DB3B5AB072.o
+/Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/ProjectWindow_moc.o
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/kIRNodeBase.o
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/EditorWindowGraphicsView-30E4E0441914F60B.o
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/NodeObject.o
+/Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/IRGraphicsScene-CA75ECB18E195F77.o
+/Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/WorkSpaceDatabase.o
+/Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/IRGraphicsScene_moc.o
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/ProjectData.o
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/GraphicsView-2B02A85C66316316.o
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/SoundNodeObjectGraphicsItem.o
@@ -32,5 +39,8 @@
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/WaveformNodeObject.o
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/kEditorWindow-F928F39AC1F49A6F.o
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/kEditorWindow_moc.o
+/Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/IRGraphicsView-A0D45F631395E460.o
+/Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/NodeDatabase.o
+/Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/IRGraphicsView_moc.o
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/kEditorWindowScene-16DB5C4E45BE8181.o
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/kEditorWindowScene_moc.o

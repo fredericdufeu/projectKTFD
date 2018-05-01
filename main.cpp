@@ -9,7 +9,9 @@ int main(int argc, char *argv[])
     
     GlobalDataBase *database = new GlobalDataBase();
     MainWindow w(nullptr);
-    w.show();
+    //w.show();
+    
+    //w.window1->show();
 
     
     // CLEANUP RESPONSIBILITY PASSED TO MAIN WINDOW
