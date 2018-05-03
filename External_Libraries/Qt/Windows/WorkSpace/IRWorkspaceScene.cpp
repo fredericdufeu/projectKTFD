@@ -10,7 +10,7 @@
 IRWorkspaceScene::IRWorkspaceScene(QWidget *parent)
 : QGraphicsScene(parent)
 {
-    
+    setSceneRect(-2500, -2500, 5000, 5000);
 }
 
 IRWorkspaceScene::~IRWorkspaceScene()

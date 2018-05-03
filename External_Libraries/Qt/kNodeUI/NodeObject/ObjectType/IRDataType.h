@@ -40,6 +40,13 @@ namespace IR_Data {
         IR_DAY_FLT = 24,
         IR_DAY_DBL = 25,
     };
+    
+    /* INOUTDATA Structure which indicates what data type input and ouput have */
+    struct INOUTDATA{
+        int count;
+        Type *typelist;
+    };
+    
 }
 
 

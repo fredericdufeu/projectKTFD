@@ -68,12 +68,14 @@ void MainWindow::createNewProject()
 void MainWindow::newWorkSpaceActionFunc()
 {
     std::cout << "create new workspace" << std::endl;
-    
     /* get currently top-level window */
-    IRProjectWindow *win = static_cast<IRProjectWindow* >(QApplication::activeWindow());
-    win->createWorkspace();
-    std::cout << win->getWindowID().toStdString() << " of " << win->getWorkspaceCount() <<std::endl;
-
+    if(QApplication::activeWindow() != nullptr){
+        IRProjectWindow *win = static_cast<IRProjectWindow* >(QApplication::activeWindow());
+        win->createWorkspace();
+        std::cout << win->getWindowID().toStdString() << " of " << win->getWorkspaceCount() <<std::endl;
+    }else{
+        std::cout << "Error newWorkSpaceActionFunc() : Could not find any active Window.\n" << std::endl;
+    }
 }
 
 

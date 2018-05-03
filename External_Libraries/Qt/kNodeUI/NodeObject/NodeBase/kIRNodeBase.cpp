@@ -62,9 +62,7 @@ void kIRNodeBase::paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWi
 
     painter->drawRect(x, y, this->frame.size.width, this->frame.size.height);
     painter->fillRect(x, y, this->frame.size.width, this->frame.size.height, Qt::lightGray);
-    
-    printf("paint called! :: object made in %f, %f", this->frame.origin.x, this->frame.origin.y);
-    printf("\n");
+
 }
 
 QRectF kIRNodeBase::boundingRect() const

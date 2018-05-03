@@ -13,6 +13,7 @@
 #include <QtWidgets>
 #include "WorkSpace.hpp"
 #include "NavigatorSpace.hpp"
+#include "WorkSpaceDatabase.hpp"
 
 class IRProjectWindow : public QWidget
 {
@@ -20,23 +21,30 @@ class IRProjectWindow : public QWidget
     
 public:
     IRProjectWindow(QString id, QWidget *parent = 0);
-    IRProjectWindow();
+    ~IRProjectWindow();
     
     QString getWindowID();
     unsigned int getWorkspaceCount();
     
     void createWorkspace();
     void deleteWorkspace();
+    
+public slots:
+    void workspaceSelectionChangedSlot(QString id);
 
     
 private:
     void closeEvent(QCloseEvent *event) override;
     
     
-    WorkSpace *workspace;
     unsigned int workspaceCounter = 0;
-    //std::map<std::string>
-
+    WorkSpaceDatabase *DB_workspace;
+    
+    /* This pointer indicates the workspace which should be shown on the Project Window. */
+    WorkSpace *topWorkspace;
+    /* for switching Widget */
+    QStackedWidget *stackeWidget;
+    
     NavigatorSpace *navigatorspace;
     QHBoxLayout *layout;
     

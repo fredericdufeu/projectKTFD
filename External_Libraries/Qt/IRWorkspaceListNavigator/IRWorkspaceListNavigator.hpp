@@ -13,7 +13,8 @@
 
 #include <QtWidgets>
 
-class IRWorkspaceListNavigator : public QListWidget{
+class IRWorkspaceListNavigator : public QListWidget
+{
     Q_OBJECT
 public:
     IRWorkspaceListNavigator(QWidget *parent);
@@ -22,10 +23,13 @@ public:
     void addNewItem(QString item);
     void removeItem();
     
+    
+signals:
+    void selectionChangedSignal(QString);
+    
 public slots:
     void selectionChangeAction();
     
-
     
 };
 

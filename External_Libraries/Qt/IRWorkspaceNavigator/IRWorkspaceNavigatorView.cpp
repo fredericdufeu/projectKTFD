@@ -18,3 +18,7 @@ IRWorkspaceNavigatorView::~IRWorkspaceNavigatorView()
 {
     
 }
+
+
+
+

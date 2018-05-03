@@ -89,12 +89,12 @@ void GraphicsView::dropEvent(QDropEvent *event)
      
     scene()->addItem(soundNodeObject->graphicsItem);
    */
-    
+    /*
     struct IR::Frame objFrame = { { static_cast<float>(pointInSceneCoordinates.x()), static_cast<float>(pointInSceneCoordinates.y()) }, {150, 40} };
-    kNodeObject *obj = new kNodeObject(IR_Object::NOTYPE, IR_Object::NONAME, objFrame);
+    kNodeObject *obj = new kNodeObject(IR_Object::NONAME, objFrame);
     scene()->addItem(obj);
     scene()->update();
-     
+     */
     //std::cout << "object position = " << obj->getFrame().origin.x << " , " << obj->getFrame().origin.y << " set by mouse position " << this->mPos.x << " , " << this->mPos.y << std::endl;
 }
 

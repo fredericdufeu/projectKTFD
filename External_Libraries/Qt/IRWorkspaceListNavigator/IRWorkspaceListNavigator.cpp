@@ -16,22 +16,9 @@ IRWorkspaceListNavigator::IRWorkspaceListNavigator(QWidget *parent)
     //this->sortItems(Qt::AscendingOrder);
 
     this->setDragEnabled(true);
-    QString item = "workspace_1";
+    //QString item = "workspace_1";
     
-    //QLineEdit *line = new QLineEdit(item,this);
-    //this->addItem(line->text());
-    
-    //QLstWidgetItem *wItem = new QListWidgetItem(&item);
-    //this->addItem(new QListWidgetItem("workspace 1"));
-
-    
-    
-    //this->lineEdit = new QLineEdit(item, this);
-    //this->lineEdit->setReadOnly(true);
-    //this->addItem(lineEdit->text());
-    
-    
-    addNewItem(item);
+    //addNewItem(item);
     
     /* connect signal to slot selectionChanged(). The target of the signal is also "this" because this class inherits QListWidget itself.*/
     QObject::connect(this, SIGNAL(itemSelectionChanged()), this, SLOT(selectionChangeAction()));
@@ -55,5 +42,17 @@ void IRWorkspaceListNavigator::addNewItem(QString item)
 
 void IRWorkspaceListNavigator::selectionChangeAction()
 {
-    std::cout << "selected changed!!" << std::endl;
+    std::cout << "selected changed!! call Signal" << std::endl;
+    QList<QListWidgetItem *> listItems = this->selectedItems();
+    
+    QString id = listItems[0]->text();
+    
+    //invoke signal
+    emit selectionChangedSignal(id);
 }
+/*
+void IRWorkspaceListNavigator::selectionChangedSignal()
+{
+    std::cout << "selectionChangedSignal called!!" << std::endl;
+
+}*/

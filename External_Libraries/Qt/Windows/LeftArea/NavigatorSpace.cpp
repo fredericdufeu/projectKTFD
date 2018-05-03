@@ -20,7 +20,6 @@ NavigatorSpace::NavigatorSpace(QWidget *parent)
     
 
     this->workspacelist = new IRWorkspaceListNavigator(this);
-    
 
     this->layout->addWidget(this->workspacelist);
     

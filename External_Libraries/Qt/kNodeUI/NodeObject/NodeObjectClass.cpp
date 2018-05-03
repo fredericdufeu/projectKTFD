@@ -9,12 +9,14 @@
 #include "NodeObjectClass.hpp"
 
 
-kNodeObject::kNodeObject(IR_Object::Type type, IR_Object::Name name, IR::Frame frame)
+kNodeObject::kNodeObject(IR_Object::Name name, IR::Frame frame, IR_Data::INOUTDATA input, IR_Data::INOUTDATA output)
 : kIRNodeBase(frame)
 {
     this->frame = frame;
-    this->objectType = type;
     this->objectName = name;
+    
+    this->inputDataType = input;
+    this->outputDataType = output;
     
 }
 
@@ -27,9 +29,17 @@ void kNodeObject::createObj() {
 }
 
 
-IR_Object::Type kNodeObject::getObjectType() {
-    return this->objectType;
+IR_Data::INOUTDATA kNodeObject::getInputDataType()
+{
+    return this->inputDataType;
 }
+
+IR_Data::INOUTDATA kNodeObject::getOutputDataType()
+{
+    return this->outputDataType;
+}
+
+
 
 IR_Object::Name kNodeObject::getObjectName() {
     return this->objectName;

@@ -24,12 +24,14 @@
 class kNodeObject : public kIRNodeBase
 {
 public:
-    kNodeObject(IR_Object::Type type, IR_Object::Name name, IR::Frame frame);
+    kNodeObject(IR_Object::Name name, IR::Frame frame, IR_Data::INOUTDATA input, IR_Data::INOUTDATA output);
     ~kNodeObject();
     
     virtual void createObj();
     
-    IR_Object::Type getObjectType();
+    IR_Data::INOUTDATA getInputDataType();
+    IR_Data::INOUTDATA getOutputDataType();
+
     IR_Object::Name getObjectName();
     
     void setFrameSize(IR::Frame frame) override;
@@ -42,7 +44,9 @@ public:
     virtual void mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event) override;
     
 private:
-    IR_Object::Type objectType;
+    
+    IR_Data::INOUTDATA inputDataType;
+    IR_Data::INOUTDATA outputDataType;
     IR_Object::Name objectName;
     
     IR::Frame frame;

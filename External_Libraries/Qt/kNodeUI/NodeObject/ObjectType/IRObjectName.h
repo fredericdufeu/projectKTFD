@@ -11,16 +11,6 @@
 
 namespace IR_Object {
     
-    enum Type
-    {
-        NOTYPE = -1,
-        
-        AUDIO = 1,
-        IMAGE = 2,
-        MOVIE = 3,
-        SCORE = 4,
-    };
-
     enum Name
     {
         NONAME = -1,
@@ -28,8 +18,6 @@ namespace IR_Object {
         HOGE = 1,
         FORK = 2,
         TEST = 3,
-        
-        
     };
 }
 

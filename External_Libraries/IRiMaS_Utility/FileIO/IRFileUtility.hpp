@@ -18,10 +18,12 @@ public:
     IRFileUtility();
     ~IRFileUtility();
     
-    IR_FILE::TYPE checkFileType(std::string& filename);
+    IR_FILE::FILEIDENTITY checkFileType(std::string& filename);
+    IR_FILE::FILETYPE checkFileType(int fileTypeIndex);
     std::string getFileExtension(const std::string& s);
     
-    std::map<std::string, IR_FILE::TYPE>IR_FILE_TYPE_EXT;
+    std::map<std::string, IR_FILE::FILEFORMAT>IR_FILE_FORMAT_EXT;
+    std::map<int, IR_FILE::FILETYPE>IR_FILE_TYPE_EXT;
     
 };
 

@@ -15,7 +15,7 @@
 
 namespace IR_FILE
 {
-    enum TYPE
+    enum FILEFORMAT
     {
         /* undefined */
         NONE                = 0,
@@ -36,7 +36,21 @@ namespace IR_FILE
 
     };
     
+    enum FILETYPE
+    {
+        NOTYPE = -1,
+        
+        AUDIO = 1,
+        IMAGE = 2,
+        MOVIE = 3,
+        SCORE = 4,
+    };
     
+    struct FILEIDENTITY {
+        
+        FILEFORMAT format;
+        FILETYPE type;
+    };
     
 };
 
