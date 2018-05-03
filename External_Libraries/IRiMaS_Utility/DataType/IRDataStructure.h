@@ -9,7 +9,7 @@
 #define IRDataStructure_h
 
 #include <iostream>
-#include "WorkSpace.hpp"
+//#include "WorkSpace.hpp"
 
 
 namespace IR {
@@ -34,16 +34,7 @@ namespace IR {
         float y;
     };
     
-    
-    struct t_WorkSpace{
-        
-        unsigned int index;
-        WorkSpace workspaceData;
-        
-        
-    };
-    
-    
+
 }
 
 

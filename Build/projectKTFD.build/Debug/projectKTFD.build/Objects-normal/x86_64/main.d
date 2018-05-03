@@ -123,14 +123,40 @@ dependencies: /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/main.cpp \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/IRiMaS_Utility/FileIO/IRFileUtility.hpp \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/IRiMaS_Utility/FileIO/IRFileTypeEnum.hpp \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/IRiMaS_Utility/DataType/IRDataStructure.h \
-  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/Windows/WorkSpace/WorkSpace.hpp \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/NodeObject/SoundNodeObject/SoundNodeObjectGraphicsItem/SoundNodeObjectGraphicsItem.hpp \
+  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/QGraphicsItem \
+  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qgraphicsitem.h \
+  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtCore.framework/Headers/QRectF \
+  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtGui.framework/Headers/QPainterPath \
+  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtGui.framework/Headers/QPainter \
+  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/QStyleOptionGraphicsItem \
+  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qstyleoption.h \
+  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qabstractspinbox.h \
+  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtGui.framework/Headers/qvalidator.h \
+  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtCore.framework/Headers/qregularexpression.h \
+  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtGui.framework/Headers/qicon.h \
+  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qslider.h \
+  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qabstractslider.h \
+  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qstyle.h \
+  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qtabbar.h \
+  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qtabwidget.h \
+  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qrubberband.h \
+  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtCore.framework/Headers/qabstractitemmodel.h \
+  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/QGraphicsSceneMouseEvent \
+  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qgraphicssceneevent.h \
+  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtGui.framework/Headers/QColor \
+  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtGui.framework/Headers/QKeyEvent \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/LibPortAudio/SoundFilePlayer/soundFilePlayer.h \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/LibPortAudio/portaudio.h \
+  MainWindow.hpp \
+  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/QMainWindow \
+  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qmainwindow.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/QtWidgets \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/QtWidgetsDepends \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtCore.framework/Headers/QtCore \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtCore.framework/Headers/QtCoreDepends \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtCore.framework/Headers/qabstractanimation.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtCore.framework/Headers/qabstracteventdispatcher.h \
-  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtCore.framework/Headers/qabstractitemmodel.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtCore.framework/Headers/qabstractnativeeventfilter.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtCore.framework/Headers/qabstractproxymodel.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtCore.framework/Headers/qabstractstate.h \
@@ -204,7 +230,6 @@ dependencies: /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/main.cpp \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtCore.framework/Headers/qqueue.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtCore.framework/Headers/qrandom.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtCore.framework/Headers/qreadwritelock.h \
-  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtCore.framework/Headers/qregularexpression.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtCore.framework/Headers/qresource.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtCore.framework/Headers/qsavefile.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtCore.framework/Headers/qscopedvaluerollback.h \
@@ -264,7 +289,6 @@ dependencies: /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/main.cpp \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtCore.framework/Headers/QRect \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtGui.framework/Headers/qsurface.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtGui.framework/Headers/qsurfaceformat.h \
-  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtGui.framework/Headers/qicon.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtGui.framework/Headers/qbitmap.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtGui.framework/Headers/qclipboard.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtGui.framework/Headers/qdesktopservices.h \
@@ -333,18 +357,9 @@ dependencies: /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/main.cpp \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtGui.framework/Headers/qtextdocumentwriter.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtGui.framework/Headers/qtextlist.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtGui.framework/Headers/qtexttable.h \
-  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtGui.framework/Headers/qvalidator.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtGui.framework/Headers/qtguiversion.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qabstractbutton.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qabstractitemdelegate.h \
-  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qstyleoption.h \
-  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qabstractspinbox.h \
-  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qslider.h \
-  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qabstractslider.h \
-  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qstyle.h \
-  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qtabbar.h \
-  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qtabwidget.h \
-  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qrubberband.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qabstractitemview.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qaccessiblewidget.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qaction.h \
@@ -385,7 +400,6 @@ dependencies: /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/main.cpp \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qgesture.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qgesturerecognizer.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qgraphicsanchorlayout.h \
-  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qgraphicsitem.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qgraphicslayout.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qgraphicslayoutitem.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qgraphicseffect.h \
@@ -394,7 +408,6 @@ dependencies: /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/main.cpp \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qgraphicslinearlayout.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qgraphicsproxywidget.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qgraphicswidget.h \
-  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qgraphicssceneevent.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qgraphicstransform.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtGui.framework/Headers/QVector3D \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qgroupbox.h \
@@ -409,7 +422,6 @@ dependencies: /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/main.cpp \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qlcdnumber.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qlistview.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qlistwidget.h \
-  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qmainwindow.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qmdiarea.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qmdisubwindow.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qmenu.h \
@@ -461,19 +473,22 @@ dependencies: /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/main.cpp \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qwidgetaction.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qwizard.h \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/qtwidgetsversion.h \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/Windows/MainWindow/ProjectWindow/ProjectWindow.hpp \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/Windows/WorkSpace/WorkSpace.hpp \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/IRGraphicsView/IRGraphicsView.hpp \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/kNodeUI.h \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/NodeObject/NodeBase/kIRNodeBase.hpp \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/NodeObject/EditorWindow/kEditorWindow.hpp \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/NodeObject/NodeObjectClass.hpp \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/NodeObject/ObjectType/IRDataType.h \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/NodeObject/ObjectType/IRObjectName.h \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/IRGraphicsScene/IRGraphicsScene.hpp \
-  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/NodeObject/SoundNodeObject/SoundNodeObjectGraphicsItem/SoundNodeObjectGraphicsItem.hpp \
-  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/QGraphicsItem \
-  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtCore.framework/Headers/QRectF \
-  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtGui.framework/Headers/QPainterPath \
-  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtGui.framework/Headers/QPainter \
-  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/QStyleOptionGraphicsItem \
-  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/QGraphicsSceneMouseEvent \
-  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtGui.framework/Headers/QColor \
-  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtGui.framework/Headers/QKeyEvent \
-  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/LibPortAudio/SoundFilePlayer/soundFilePlayer.h \
-  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/LibPortAudio/portaudio.h \
-  MainWindow.hpp \
-  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/QMainWindow \
-  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/Windows/MainWindow/ProjectWindow/ProjectWindow.hpp
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/Windows/WorkSpace/IRWorkspaceView.hpp \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/Windows/WorkSpace/IRWorkspaceScene.hpp \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/Windows/LeftArea/NavigatorSpace.hpp \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/Windows/MainWindow/IRiMaSFoundation.h \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/ProjectDataSet/ProjectData.hpp \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/ProjectDataSet/WorkSpaceDatabase/WorkSpaceDatabase.hpp \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/IRWorkspaceNavigator/IRWorkspaceNavigatorView.hpp \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/IRWorkspaceNavigator/IRWorkspaceNavigatorScene.hpp \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/IRWorkspaceListNavigator/IRWorkspaceListNavigator.hpp

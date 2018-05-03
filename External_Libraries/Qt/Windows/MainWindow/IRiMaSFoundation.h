@@ -10,4 +10,11 @@
 
 #include "ProjectData.hpp"
 
+#include "IRGraphicsView.hpp"
+#include "IRGraphicsScene.hpp"
+
+#include "IRWorkspaceNavigatorView.hpp"
+#include "IRWorkspaceNavigatorScene.hpp"
+#include "IRWorkspaceListNavigator.hpp"
+
 #endif /* IRiMaSFoundation_h */

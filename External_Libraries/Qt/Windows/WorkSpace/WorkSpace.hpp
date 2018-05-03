@@ -17,6 +17,9 @@
 #include "IRGraphicsView.hpp"
 #include "IRGraphicsScene.hpp"
 
+#include "IRWorkspaceView.hpp"
+#include "IRWorkspaceScene.hpp"
+
 class WorkSpace : public QWidget {
     
     Q_OBJECT
@@ -25,13 +28,13 @@ public:
     WorkSpace(QWidget *parent);
     ~WorkSpace();
     
-    IRGraphicsView *getView() const;
-    IRGraphicsScene *getScene() const;
+    IRWorkspaceView *getView() const;
+    IRWorkspaceScene *getScene() const;
     
     
 private:
-    IRGraphicsView *view;
-    IRGraphicsScene *scene;
+    IRWorkspaceView *workspaceView;
+    IRWorkspaceScene *workspaceScene;
     
     IRGraphicsView *InspectorView;
     IRGraphicsScene *InspectorScene;

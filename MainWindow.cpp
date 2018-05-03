@@ -12,7 +12,8 @@ MainWindow::MainWindow(QWidget *parent)
     /* create menuws */
     createMenus();
     
-    show();
+    show(); // call show() to show menu
+    hide(); // hide main window
 
     /* connect actions */
     connect(newWorkSpaceAction, &QAction::triggered, this, &MainWindow::newWorkSpaceActionFunc);
@@ -55,7 +56,11 @@ void MainWindow::createNewProject()
 {
     std::cout << "create new project" << std::endl;
     
-    IRProjectWindow *win = new IRProjectWindow(0);
+    this->windowCounter += 1;
+    QString uniqueID = "My Project " + QString::number(this->windowCounter);
+    
+    /* win is automatically deleted when closed by Qt::WA_DeleteOnClose method. CHECK IF IT IS TRUE OR NOT!! */
+    IRProjectWindow *win = new IRProjectWindow(uniqueID,0);
     
     
 }
@@ -63,6 +68,11 @@ void MainWindow::createNewProject()
 void MainWindow::newWorkSpaceActionFunc()
 {
     std::cout << "create new workspace" << std::endl;
+    
+    /* get currently top-level window */
+    IRProjectWindow *win = static_cast<IRProjectWindow* >(QApplication::activeWindow());
+    win->createWorkspace();
+    std::cout << win->getWindowID().toStdString() << " of " << win->getWorkspaceCount() <<std::endl;
 
 }
 

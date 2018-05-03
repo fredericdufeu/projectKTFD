@@ -22,6 +22,7 @@
 #include <QKeyEvent>
 
 #include "kEditorWindow.hpp"
+#include "IRUtilities.hpp"
 
 
 

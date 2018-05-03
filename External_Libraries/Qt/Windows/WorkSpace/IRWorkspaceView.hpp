@@ -1,29 +1,29 @@
 //
-//  IRGraphicsView.hpp
+//  IRWorkspaceView.hpp
 //  projectKTFD
 //
-//  Created by Keitaro Takahashi on 2018/05/01.
+//  Created by Keitaro Takahashi on 2018/05/02.
 //
 
-#ifndef IRGraphicsView_hpp
-#define IRGraphicsView_hpp
+#ifndef IRWorkspaceView_hpp
+#define IRWorkspaceView_hpp
 
 #include <stdio.h>
 #include <iostream>
+
 #include <QtWidgets>
 
 #include "IRUtilities.hpp"
 #include "kNodeUI.h"
 
 
-
-class IRGraphicsView : public QGraphicsView
+class IRWorkspaceView : public QGraphicsView
 {
     Q_OBJECT
-public:
-    IRGraphicsView(QGraphicsScene *scene, QWidget *parent);
-    ~IRGraphicsView();
     
+public:
+    IRWorkspaceView(QGraphicsScene *scene, QWidget *parent);
+    ~IRWorkspaceView();
     
     virtual void dragEnterEvent(QDragEnterEvent *event) override;
     virtual void dragMoveEvent(QDragMoveEvent *event) override;
@@ -31,7 +31,6 @@ public:
     
 private:
     IR::Point mPos;
-
 };
 
-#endif /* IRGraphicsView_hpp */
+#endif /* IRWorkspaceView_hpp */

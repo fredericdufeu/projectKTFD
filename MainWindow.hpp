@@ -53,6 +53,9 @@ private:
     QAction *hideFileNavigatorAction;
     QAction *hideNodeObjInspectorAction;
     
+    
+    unsigned int windowCounter = 0;
+    
     //widget
 
 };
