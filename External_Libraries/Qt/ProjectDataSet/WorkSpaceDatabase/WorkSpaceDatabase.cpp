@@ -60,6 +60,13 @@ void WorkSpaceDatabase::showDatabase()
     }
 }
 
+void WorkSpaceDatabase::deleteAllWorkSpace()
+{
+    for(auto itr = this->database.begin(); itr != this->database.end(); ++itr) {
+        delete itr->second;
+    }
+}
+
 void WorkSpaceDatabase::clearDatabase()
 {
     this->database.clear();

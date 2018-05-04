@@ -65,17 +65,23 @@ IRProjectWindow::IRProjectWindow(QString id, QWidget *parent)
 
 IRProjectWindow::~IRProjectWindow()
 {
+    /* delete all WorkSpace poitner */
+    this->DB_workspace->deleteAllWorkSpace();
     delete this->DB_workspace;
 }
 
 void IRProjectWindow::closeEvent(QCloseEvent *event)
 {
-    QMessageBox::StandardButton res = QMessageBox::question(this, tr("Do you want to keep this new document?"), tr("Save? \n You can choose to save your changes, or delete this document. You can't undo this action."), QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel);
+    
+    QString t = this->id + " : Do you want to keep this new document?";
+    QString t2 = this->id + "Save? \n You can choose to save your changes, or delete this document. You can't undo this action.";
+    
+    QMessageBox::StandardButton res = QMessageBox::question(this, tr(t.toLatin1().data()), tr(t2.toLatin1().data()), QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel);
     
     switch(res)
     {
         case QMessageBox::Yes:
-            event->ignore();
+            //event->ignore();
             event->accept();
             break;
             

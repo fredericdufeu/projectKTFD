@@ -18,7 +18,7 @@ MainWidgetController::MainWidgetController(QWidget *parent)
 
 MainWidgetController::~MainWidgetController()
 {
-    
+    delete this->p_data;
 }
 
 
