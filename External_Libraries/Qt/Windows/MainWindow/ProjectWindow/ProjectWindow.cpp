@@ -44,8 +44,9 @@ IRProjectWindow::IRProjectWindow(QString id, QWidget *parent)
     IRWorkspaceListNavigator* workspaceList = this->navigatorspace->getWorkspaceList();
     QObject::connect(workspaceList, SIGNAL(selectionChangedSignal(QString)), this, SLOT(workspaceSelectionChangedSlot(QString)));
 
-    /* create WorkSpace Database*/
-    this->DB_workspace = new WorkSpaceDatabase();
+    /* create ProjectData which handls all data */
+    this->projectdata = new ProjectData();
+    
     /* create one WorkSpace which is initial one */
     createWorkspace();
 
@@ -56,18 +57,26 @@ IRProjectWindow::IRProjectWindow(QString id, QWidget *parent)
     this->layout->addWidget(this->stackeWidget,5);
     /* setup layout spacing */
     this->layout->setSpacing(4);
+    this->layout->setContentsMargins(1, 1, 1, 1);
+
     setLayout(this->layout);
 
     /* show */
     show();
+    
+    
+    /* register shortcut key */
+    QShortcut *closeCtrlW = new QShortcut(this);
+    closeCtrlW->setKey(Qt::CTRL + Qt::Key_W);
+    connect(closeCtrlW, SIGNAL(activated()), this, SLOT(close()));
 
 }
 
 IRProjectWindow::~IRProjectWindow()
 {
     /* delete all WorkSpace poitner */
-    this->DB_workspace->deleteAllWorkSpace();
-    delete this->DB_workspace;
+    //this->DB_workspace->deleteAllWorkSpace();
+    //delete this->DB_workspace;
 }
 
 void IRProjectWindow::closeEvent(QCloseEvent *event)
@@ -116,7 +125,7 @@ void IRProjectWindow::createWorkspace()
     
     WorkSpace *newWorkSpace = new WorkSpace(this);
     
-    if(this->DB_workspace->registerObjToDatabase(item.toStdString(), newWorkSpace) == false) {
+    if(this->projectdata->registerWorkSpace(item.toStdString(), newWorkSpace) == false) {
         QMessageBox msg(this); msg.setText(tr("fatal Error : IRProjectWindow() : Could not create new workspace!\n")); msg.exec();
     }else{
         /* set new workspace on top to display on the Project window. */
@@ -124,16 +133,14 @@ void IRProjectWindow::createWorkspace()
     }
     
     std::cout << "\n ===== WorkSpace Database ===== \n" << std::endl;
-    this->DB_workspace->showDatabase();
+    this->projectdata->showWorkSpace();
     
     auto idx = this->stackeWidget->addWidget(newWorkSpace);
     auto index = this->stackeWidget->currentIndex();
     std::cout << "current Index = " << index << " : " << idx << std::endl;
     this->stackeWidget->setCurrentIndex(0);
     
-    
 }
-
 
 /*
  #  This method is called when a SIGNAL selectionChangedSignal(QString) is called in IRWorkspaceListNavigator class.
@@ -144,7 +151,7 @@ void IRProjectWindow::workspaceSelectionChangedSlot(QString id)
 {
     std::cout << "workspaceSelectionChanged slot called!! " << id.toStdString() << std::endl;
     /* retrieve a pointer of the selected WorkSpace object */
-    WorkSpace *ws = this->DB_workspace->retrieveObjFromDatabase(id.toStdString());
+    WorkSpace *ws = this->projectdata->retrieveWorkSpace(id.toStdString());
     /* get an index of the retrieved WorkSpace object registered to QStackeWidget */
     int index = this->stackeWidget->indexOf(ws);
     /* set the selected WorkSpace to stackeWidget */
@@ -158,5 +165,4 @@ void IRProjectWindow::deleteWorkspace()
 {
     this->workspaceCounter -= 1;
 }
-
 

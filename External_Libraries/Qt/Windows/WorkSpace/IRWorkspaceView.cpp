@@ -12,7 +12,6 @@ IRWorkspaceView::IRWorkspaceView(QGraphicsScene *scene, QWidget *parent)
 : QGraphicsView(scene, parent)
 {
     setAcceptDrops(true);
-    
     std::cout << "workspace view size = " << this->width() << ", " << this->height() << std::endl;
 }
 

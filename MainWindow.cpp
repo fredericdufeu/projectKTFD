@@ -24,6 +24,9 @@ MainWindow::MainWindow(QWidget *parent)
     this->openProjectAction->setShortcut(Qt::CTRL + Qt::Key_O); // set shortcuts (windows control+o, mac commando+o)
     connect(hideFileNavigatorAction, &QAction::triggered, this, &MainWindow::hideFileNavigator);
     connect(hideNodeObjInspectorAction, &QAction::triggered, this, &MainWindow::hideNodeObjInspector);
+    
+    
+    
 }
 
 
@@ -60,6 +63,11 @@ void MainWindow::createNewProject()
     QString uniqueID = "My Project " + QString::number(this->windowCounter);
     
     /* win is automatically deleted when closed by Qt::WA_DeleteOnClose method. CHECK IF IT IS TRUE OR NOT!! */
+    
+    IRFileSystem IRDir = IRFileSystem();
+    IRDir.createProjectDirectory();
+    
+    
     IRProjectWindow *win = new IRProjectWindow(uniqueID,0);
     
     

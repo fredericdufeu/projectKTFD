@@ -13,5 +13,6 @@
 
 #include "IRDataStructure.h"
 
+#include "IRFileSystem.hpp"
 
 #endif /* IRUtilities_h */

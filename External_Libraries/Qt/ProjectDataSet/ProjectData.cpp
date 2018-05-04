@@ -10,37 +10,35 @@
 
 ProjectData::ProjectData()
 {
-    this->workspaceData = WorkSpaceDatabase();
+    this->workspaceData = new WorkSpaceDatabase();
 }
 
 ProjectData::~ProjectData()
 {
-    this->workspaceData.clearDatabase();
+
 }
 
-bool ProjectData::registerWorkspace(std::string id, WorkSpace* obj)
+bool ProjectData::registerWorkSpace(std::string id, WorkSpace *obj)
 {
-    return this->workspaceData.registerObjToDatabase(id,obj);
+    return this->workspaceData->registerObjToDatabase(id,obj);
 }
 
-WorkSpace* ProjectData::retrieveWorkspace(std::string id)
+WorkSpace* ProjectData::retrieveWorkSpace(std::string id)
 {
-    return this->workspaceData.retrieveObjFromDatabase(id);
+    return this->workspaceData->retrieveObjFromDatabase(id);
 }
 
-bool ProjectData::removeWorkspace(std::string id)
+bool ProjectData::removeWorkSpace(std::string id)
 {
-    WorkSpace *obj = retrieveWorkspace(id);
-    if(obj != nullptr){
-        delete obj;
-    }
-    return this->workspaceData.removeObjFromDatabase(id);
+    return this->workspaceData->removeObjFromDatabase(id);
 }
 
-void ProjectData::showWorkspace()
+void ProjectData::showWorkSpace()
 {
-    this->workspaceData.showDatabase();
+    this->workspaceData->showDatabase();
 }
 
-
-
+void ProjectData::clearWorkSpace()
+{
+    this->workspaceData->clearDatabase();
+}

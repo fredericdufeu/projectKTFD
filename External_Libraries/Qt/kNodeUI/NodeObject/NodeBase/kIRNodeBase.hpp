@@ -51,12 +51,14 @@ public:
     
     /* enable to open an editor window when double clickled*/
     bool isOpenEditorWindow = false;
-    //kEditorWindow getEditorWindow();
+    
+    kEditorWindow *getEditorWindow();
 
 
 private:
     IR::Frame frame;
-    
+    kEditorWindow *editorWindow;
+
     
 };
 #endif /* kIRNodeBase_hpp */

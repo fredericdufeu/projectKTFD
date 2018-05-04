@@ -7,12 +7,13 @@
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/TreeView_moc.o
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/GraphicsScene_moc.o
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/GraphicsView_moc.o
-/Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/readSoundFileAtPath.o
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/IRWorkspaceListNavigator-C8750FDDA9F1A060.o
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/WorkSpace-4AE5A3524F39E14F.o
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/IRWorkspaceListNavigator_moc.o
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/WorkSpace_moc.o
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/IRWorkspaceScene_moc.o
+/Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/kEditorWindowView_moc.o
+/Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/readSoundFileAtPath.o
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/SoundFile.o
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/IRWorkspaceView_moc.o
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/main.o
@@ -27,10 +28,12 @@
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/IRWorkspaceScene-B747FC17B497677.o
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/moc_MainWindow.o
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/SoundNodeObject.o
+/Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/kEditorWindowView-BC475D91FA059B94.o
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/soundFilePlayer.o
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/ProjectWindow-50D4B0DB3B5AB072.o
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/ProjectWindow_moc.o
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/kIRNodeBase.o
+/Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/IRFileSystem.o
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/EditorWindowGraphicsView-30E4E0441914F60B.o
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/NodeObject.o
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/IRWorkspaceNavigatorScene.o
@@ -44,6 +47,7 @@
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/IRFileUtility.o
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/dummy.o
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/NodeObjectClass.o
+/Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/QDirSystem.o
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/CentralWidget-75F4F0B67780C30C.o
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/kEditorWindow-F928F39AC1F49A6F.o
 /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/Build/projectKTFD.build/Debug/projectKTFD.build/Objects-normal/x86_64/kEditorWindow_moc.o

@@ -11,6 +11,8 @@
 #include <stdio.h>
 #include <iostream>
 
+#include <QWidget>
+
 #include "WorkSpace.hpp"
 #include "WorkSpaceDatabase.hpp"
 #include "IRDataStructure.h"
@@ -21,26 +23,27 @@ public:
     ProjectData();
     ~ProjectData();
     
-    // register an Object to the database with id.
-    // return false if failed.
-    bool registerWorkspace(std::string id, WorkSpace* obj);
-    // retrieve an Object registered in the database.
-    // return a pointer of the Object if success, and NULL if failed.
-    WorkSpace* retrieveWorkspace(std::string id);
-    // remove an Object regiestered in the database and deallocate it.
-    // return false if failed.
-    bool removeWorkspace(std::string id);
-    // print out all objects information registered to the database.
-    void showWorkspace();
+    bool registerWorkSpace(std::string id, WorkSpace *obj);
+    WorkSpace* retrieveWorkSpace(std::string id);
+    bool removeWorkSpace(std::string id);
+    void showWorkSpace();
+    void clearWorkSpace();
+    
+    
+    
     
 
 private:
     //workspace
     
-    WorkSpaceDatabase workspaceData;
+    WorkSpaceDatabase *workspaceData;
+    
+    QString RESOURCE_DIRECTORY = "/Resources";
+    QString DATA_DIRECTORY = "/Data";
+    QString AUDIO_DIRECTORY = "/Resources/audio";
+    QString IMAGE_DIRECTORY = "/Resources/image";
+    QString MOVIE_DIRECTORY = "/Resources/movie";
 
-    
-    
     
 };
 

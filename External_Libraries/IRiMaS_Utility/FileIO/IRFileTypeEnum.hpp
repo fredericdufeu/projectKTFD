@@ -15,6 +15,8 @@
 
 namespace IR_FILE
 {
+
+    
     enum FILEFORMAT
     {
         /* undefined */

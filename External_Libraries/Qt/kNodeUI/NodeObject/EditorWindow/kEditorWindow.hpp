@@ -15,6 +15,8 @@
 
 
 #include "IRUtilities.hpp"
+#include "kEditorWindowView.hpp"
+#include "kEditorWindowScene.hpp"
 
 class kEditorWindow : public QWidget
 {
@@ -25,6 +27,10 @@ public:
     ~kEditorWindow();
 private:
     QWidget *parent;
+    
+    QHBoxLayout *layout;
+    kEditorWindowView *view;
+    kEditorWindowScene *scene;
     
 };
 

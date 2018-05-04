@@ -25,7 +25,8 @@ NavigatorSpace::NavigatorSpace(QWidget *parent)
     
     
     this->layout->setSpacing(4);
-    
+    this->layout->setContentsMargins(4, 4, 4, 4);
+
 }
 
 NavigatorSpace::~NavigatorSpace()

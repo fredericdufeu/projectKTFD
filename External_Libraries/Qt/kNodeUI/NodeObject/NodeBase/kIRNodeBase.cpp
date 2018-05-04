@@ -12,7 +12,7 @@ kIRNodeBase::kIRNodeBase(IR::Frame frame)
 {
     this->frame = frame;
     
-    //this->editorWindow = new kEditorWindow(this->parent);
+    this->editorWindow = new kEditorWindow(0);
 
     setFlags(QGraphicsItem::ItemIsMovable | QGraphicsItem::ItemIsSelectable | QGraphicsItem::ItemIsFocusable);
 }
@@ -21,9 +21,6 @@ kIRNodeBase::~kIRNodeBase()
 {
     
 }
-
-
-
 
 void kIRNodeBase::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
@@ -46,8 +43,9 @@ void kIRNodeBase::mouseReleaseEvent(QGraphicsSceneMouseEvent *event)
 
 void kIRNodeBase::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event)
 {
-    if(this->isOpenEditorWindow == true) {
-    }
+    this->editorWindow->show();
+    this->editorWindow->raise(); // mac
+    this->editorWindow->activateWindow(); // windows??
 }
 
 void kIRNodeBase::paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWidget *)
@@ -95,6 +93,11 @@ void kIRNodeBase::setFrameSize(IR::Frame frame)
 {
     this->frame = frame;
     update();
+}
+
+kEditorWindow* kIRNodeBase::getEditorWindow()
+{
+    return this->editorWindow;
 }
 
 

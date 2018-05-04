@@ -71,6 +71,7 @@ void WorkSpaceDatabase::deleteAllWorkSpace()
 
 void WorkSpaceDatabase::clearDatabase()
 {
+    deleteAllWorkSpace();
     this->database.clear();
 }
 

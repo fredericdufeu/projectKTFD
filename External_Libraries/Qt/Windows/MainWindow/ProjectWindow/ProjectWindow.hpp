@@ -14,6 +14,7 @@
 #include "WorkSpace.hpp"
 #include "NavigatorSpace.hpp"
 #include "WorkSpaceDatabase.hpp"
+#include "ProjectData.hpp"
 
 class IRProjectWindow : public QWidget
 {
@@ -28,19 +29,17 @@ public:
     
     void createWorkspace();
     void deleteWorkspace();
-
     
 public slots:
     void workspaceSelectionChangedSlot(QString id);
 
-    
 private:
     void closeEvent(QCloseEvent *event) override;
     
-    
     unsigned int workspaceCounter = 0;
-    WorkSpaceDatabase *DB_workspace;
+    //WorkSpaceDatabase *DB_workspace;
     
+    ProjectData *projectdata;
     /* This pointer indicates the workspace which should be shown on the Project Window. */
     WorkSpace *topWorkspace;
     /* for switching Widget */

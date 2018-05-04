@@ -454,6 +454,8 @@ dependencies: \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/IRiMaS_Utility/FileIO/IRFileUtility.hpp \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/IRiMaS_Utility/FileIO/IRFileTypeEnum.hpp \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/IRiMaS_Utility/DataType/IRDataStructure.h \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/IRFileSystem/IRFileSystem.hpp \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/IRFileSystem/QtDirSystem/QDirSystem.hpp \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/kNodeUI.h \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/NodeObject/NodeBase/kIRNodeBase.hpp \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/QGraphicsItem \
@@ -465,6 +467,9 @@ dependencies: \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtGui.framework/Headers/QColor \
   /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtGui.framework/Headers/QKeyEvent \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/NodeObject/EditorWindow/kEditorWindow.hpp \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/NodeObject/EditorWindow/kEditorWindowView.hpp \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/NodeObject/EditorWindow/kEditorWindowScene.hpp \
+  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/QGraphicsScene \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/NodeObject/NodeObjectClass.hpp \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/NodeObject/ObjectType/IRDataType.h \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/NodeObject/ObjectType/IRObjectName.h \

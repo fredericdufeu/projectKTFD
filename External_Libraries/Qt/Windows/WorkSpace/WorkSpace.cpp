@@ -24,7 +24,8 @@ WorkSpace::WorkSpace(QWidget *parent)
     this->layout->addWidget(this->InspectorView,1);
     
     this->layout->setSpacing(4);
-    
+    this->layout->setContentsMargins(4, 4, 4, 4);
+
 }
 
 WorkSpace::~WorkSpace()
