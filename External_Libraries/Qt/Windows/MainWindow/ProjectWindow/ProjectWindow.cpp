@@ -92,6 +92,8 @@ void IRProjectWindow::closeEvent(QCloseEvent *event)
         case QMessageBox::Cancel:
             event->ignore();
             break;
+        default:
+            break;
     }
     
 }
@@ -156,3 +158,5 @@ void IRProjectWindow::deleteWorkspace()
 {
     this->workspaceCounter -= 1;
 }
+
+

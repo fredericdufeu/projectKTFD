@@ -27,11 +27,12 @@ public:
     // retrieve an Object registered in the database.
     // return a pointer of the Object if success, and NULL if failed.
     WorkSpace* retrieveWorkspace(std::string id);
-    // remove an Object regiestered in the database.
+    // remove an Object regiestered in the database and deallocate it.
     // return false if failed.
     bool removeWorkspace(std::string id);
     // print out all objects information registered to the database.
     void showWorkspace();
+    
 
 private:
     //workspace

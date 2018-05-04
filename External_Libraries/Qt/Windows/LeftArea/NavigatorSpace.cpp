@@ -38,3 +38,4 @@ IRWorkspaceListNavigator* NavigatorSpace::getWorkspaceList()
     return this->workspacelist;
 }
 
+

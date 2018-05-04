@@ -51,25 +51,52 @@ void IRWorkspaceView::dropEvent(QDropEvent *event)
     
     std::cout << "filename : " << path << " loading... : file format is " << fileformat.format << std::endl;
     struct IR::Frame objFrame = { { static_cast<float>(pointInSceneCoordinates.x()), static_cast<float>(pointInSceneCoordinates.y()) }, {150, 40} };
+
+    
+    switch (fileformat.type)
+    {
+        case IR_FILE::FILETYPE::AUDIO:
+            createAudioObj(objFrame);
+            break;
+            
+        case IR_FILE::FILETYPE::IMAGE:
+            break;
+        default:
+            break;
+            /*
+
+        case IR_FILE::FILETYPE::IMAGE:
+            break;
+        case IR_FILE::FILETYPE::MOVIE:
+            break;
+        default:
+            break;
+             */
+    }
     
     
+    
+
+}
+
+void IRWorkspaceView::createAudioObj(IR::Frame objFrame)
+{
     IR_Data::Type inputTypeArray [] = {
-        IR_Data::IR_AY_FLT
+        IR_Data::IR_AY_FLT,
+        IR_Data::IR_INT32, // begining
+        IR_Data::IR_INT32 // end
     };
     
     IR_Data::Type outputTypeArray [] = {
         IR_Data::IR_AY_FLT
     };
     
-    IR_Data::INOUTDATA inputDataType = IR_Data::INOUTDATA{1, inputTypeArray};
+    IR_Data::INOUTDATA inputDataType = IR_Data::INOUTDATA{3, inputTypeArray};
     IR_Data::INOUTDATA outputDataType = IR_Data::INOUTDATA{1, outputTypeArray};
-
-    kNodeObject *obj = createObj(IR_Object::NONAME, objFrame, inputDataType,outputDataType);
+    
+    kNodeObject *obj = createObj(IR_Object::NONAME, objFrame, inputDataType, outputDataType);
     scene()->addItem(obj);
     scene()->update();
-    
-    
-    
     
 }
 
@@ -103,6 +130,22 @@ void IRWorkspaceView::duplicateObj()
 }
 
 
+
+/* event */
+void IRWorkspaceView::keyPressEvent(QKeyEvent *event)
+{
+    std::cout << "key pressed! " << event->key() << std::endl;
+    switch (event->key())
+    {
+        case Qt::Key_Delete:
+            break;
+    }
+}
+
+void IRWorkspaceView::keyReleaseEvent(QKeyEvent *event)
+{
+    
+}
 
 
 

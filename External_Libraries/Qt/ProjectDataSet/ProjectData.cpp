@@ -30,6 +30,10 @@ WorkSpace* ProjectData::retrieveWorkspace(std::string id)
 
 bool ProjectData::removeWorkspace(std::string id)
 {
+    WorkSpace *obj = retrieveWorkspace(id);
+    if(obj != nullptr){
+        delete obj;
+    }
     return this->workspaceData.removeObjFromDatabase(id);
 }
 

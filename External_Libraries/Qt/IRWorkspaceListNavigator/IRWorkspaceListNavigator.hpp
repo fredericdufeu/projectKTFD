@@ -23,6 +23,19 @@ public:
     void addNewItem(QString item);
     void removeItem();
     
+    bool isThereAnySelectedItems();
+
+    
+protected:
+    void keyPressEvent(QKeyEvent *event) override;
+    void keyReleaseEvent(QKeyEvent *event) override;
+    
+    
+    void keyUpEvent();
+    void keyDownEvent();
+    void keyDeleteEvent();
+    
+
     
 signals:
     void selectionChangedSignal(QString);

@@ -28,6 +28,7 @@ public:
     
     void createWorkspace();
     void deleteWorkspace();
+
     
 public slots:
     void workspaceSelectionChangedSlot(QString id);

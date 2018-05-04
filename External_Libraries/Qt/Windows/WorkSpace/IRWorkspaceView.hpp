@@ -44,13 +44,15 @@ signals:
     void pasteObjSignal(IR::Frame objFrame);
     void duplicateObjSignal();
 
-    
-    
+protected:
+    void keyPressEvent(QKeyEvent *event) override;
+    void keyReleaseEvent(QKeyEvent *event) override;
+
 private:
     IR::Point mPos;
     
 
-    
+    void createAudioObj(IR::Frame objFrame);
     
     
 };

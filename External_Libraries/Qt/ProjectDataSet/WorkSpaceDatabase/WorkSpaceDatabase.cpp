@@ -48,6 +48,8 @@ bool WorkSpaceDatabase::removeObjFromDatabase(std::string id)
         return false;
     }else{
         //erase item if it exists.
+        WorkSpace *obj = this->database[id];
+        delete obj;
         this->database.erase(id);
         return true;
     }
