@@ -73,7 +73,7 @@ IR_Object::Id kNodeObject::getUniqueId()
 {
     return this->uniqueID;
 }
-
+/*
 void kNodeObject::mouseMoveEvent(QGraphicsSceneMouseEvent *event)
 {
     std::cout << "test" << std::endl;
@@ -93,7 +93,7 @@ void kNodeObject::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event)
 void kNodeObject::mouseReleaseEvent(QGraphicsSceneMouseEvent *event)
 {
     kIRNodeBase::mouseReleaseEvent(event);
-}
+}*/
 
 std::string kNodeObject::IRRandomStringsGenerator(const int len)
 {
