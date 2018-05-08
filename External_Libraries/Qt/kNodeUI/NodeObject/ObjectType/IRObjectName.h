@@ -19,6 +19,8 @@ namespace IR_Object {
         FORK = 2,
         TEST = 3,
     };
+    
+    using Id = std::string;
 }
 
 #endif /* IRObjectName_h */

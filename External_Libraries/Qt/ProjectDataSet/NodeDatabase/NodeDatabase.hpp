@@ -35,12 +35,19 @@ public:
     bool removeObjFromDatabase(std::string id);
     // print out all objects information registered to the database.
     void showDatabase();
+
+    //clear all members
+    void clearDatabase();
     
-    
+    //show selected objects
+    void showSelectedObj();
     
 private:
     //database map.
     std::map<std::string, kNodeObject*>database;
+    
+    //deallocate all node pointer
+    void deleteAllNode();
     
 };
 

@@ -13,12 +13,17 @@ IRWorkspaceView::IRWorkspaceView(QGraphicsScene *scene, QWidget *parent)
 {
     setAcceptDrops(true);
     std::cout << "workspace view size = " << this->width() << ", " << this->height() << std::endl;
+    
+    this->database = new NodeDatabase();
+    
 }
 
 IRWorkspaceView::~IRWorkspaceView()
 {
     
 }
+
+
 
 void IRWorkspaceView::dragEnterEvent(QDragEnterEvent *event)
 {
@@ -72,10 +77,6 @@ void IRWorkspaceView::dropEvent(QDropEvent *event)
             break;
              */
     }
-    
-    
-    
-
 }
 
 void IRWorkspaceView::createAudioObj(IR::Frame objFrame)
@@ -103,48 +104,13 @@ kNodeObject *IRWorkspaceView::createObj(IR_Object::Name name, IR::Frame objFrame
 {
     kNodeObject *obj = new kNodeObject(IR_Object::NONAME, objFrame, input, output);
     
+    this->database->registerObjToDatabase(obj->getUniqueId(), obj);
+    
     emit createObjSignal(name, objFrame);
     
     return obj;
 }
 
-void IRWorkspaceView::deleteObj()
-{
-    emit deleteObjSignal();
-}
-
-void IRWorkspaceView::copyObj(kNodeObject *node)
-{
-    emit copyObjSignal(node);
-}
-
-void IRWorkspaceView::pasteObj(IR::Frame objFrame)
-{
-    emit pasteObjSignal(objFrame);
-}
-
-void IRWorkspaceView::duplicateObj()
-{
-    emit duplicateObjSignal();
-}
-
-
-
-/* event */
-void IRWorkspaceView::keyPressEvent(QKeyEvent *event)
-{
-    std::cout << "key pressed! " << event->key() << std::endl;
-    switch (event->key())
-    {
-        case Qt::Key_Delete:
-            break;
-    }
-}
-
-void IRWorkspaceView::keyReleaseEvent(QKeyEvent *event)
-{
-    
-}
 
 
 

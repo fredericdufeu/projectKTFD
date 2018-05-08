@@ -7,7 +7,6 @@
 
 #include "IRWorkspaceListNavigator.hpp"
 
-
 IRWorkspaceListNavigator::IRWorkspaceListNavigator(QWidget *parent)
 :QListWidget(parent)
 {

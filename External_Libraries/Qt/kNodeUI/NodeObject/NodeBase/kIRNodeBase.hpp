@@ -11,36 +11,44 @@
 #include <stdio.h>
 #include <iostream>
 
-#include <QGraphicsItem>
-#include <QRectF>
-#include <QPainterPath>
-#include <QPainter>
-#include <QStyleOptionGraphicsItem>
-#include <QWidget>
-#include <QGraphicsSceneMouseEvent>
-#include <QColor>
-#include <QKeyEvent>
+#include <QtWidgets>
+
 
 #include "kEditorWindow.hpp"
 #include "IRUtilities.hpp"
 
 
 
-class kIRNodeBase : public QGraphicsItem
+class kIRNodeBase : public QGraphicsObject
 {
-    
+    Q_OBJECT
 public:
     kIRNodeBase(IR::Frame frame);
     ~kIRNodeBase();
     
     QRectF boundingRect() const override;
     QPainterPath shape() const override;
-
     
+    /* move object to the indicated position */
+    void setObjPos(IR::Origin pos);
+    void moveObjBy(IR::Origin pos);
+
+    /*
     virtual void mousePressEvent(QGraphicsSceneMouseEvent *event) override;
     virtual void mouseMoveEvent(QGraphicsSceneMouseEvent *event) override;
     virtual void mouseReleaseEvent(QGraphicsSceneMouseEvent *event) override;
     virtual void mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event) override;
+    */
+    void keyPressEvent(QKeyEvent *event) override;
+    void keyReleaseEvent(QKeyEvent *event) override;
+    
+    void openEditorWindow();
+
+    /* handle all item status change */
+    virtual QVariant itemChange(GraphicsItemChange change, const QVariant &value) override;
+    
+    /* call when selection changed in mousePressEvent() */
+    virtual void objSelectionChanged();
 
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
     
@@ -53,11 +61,22 @@ public:
     bool isOpenEditorWindow = false;
     
     kEditorWindow *getEditorWindow();
+    
+    
+    /* give signals to inform events */
+signals:
+    void mousePressSignal(QGraphicsSceneMouseEvent *event);
+    void mouseMoveSignal(QGraphicsSceneMouseEvent *event);
+    void mouseReleaseSignal(QGraphicsSceneMouseEvent *event);
+    void mouseDoubleClickSignal(QGraphicsSceneMouseEvent *event);
+    
 
 
 private:
     IR::Frame frame;
-    kEditorWindow *editorWindow;
+    kEditorWindow *editorWindow = nullptr;
+    
+    bool isEnableMultiSelection = false;
 
     
 };

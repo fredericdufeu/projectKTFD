@@ -8,7 +8,7 @@
 #include "kIRNodeBase.hpp"
 
 kIRNodeBase::kIRNodeBase(IR::Frame frame)
-: QGraphicsItem()
+: QGraphicsObject()
 {
     this->frame = frame;
     
@@ -19,26 +19,34 @@ kIRNodeBase::kIRNodeBase(IR::Frame frame)
 
 kIRNodeBase::~kIRNodeBase()
 {
-    
 }
-
+/*
 void kIRNodeBase::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
-    std::cout << "mouse pressed " << event->scenePos().x() << std::endl;
+    //necessary to call it to select this object
+    QGraphicsObject::mousePressEvent(event);
+    std::cout << "mouse pressed " << isSelected() << " : " << event->scenePos().x() << std::endl;
 
+    if(isSelected()){
+        objSelectionChanged();
+    }
+    emit mousePressSignal(event);
 }
 
 void kIRNodeBase::mouseMoveEvent(QGraphicsSceneMouseEvent *event)
 {
     std::cout << "mouse move " << event->scenePos().x() << std::endl;
     moveBy(event->scenePos().x() - event->lastScenePos().x(), event->scenePos().y() - event->lastScenePos().y());
-
     
+    emit mouseMoveSignal(event);
 }
 
 void kIRNodeBase::mouseReleaseEvent(QGraphicsSceneMouseEvent *event)
 {
-    
+    QGraphicsObject::mouseReleaseEvent(event);
+    std::cout << "mouse released " << isSelected() << " : " << event->scenePos().x() << std::endl;
+
+    emit mouseReleaseSignal(event);
 }
 
 void kIRNodeBase::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event)
@@ -46,12 +54,22 @@ void kIRNodeBase::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event)
     this->editorWindow->show();
     this->editorWindow->raise(); // mac
     this->editorWindow->activateWindow(); // windows??
+    
+    emit mouseDoubleClickSignal(event);
+}*/
+
+void kIRNodeBase::openEditorWindow()
+{
+    this->editorWindow->show();
+    this->editorWindow->raise(); // mac
+    this->editorWindow->activateWindow(); // windows??
 }
+
 
 void kIRNodeBase::paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWidget *)
 {
     
-    QPen pen(Qt::darkRed);
+    QPen pen(isSelected()? Qt::darkRed : Qt::blue);
     pen.setColor(Qt::black);
     painter->setPen(pen);
     
@@ -59,7 +77,9 @@ void kIRNodeBase::paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWi
     float y = this->frame.origin.y - this->frame.size.height/2;
 
     painter->drawRect(x, y, this->frame.size.width, this->frame.size.height);
-    painter->fillRect(x, y, this->frame.size.width, this->frame.size.height, Qt::lightGray);
+    
+    auto color = isSelected()? Qt::blue : Qt::lightGray;
+    painter->fillRect(x, y, this->frame.size.width, this->frame.size.height, color);
 
 }
 
@@ -98,6 +118,53 @@ void kIRNodeBase::setFrameSize(IR::Frame frame)
 kEditorWindow* kIRNodeBase::getEditorWindow()
 {
     return this->editorWindow;
+}
+
+void kIRNodeBase::objSelectionChanged()
+{
+    
+}
+
+QVariant kIRNodeBase::itemChange(GraphicsItemChange change, const QVariant &value)
+{
+    if(change == ItemSelectedChange) {
+        std::cout << "item selected changed!! " << isSelected() <<  std::endl;
+    }
+    
+    return QGraphicsObject::itemChange(change,value);
+}
+
+void kIRNodeBase::keyPressEvent(QKeyEvent *event)
+{
+    switch (event->key())
+    {
+        case Qt::SHIFT:
+            this->isEnableMultiSelection = true;
+            break;
+        
+    }
+}
+
+void kIRNodeBase::keyReleaseEvent(QKeyEvent *event)
+{
+    switch (event->key())
+    {
+        case Qt::SHIFT:
+            this->isEnableMultiSelection = false;
+            break;
+            
+    }
+}
+
+
+void kIRNodeBase::setObjPos(IR::Origin pos)
+{
+    setPos(pos.x, pos.y);
+}
+
+void kIRNodeBase::moveObjBy(IR::Origin pos)
+{
+    moveBy(pos.x - this->frame.origin.x, pos.y - this->frame.origin.y);
 }
 
 

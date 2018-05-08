@@ -16,6 +16,9 @@
 #include "IRUtilities.hpp"
 #include "kNodeUI.h"
 
+#include "NodeDatabase.hpp"
+#include "IRWorkspaceScene.hpp"
+
 
 class IRWorkspaceView : public QGraphicsView
 {
@@ -28,31 +31,22 @@ public:
     virtual void dragEnterEvent(QDragEnterEvent *event) override;
     virtual void dragMoveEvent(QDragMoveEvent *event) override;
     virtual void dropEvent(QDropEvent *event) override;
-    
-    
+
     /* fundamental */
     kNodeObject *createObj(IR_Object::Name name, IR::Frame objFrame, IR_Data::INOUTDATA input, IR_Data::INOUTDATA output);
     void deleteObj();
-    void copyObj(kNodeObject *node);
-    void pasteObj(IR::Frame objFrame);
-    void duplicateObj();
-    
+
 signals:
     void createObjSignal(IR_Object::Name name, IR::Frame objFrame);
-    void deleteObjSignal();
-    void copyObjSignal(kNodeObject *node);
-    void pasteObjSignal(IR::Frame objFrame);
-    void duplicateObjSignal();
 
-protected:
-    void keyPressEvent(QKeyEvent *event) override;
-    void keyReleaseEvent(QKeyEvent *event) override;
 
 private:
     IR::Point mPos;
     
-
+    NodeDatabase *database;
     void createAudioObj(IR::Frame objFrame);
+    
+    QList<kNodeObject> selectedObjList;
     
     
 };

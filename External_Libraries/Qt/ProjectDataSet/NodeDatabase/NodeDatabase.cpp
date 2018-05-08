@@ -61,3 +61,29 @@ void NodeDatabase::showDatabase()
         std::cout << "key = " << itr->first << " : val = " << itr->second << "\n"<< std::endl;
     }
 }
+
+void NodeDatabase::deleteAllNode()
+{
+    for(auto itr = this->database.begin(); itr != this->database.end(); ++itr) {
+        delete itr->second;
+    }
+}
+
+void NodeDatabase::clearDatabase()
+{
+    deleteAllNode();
+    this->database.clear();
+}
+
+void NodeDatabase::showSelectedObj()
+{
+    for (auto x : this->database) {
+        std::cout << x.first << " : " << x.second << "\n";
+        kNodeObject *o = static_cast<kNodeObject *>(x.second);
+        if(o->isSelected()) {
+            std::cout << " selected : "<< x.first << " : " << x.second << "\n";
+
+        }
+        
+    }
+}

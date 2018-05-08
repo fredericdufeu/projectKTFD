@@ -15,4 +15,9 @@
 
 #include "IRFileSystem.hpp"
 
+/* this header includes all fundamental static values required in this software */
+#include "fundamentalStaticValues.hpp"
+
+
+
 #endif /* IRUtilities_h */

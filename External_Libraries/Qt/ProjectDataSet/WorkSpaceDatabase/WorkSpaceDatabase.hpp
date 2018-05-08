@@ -33,15 +33,15 @@ public:
     bool removeObjFromDatabase(std::string id);
     // print out all objects information registered to the database.
     void showDatabase();
-    //deallocate all WorkSpace pointer
-    void deleteAllWorkSpace();
+
     // clear all members.
     void clearDatabase();
     
 private:
     //database map.
     std::map<std::string, WorkSpace*>database;
-    
+    //deallocate all WorkSpace pointer
+    void deleteAllWorkSpace();
 };
 
 
