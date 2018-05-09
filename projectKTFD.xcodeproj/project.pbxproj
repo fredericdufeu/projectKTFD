@@ -60,6 +60,8 @@
 		7D617BAC2098880B00E270EE /* ProjectWindow.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7D617BAA2098880B00E270EE /* ProjectWindow.cpp */; };
 		7D617BAD2098886100E270EE /* ProjectWindow.hpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7D617BAB2098880B00E270EE /* ProjectWindow.hpp */; };
 		7D617BAE2098A13F00E270EE /* WorkSpace.hpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7D617B952098744500E270EE /* WorkSpace.hpp */; };
+		7D7F2E6020A2F3720007928C /* selectionAreaSquare.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7D7F2E5E20A2F3720007928C /* selectionAreaSquare.cpp */; };
+		7D7F2E6120A317E50007928C /* selectionAreaSquare.hpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7D7F2E5F20A2F3720007928C /* selectionAreaSquare.hpp */; };
 		7D7F47792099F3BD009B37F5 /* IRWorkspaceView.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7D7F47772099F3BD009B37F5 /* IRWorkspaceView.cpp */; };
 		7D7F477C2099F3C4009B37F5 /* IRWorkspaceScene.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7D7F477A2099F3C4009B37F5 /* IRWorkspaceScene.cpp */; };
 		7D7F477D2099F78B009B37F5 /* IRWorkspaceView.hpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7D7F47782099F3BD009B37F5 /* IRWorkspaceView.hpp */; };
@@ -187,6 +189,8 @@
 		7D617BA720987FFB00E270EE /* WorkSpaceDatabase.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = WorkSpaceDatabase.hpp; sourceTree = "<group>"; };
 		7D617BAA2098880B00E270EE /* ProjectWindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ProjectWindow.cpp; sourceTree = "<group>"; };
 		7D617BAB2098880B00E270EE /* ProjectWindow.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ProjectWindow.hpp; sourceTree = "<group>"; };
+		7D7F2E5E20A2F3720007928C /* selectionAreaSquare.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = selectionAreaSquare.cpp; sourceTree = "<group>"; };
+		7D7F2E5F20A2F3720007928C /* selectionAreaSquare.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = selectionAreaSquare.hpp; sourceTree = "<group>"; };
 		7D7F47772099F3BD009B37F5 /* IRWorkspaceView.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IRWorkspaceView.cpp; sourceTree = "<group>"; };
 		7D7F47782099F3BD009B37F5 /* IRWorkspaceView.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IRWorkspaceView.hpp; sourceTree = "<group>"; };
 		7D7F477A2099F3C4009B37F5 /* IRWorkspaceScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IRWorkspaceScene.cpp; sourceTree = "<group>"; };
@@ -502,6 +506,7 @@
 		7D31E01320A1ABE50052F252 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				7D7F2E5D20A2F3570007928C /* Graphics */,
 				7D31E01520A1ABF70052F252 /* randomStringGenerator.hpp */,
 				7D31E01A20A1B15D0052F252 /* IRTools.h */,
 			);
@@ -583,6 +588,15 @@
 				7D617BAB2098880B00E270EE /* ProjectWindow.hpp */,
 			);
 			path = ProjectWindow;
+			sourceTree = "<group>";
+		};
+		7D7F2E5D20A2F3570007928C /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				7D7F2E5E20A2F3720007928C /* selectionAreaSquare.cpp */,
+				7D7F2E5F20A2F3720007928C /* selectionAreaSquare.hpp */,
+			);
+			path = Graphics;
 			sourceTree = "<group>";
 		};
 		7D7F4782209C96E8009B37F5 /* QtDirSystem */ = {
@@ -909,6 +923,8 @@
 				7D617BAE2098A13F00E270EE /* WorkSpace.hpp in Compile Sources */,
 				7D7F477E2099F78D009B37F5 /* IRWorkspaceScene.hpp in Compile Sources */,
 				7D31E01F20A1CF420052F252 /* NodeObjectClass.hpp in Compile Sources */,
+				7D7F2E6020A2F3720007928C /* selectionAreaSquare.cpp in Compile Sources */,
+				7D7F2E6120A317E50007928C /* selectionAreaSquare.hpp in Compile Sources */,
 				7D7F4790209CB3C8009B37F5 /* kEditorWindowView.hpp in Compile Sources */,
 				7D7F478C209CAA67009B37F5 /* readSoundFileAtPath.cpp in Compile Sources */,
 				10C27024209343CF00175F44 /* SoundFile.cpp in Compile Sources */,

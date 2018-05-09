@@ -52,8 +52,12 @@ public:
 
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
     
+    void ItemSelectedHasChanged();
+    
     int getX();
     int getY();
+    
+    IR::Frame getFrameSize();
     
     virtual void setFrameSize(IR::Frame frame);
     

@@ -14,7 +14,6 @@ IRWorkspaceView::IRWorkspaceView(QGraphicsScene *scene, QWidget *parent)
     setAcceptDrops(true);
     std::cout << "workspace view size = " << this->width() << ", " << this->height() << std::endl;
     
-    this->database = new NodeDatabase();
     
 }
 
@@ -94,21 +93,38 @@ void IRWorkspaceView::createAudioObj(IR::Frame objFrame)
     IR_Data::INOUTDATA inputDataType = IR_Data::INOUTDATA{3, inputTypeArray};
     IR_Data::INOUTDATA outputDataType = IR_Data::INOUTDATA{1, outputTypeArray};
     
-    kNodeObject *obj = createObj(IR_Object::NONAME, objFrame, inputDataType, outputDataType);
-    scene()->addItem(obj);
-    scene()->update();
+    createObj(IR_Object::NONAME, objFrame, inputDataType, outputDataType);
     
 }
 
-kNodeObject *IRWorkspaceView::createObj(IR_Object::Name name, IR::Frame objFrame, IR_Data::INOUTDATA input, IR_Data::INOUTDATA output)
+void IRWorkspaceView::createObj(IR_Object::Name name, IR::Frame objFrame, IR_Data::INOUTDATA input, IR_Data::INOUTDATA output)
 {
     kNodeObject *obj = new kNodeObject(IR_Object::NONAME, objFrame, input, output);
     
-    this->database->registerObjToDatabase(obj->getUniqueId(), obj);
+    static_cast<IRWorkspaceScene* >(scene())->createObj(obj);
     
     emit createObjSignal(name, objFrame);
     
-    return obj;
+}
+
+void IRWorkspaceView::copyObj()
+{
+    //get selected obj
+    std::vector<kNodeObject* >selectedObj = static_cast<IRWorkspaceScene* >(scene())->getSelectedObjects();
+    if(selectedObj[0] != nullptr) {
+        
+        for(auto obj : selectedObj) {
+            
+        }
+        
+    }
+    
+}
+
+
+void IRWorkspaceView::deleteObj()
+{
+    
 }
 
 

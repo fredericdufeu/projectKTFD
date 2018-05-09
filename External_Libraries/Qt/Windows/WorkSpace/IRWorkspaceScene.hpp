@@ -12,7 +12,9 @@
 #include <iostream>
 
 #include <QtWidgets>
+#include "NodeDatabase.hpp"
 #include "kNodeUI.h"
+#include "selectionAreaSquare.hpp"
 
 class IRWorkspaceScene : public QGraphicsScene
 {
@@ -34,10 +36,15 @@ public:
     
     std::vector<kNodeObject* > getSelectedObjects();
     
+    void createObj(kNodeObject *obj);
     void deleteObj();
     void copyObj(kNodeObject *node);
     void pasteObj(IR::Frame objFrame);
     void duplicateObj();
+    
+    void setSelectionAreaSquare(bool flag);
+    
+    bool isSelected();
     
 signals:
     void deleteObjSignal();
@@ -45,13 +52,26 @@ signals:
     void pasteObjSignal(IR::Frame objFrame);
     void duplicateObjSignal();
     
-    
 protected:
     void keyPressEvent(QKeyEvent *event) override;
     void keyReleaseEvent(QKeyEvent *event) override;
+
     
 private:
+    
+    NodeDatabase *database;
     void calcSelectedObjecsts();
+    
+    /* selection area square flag */
+    bool isSelectionAreaSquare = true;
+    IRSelectionAreaSquare *selectionAreaSquare;
+    
+    /* if there is any selected objects */
+    bool isSelectedFlag = false;
+    
+    /* key flag */
+    bool key_option_press_flag = false;
+    bool key_ctrl_press_flag = false; // in mac commando
 
 };
 #endif /* IRWorkspaceScene_hpp */

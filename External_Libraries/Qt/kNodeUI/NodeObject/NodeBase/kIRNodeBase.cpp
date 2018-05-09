@@ -13,8 +13,12 @@ kIRNodeBase::kIRNodeBase(IR::Frame frame)
     this->frame = frame;
     
     this->editorWindow = new kEditorWindow(0);
-
-    setFlags(QGraphicsItem::ItemIsMovable | QGraphicsItem::ItemIsSelectable | QGraphicsItem::ItemIsFocusable);
+    
+    // Give ItemSendsGeometryChanges to receive signal when item position has changed. see itemChange()
+    setFlags(QGraphicsItem::ItemIsMovable | QGraphicsItem::ItemIsSelectable | QGraphicsItem::ItemIsFocusable | QGraphicsItem::ItemSendsGeometryChanges);
+    
+    // set Z order value : 0 is buttom
+    setZValue(0);
 }
 
 kIRNodeBase::~kIRNodeBase()
@@ -102,15 +106,24 @@ QPainterPath kIRNodeBase::shape() const
 
 
 int kIRNodeBase::getX(){
-    return this->frame.origin.x;
+    return this->frame.origin.x + pos().x();
 }
 
 int kIRNodeBase::getY(){
-    return this->frame.origin.y;
+    return this->frame.origin.y + pos().y();
+}
+
+IR::Frame kIRNodeBase::getFrameSize()
+{
+    IR::Frame objFrame = IR::Frame{ {this->frame.origin.x + static_cast<float>(pos().x()), this->frame.origin.y + static_cast<float>(pos().y())} , this->frame.size};
+    return objFrame;
 }
 
 void kIRNodeBase::setFrameSize(IR::Frame frame)
 {
+    setX(0);
+    setY(0);
+    
     this->frame = frame;
     update();
 }
@@ -125,12 +138,26 @@ void kIRNodeBase::objSelectionChanged()
     
 }
 
+
 QVariant kIRNodeBase::itemChange(GraphicsItemChange change, const QVariant &value)
 {
-    if(change == ItemSelectedChange) {
-        std::cout << "item selected changed!! " << isSelected() <<  std::endl;
+    std::cout << "itemchange() : " << change << " : "<< std::endl;
+    std::cout << "selectedChange = " << QGraphicsItem::ItemSelectedChange << " : positionHasChanged = " << QGraphicsItem::ItemPositionHasChanged << " : ItemTransformHasChanged = " << QGraphicsItem::ItemTransformHasChanged << std::endl;
+
+    switch (change) {
+        case QGraphicsItem::ItemSelectedChange:
+            std::cout << "item selected changed!! " << isSelected() <<  std::endl;
+            break;
+        case QGraphicsItem::ItemPositionChange:
+            std::cout << "item position changed!! " << isSelected() <<  std::endl;
+            break;
+        case QGraphicsItem::ItemPositionHasChanged: {
+            std::cout << "item position has changed!! to " << isSelected() <<  std::endl;
+            break;
+        }
+        default:
+            break;
     }
-    
     return QGraphicsObject::itemChange(change,value);
 }
 

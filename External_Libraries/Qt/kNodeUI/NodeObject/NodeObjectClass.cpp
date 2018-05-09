@@ -66,7 +66,7 @@ void kNodeObject::setFrameSize(IR::Frame frame)
 
 IR::Frame kNodeObject::getFrame()
 {
-    return this->frame;
+    return getFrameSize();
 }
 
 IR_Object::Id kNodeObject::getUniqueId()
