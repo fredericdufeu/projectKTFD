@@ -13,6 +13,7 @@
 #include <QtWidgets>
 
 #include "IRUtilities.hpp"
+#include "kNodeUI.h"
 
 class IRSelectionAreaSquare : public QGraphicsObject
 {
@@ -26,6 +27,9 @@ public:
     
     void drawSelectionArea(QPointF startPos, QPointF currentPos);
     void deleteSquare();
+    
+    void selectNodeObj(IR::Frame selectedArea, std::vector<kNodeObject *> objs);
+    
     
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
 

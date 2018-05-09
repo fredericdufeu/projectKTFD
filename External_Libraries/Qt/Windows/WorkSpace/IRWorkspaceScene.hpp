@@ -63,7 +63,7 @@ private:
     void calcSelectedObjecsts();
     
     /* selection area square flag */
-    bool isSelectionAreaSquare = true;
+    bool isSelectionAreaSquareFlag = true;
     IRSelectionAreaSquare *selectionAreaSquare;
     
     /* if there is any selected objects */
@@ -72,6 +72,8 @@ private:
     /* key flag */
     bool key_option_press_flag = false;
     bool key_ctrl_press_flag = false; // in mac commando
-
+    
+    /* mouse flag */
+    bool mouse_down_flag = false;
 };
 #endif /* IRWorkspaceScene_hpp */

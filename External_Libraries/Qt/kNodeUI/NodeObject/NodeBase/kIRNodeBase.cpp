@@ -79,7 +79,6 @@ void kIRNodeBase::paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWi
     
     float x = this->frame.origin.x - this->frame.size.width/2;
     float y = this->frame.origin.y - this->frame.size.height/2;
-
     painter->drawRect(x, y, this->frame.size.width, this->frame.size.height);
     
     auto color = isSelected()? Qt::blue : Qt::lightGray;
@@ -117,6 +116,7 @@ IR::Frame kIRNodeBase::getFrameSize()
 {
     IR::Frame objFrame = IR::Frame{ {this->frame.origin.x + static_cast<float>(pos().x()), this->frame.origin.y + static_cast<float>(pos().y())} , this->frame.size};
     return objFrame;
+    //return this->frame;
 }
 
 void kIRNodeBase::setFrameSize(IR::Frame frame)
@@ -135,24 +135,29 @@ kEditorWindow* kIRNodeBase::getEditorWindow()
 
 void kIRNodeBase::objSelectionChanged()
 {
-    
+    if(isSelected()){
+        setZValue(1.0);
+    }else{
+        setZValue(0.0);
+    }
 }
-
 
 QVariant kIRNodeBase::itemChange(GraphicsItemChange change, const QVariant &value)
 {
-    std::cout << "itemchange() : " << change << " : "<< std::endl;
-    std::cout << "selectedChange = " << QGraphicsItem::ItemSelectedChange << " : positionHasChanged = " << QGraphicsItem::ItemPositionHasChanged << " : ItemTransformHasChanged = " << QGraphicsItem::ItemTransformHasChanged << std::endl;
+    //std::cout << "itemchange() : " << change << " : "<< std::endl;
+    //std::cout << "selectedChange = " << QGraphicsItem::ItemSelectedChange << " : positionHasChanged = " << QGraphicsItem::ItemPositionHasChanged << " : ItemTransformHasChanged = " << QGraphicsItem::ItemTransformHasChanged << std::endl;
 
     switch (change) {
         case QGraphicsItem::ItemSelectedChange:
             std::cout << "item selected changed!! " << isSelected() <<  std::endl;
+            if(isSelected()) { setZValue(0.0); } // if selected return Z Index
+            else { setZValue(1.0); }
             break;
         case QGraphicsItem::ItemPositionChange:
-            std::cout << "item position changed!! " << isSelected() <<  std::endl;
+            //std::cout << "item position changed!! " << isSelected() <<  std::endl;
             break;
         case QGraphicsItem::ItemPositionHasChanged: {
-            std::cout << "item position has changed!! to " << isSelected() <<  std::endl;
+            //std::cout << "item position has changed!! to " << isSelected() <<  std::endl;
             break;
         }
         default:

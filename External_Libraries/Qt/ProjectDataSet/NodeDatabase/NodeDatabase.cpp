@@ -82,8 +82,11 @@ void NodeDatabase::showSelectedObj()
         kNodeObject *o = static_cast<kNodeObject *>(x.second);
         if(o->isSelected()) {
             std::cout << " selected : "<< x.first << " : " << x.second << "\n";
-
         }
-        
     }
+}
+
+std::map<std::string, kNodeObject*> NodeDatabase::getDatabase()
+{
+    return this->database;
 }

@@ -33,12 +33,6 @@ public:
     void setObjPos(IR::Origin pos);
     void moveObjBy(IR::Origin pos);
 
-    /*
-    virtual void mousePressEvent(QGraphicsSceneMouseEvent *event) override;
-    virtual void mouseMoveEvent(QGraphicsSceneMouseEvent *event) override;
-    virtual void mouseReleaseEvent(QGraphicsSceneMouseEvent *event) override;
-    virtual void mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event) override;
-    */
     void keyPressEvent(QKeyEvent *event) override;
     void keyReleaseEvent(QKeyEvent *event) override;
     
@@ -48,6 +42,8 @@ public:
     virtual QVariant itemChange(GraphicsItemChange change, const QVariant &value) override;
     
     /* call when selection changed in mousePressEvent() */
+    void ItemSelectedChange();
+    
     virtual void objSelectionChanged();
 
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;

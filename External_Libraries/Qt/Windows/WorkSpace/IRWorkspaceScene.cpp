@@ -26,13 +26,19 @@ IRWorkspaceScene::~IRWorkspaceScene()
 
 void IRWorkspaceScene::setSelectionAreaSquare(bool flag)
 {
-    this->setSelectionAreaSquare(flag);
+    this->isSelectionAreaSquareFlag = flag;
 }
 
 void IRWorkspaceScene::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
     QGraphicsScene::mousePressEvent(event);
+    this->mouse_down_flag = true;
+    
     calcSelectedObjecsts();
+    if(isSelected()) {
+        this->isSelectionAreaSquareFlag = false;
+    }else { this->isSelectionAreaSquareFlag = true; }
+    
     
     event->setLastScenePos(event->scenePos());
     
@@ -44,10 +50,8 @@ void IRWorkspaceScene::mouseMoveEvent(QGraphicsSceneMouseEvent *event)
 {
     QGraphicsScene::mouseMoveEvent(event);
     
-    std::cout << event->type() << std::endl;
     
-    if(event->type() == QGraphicsSceneMouseEvent::Move) { std::cout << "hover!! " << std::endl;}
-    if(this->isSelectionAreaSquare) {
+    if(this->isSelectionAreaSquareFlag && this->mouse_down_flag) {
         //std::cout << "button down position = " << event->buttonDownScenePos(Qt::MouseButton::LeftButton).x() << ", " <<event->buttonDownScenePos(Qt::MouseButton::LeftButton).y() << " : " << event->scenePos().x() << ", " << event->scenePos().y() << std::endl;
         this->selectionAreaSquare->drawSelectionArea( event->buttonDownScenePos(Qt::MouseButton::LeftButton), event->scenePos());
         update();
@@ -59,9 +63,31 @@ void IRWorkspaceScene::mouseMoveEvent(QGraphicsSceneMouseEvent *event)
 void IRWorkspaceScene::mouseReleaseEvent(QGraphicsSceneMouseEvent *event)
 {
     QGraphicsScene::mouseReleaseEvent(event);
-    
+    this->mouse_down_flag = false;
     // erase selectionAreaSquare
-    if(this->isSelectionAreaSquare) {this->selectionAreaSquare->deleteSquare();update();}
+    if(this->isSelectionAreaSquareFlag) {
+        IR::Frame selectedFrame = this->selectionAreaSquare->getFrameSize();
+        
+        for(auto item:this->database->getDatabase()){
+            
+            //std::cout << "square frame " << selectedFrame.origin.x << ", " << selectedFrame.origin.y << " : node frame " << item.second->getFrame().origin.x << ", " << item.second->getFrame().origin.y << "\n";
+            
+            std::cout << "selected area\n";
+            selectedFrame.show();
+            std::cout << "node area\n";
+
+            item.second->getFrame().show();
+            
+            
+            if(selectedFrame.isFrameOverlap(item.second->getFrame())){
+                item.second->setSelected(true);
+            }
+        }
+        
+        this->selectionAreaSquare->deleteSquare();
+        update();
+        
+    }
     
 }
 
@@ -133,9 +159,6 @@ void IRWorkspaceScene::copyObj(kNodeObject *node)
 {
     
     calcSelectedObjecsts();
-    for(auto item: this->selectedObject) {
-        std::cout << item << std::endl;
-    }
     emit copyObjSignal(node);
 }
 

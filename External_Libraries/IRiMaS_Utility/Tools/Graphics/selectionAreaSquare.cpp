@@ -59,7 +59,6 @@ void IRSelectionAreaSquare::paint(QPainter *painter, const QStyleOptionGraphicsI
 
 void IRSelectionAreaSquare::deleteSquare()
 {
-    std::cout << "delete \n";
     IR::Frame newFrame = {{0,0},{0,0}};
     this->frame = newFrame;
 
@@ -87,3 +86,14 @@ IR::Frame IRSelectionAreaSquare::getFrameSize()
 {
     return this->frame;
 }
+
+void IRSelectionAreaSquare::selectNodeObj(IR::Frame selectedArea, std::vector<kNodeObject *> objs)
+{
+    std::vector<kNodeObject *> TrueObjs;
+    for(auto item:objs) {
+        if(selectedArea.isFrameOverlap(item->getFrameSize())) {
+            item->setSelected(true);
+        }
+    }
+}
+
