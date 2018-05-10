@@ -47,6 +47,9 @@ private:
     IR::Point mPos;
     
     void createAudioObj(IR::Frame objFrame);
+    
+    //this is for a test 
+    void createWaveformObj(IR::Frame objFrame);
 
 };
 

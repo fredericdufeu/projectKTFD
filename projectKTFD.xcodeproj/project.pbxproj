@@ -51,6 +51,7 @@
 		7D31E01F20A1CF420052F252 /* NodeObjectClass.hpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7DD705FC209364CE00495EDA /* NodeObjectClass.hpp */; };
 		7D45304D20A459E8008C9B48 /* IRObjectName.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7D45304C20A459E8008C9B48 /* IRObjectName.cpp */; };
 		7D45305020A47F04008C9B48 /* IRWaveformNodeObject.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7D45304E20A47F04008C9B48 /* IRWaveformNodeObject.cpp */; };
+		7D45305420A49B47008C9B48 /* IRSonogramNodeObject.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7D45305220A49B47008C9B48 /* IRSonogramNodeObject.cpp */; };
 		7D617B8D2097741300E270EE /* ProjectData.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7D617B8B2097741300E270EE /* ProjectData.cpp */; };
 		7D617B962098744500E270EE /* WorkSpace.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7D617B942098744500E270EE /* WorkSpace.cpp */; };
 		7D617B9B209876FD00E270EE /* IRGraphicsScene.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7D617B99209876FD00E270EE /* IRGraphicsScene.cpp */; };
@@ -179,6 +180,8 @@
 		7D45304C20A459E8008C9B48 /* IRObjectName.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IRObjectName.cpp; sourceTree = "<group>"; };
 		7D45304E20A47F04008C9B48 /* IRWaveformNodeObject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IRWaveformNodeObject.cpp; sourceTree = "<group>"; };
 		7D45304F20A47F04008C9B48 /* IRWaveformNodeObject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IRWaveformNodeObject.hpp; sourceTree = "<group>"; };
+		7D45305220A49B47008C9B48 /* IRSonogramNodeObject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IRSonogramNodeObject.cpp; sourceTree = "<group>"; };
+		7D45305320A49B47008C9B48 /* IRSonogramNodeObject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IRSonogramNodeObject.hpp; sourceTree = "<group>"; };
 		7D617B8B2097741300E270EE /* ProjectData.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ProjectData.cpp; sourceTree = "<group>"; };
 		7D617B8C2097741300E270EE /* ProjectData.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ProjectData.hpp; sourceTree = "<group>"; };
 		7D617B8E2097751900E270EE /* IRiMaSFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IRiMaSFoundation.h; sourceTree = "<group>"; };
@@ -518,6 +521,15 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
+		7D45305120A49B33008C9B48 /* Sonogram */ = {
+			isa = PBXGroup;
+			children = (
+				7D45305220A49B47008C9B48 /* IRSonogramNodeObject.cpp */,
+				7D45305320A49B47008C9B48 /* IRSonogramNodeObject.hpp */,
+			);
+			path = Sonogram;
+			sourceTree = "<group>";
+		};
 		7D617B8A209773F600E270EE /* ProjectDataSet */ = {
 			isa = PBXGroup;
 			children = (
@@ -713,6 +725,7 @@
 		7DD705F62093645F00495EDA /* AudioNodeObject */ = {
 			isa = PBXGroup;
 			children = (
+				7D45305120A49B33008C9B48 /* Sonogram */,
 				7DD22CD2209728C500B7B535 /* WaveformNode */,
 			);
 			path = AudioNodeObject;
@@ -938,6 +951,7 @@
 				7D7F478C209CAA67009B37F5 /* readSoundFileAtPath.cpp in Compile Sources */,
 				10C27024209343CF00175F44 /* SoundFile.cpp in Compile Sources */,
 				7D7F477D2099F78B009B37F5 /* IRWorkspaceView.hpp in Compile Sources */,
+				7D45305420A49B47008C9B48 /* IRSonogramNodeObject.cpp in Compile Sources */,
 				A2C703BB415706F6735302F6 /* main.cpp in Compile Sources */,
 				10C2701E2093439500175F44 /* GraphicsScene.cpp in Compile Sources */,
 				7DD7062320936EB400495EDA /* kIRDrawSquareObjClass.cpp in Compile Sources */,

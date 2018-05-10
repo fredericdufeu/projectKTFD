@@ -16,25 +16,34 @@ namespace IR_Object {
     class Name {
         std::string name;
     public:
-        Name(){ this->name = ""; }
-        
+       
+        Name(){ SetName(""); }
+      
         Name(std::string name){
-            this->name = name;
+            SetName(name);
         }
-        
+       
         //copy constructor
         Name(const Name &obj) {
             SetName(obj.name);
         }
         
-        
+        // normal
         inline Name &operator=(const Name &obj) {
             SetName(obj.name);
             return *this;
         }
         
-        inline Name &operator=(const std::string name) {
+        // std::string
+        Name &operator=(const std::string name) {
             SetName(name);
+            return *this;
+        }
+        //const char*
+        Name &operator=(const char* name) {
+            if(name != nullptr){
+                this->name = std::string(name);
+            }else {this->name = ""; }
             return *this;
         }
         

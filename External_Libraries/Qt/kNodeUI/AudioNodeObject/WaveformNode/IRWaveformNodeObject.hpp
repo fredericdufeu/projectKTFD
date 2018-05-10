@@ -10,6 +10,7 @@
 
 #include <stdio.h>
 #include "kNodeUI.h"
+#include "IRUtilities.hpp"
 
 class IRWaveformNodeObject : public kNodeObject
 {

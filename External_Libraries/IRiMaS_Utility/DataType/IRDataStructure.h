@@ -30,23 +30,18 @@ namespace IR {
         Size size;
 
         
+        // check if the given frame overlaps to this frame.
         bool isFrameOverlap(Frame frame){
             
-            float width = size.width + frame.size.width; //size.width >= frame.size.width ? size.width : frame.size.width;
-            float height = size.height + frame.size.height; //size.height >= frame.size.height ? size.height : frame.size.height;
-            
+            float width = size.width + frame.size.width;
+            float height = size.height + frame.size.height;
             
             float dis_x = fabs(origin.x - frame.origin.x);
             float dis_y = fabs(origin.y - frame.origin.y);
         
-            std::cout << "\n";
-            std::cout << "dis_x = " << dis_x << " dis_y = " << dis_y << " : " << "width = " << width << " height = " << height << "\n";
-
             if(dis_x <= width/2 && dis_y <= height/2){
-                std::cout << "true\n";
                     return true;
             }
-            
             return false;
         }
         

@@ -38,17 +38,21 @@ void IRWorkspaceView::dragMoveEvent(QDragMoveEvent *event)
     
 }
 
+//# Drop Event
 void IRWorkspaceView::dropEvent(QDropEvent *event)
 {
     event->acceptProposedAction();
     std::cout << "drop Event \n"<< std::endl;
     
+    // File Path received from dropped file.
     std::string path(event->mimeData()->text().toStdString());
     
+    // get a view coordinate of the dropped file.
     QPoint pointInViewCoordinates = event->pos();
+    // convert View coordinate to scene coordinate
     QPointF pointInSceneCoordinates = mapToScene(pointInViewCoordinates);
     
-    /* get file type */
+    // get a file type
     IRFileUtility fileUtility = IRFileUtility();
     auto fileformat = fileUtility.checkFileType(path);
     
@@ -64,19 +68,35 @@ void IRWorkspaceView::dropEvent(QDropEvent *event)
             
         case IR_FILE::FILETYPE::IMAGE:
             break;
-        default:
-            break;
-            /*
-
-        case IR_FILE::FILETYPE::IMAGE:
-            break;
         case IR_FILE::FILETYPE::MOVIE:
             break;
+        case IR_FILE::FILETYPE::SCORE:
+            
         default:
             break;
-             */
+
     }
 }
+
+// This is just for a test Waveform Node Object
+void IRWorkspaceView::createWaveformObj(IR::Frame objFrame)
+{
+    IR_Data::Type inputTypeArray [] = {
+        IR_Data::IR_URL, // url
+        IR_Data::IR_INT32, // begin
+        IR_Data::IR_INT32 // end
+    };
+    
+    IR_Data::Type outputTypeArray [] = {
+        IR_Data::IR_AY_FLT // audio data array
+    };
+    
+    IR_Data::INOUTDATA inputDataType = IR_Data::INOUTDATA{3, inputTypeArray};
+    IR_Data::INOUTDATA outputDataType = IR_Data::INOUTDATA{1, outputTypeArray};
+    
+}
+
+
 
 void IRWorkspaceView::createAudioObj(IR::Frame objFrame)
 {
@@ -93,9 +113,9 @@ void IRWorkspaceView::createAudioObj(IR::Frame objFrame)
     IR_Data::INOUTDATA inputDataType = IR_Data::INOUTDATA{3, inputTypeArray};
     IR_Data::INOUTDATA outputDataType = IR_Data::INOUTDATA{1, outputTypeArray};
     
-    std::string t = "Keitaro";
 
-    IR_Object::Name name = t;
+    IR_Object::Name name;
+    name = "Keitaro";
     
     createObj(name, objFrame, inputDataType, outputDataType);
     
