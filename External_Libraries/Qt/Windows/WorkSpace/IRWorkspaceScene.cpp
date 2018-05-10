@@ -79,7 +79,6 @@ void IRWorkspaceScene::mouseReleaseEvent(QGraphicsSceneMouseEvent *event)
                 std::cout << "selected area\n";
                 selectedFrame.show();
                 std::cout << "node area\n";
-
                 item.second->getFrame().show();
                 
                 if(selectedFrame.isFrameOverlap(item.second->getFrame())){
@@ -193,12 +192,18 @@ void IRWorkspaceScene::duplicateObj()
         // change the status of original objects to unselected
         item->setSelected(false);
         createObj(obj);
-        
     }
-
-    
     emit duplicateObjSignal();
 }
+
+void IRWorkspaceScene::selectAllObj()
+{
+    for(auto item: this->database->getDatabase()) {
+        item.second->setSelected(true);
+    }
+    emit selectAllObjSignal();
+}
+
 
 /* event */
 void IRWorkspaceScene::keyPressEvent(QKeyEvent *event)
@@ -210,8 +215,11 @@ void IRWorkspaceScene::keyPressEvent(QKeyEvent *event)
         case 16777219:
             deleteObj();
             break;
+        case Qt::Key_A:
+            if(this->key_ctrl_press_flag) { selectAllObj(); }
+            break;
         case Qt::Key_S:
-            
+            break;
         case Qt::Key_D:
             if(this->key_option_press_flag) { duplicateObj(); }
             break;
@@ -219,6 +227,8 @@ void IRWorkspaceScene::keyPressEvent(QKeyEvent *event)
         case Qt::Key_Alt:
             this->key_option_press_flag = true;
             break;
+        case Qt::Key_Control:
+            this->key_ctrl_press_flag = true;
         default:
             break;
     }
@@ -231,6 +241,11 @@ void IRWorkspaceScene::keyReleaseEvent(QKeyEvent *event)
     {
         case Qt::Key_Option:
             this->key_option_press_flag = false;
+            break;
+        case Qt::Key_Control:
+            this->key_ctrl_press_flag = false;
+            break;
+            default:
             break;
     }
 }

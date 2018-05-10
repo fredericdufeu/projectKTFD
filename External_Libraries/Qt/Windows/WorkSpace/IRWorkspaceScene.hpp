@@ -41,6 +41,7 @@ public:
     void copyObj(kNodeObject *node);
     void pasteObj(IR::Frame objFrame);
     void duplicateObj();
+    void selectAllObj();
     
     void setSelectionAreaSquare(bool flag);
     
@@ -51,6 +52,7 @@ signals:
     void copyObjSignal(kNodeObject *node);
     void pasteObjSignal(IR::Frame objFrame);
     void duplicateObjSignal();
+    void selectAllObjSignal();
     
 protected:
     void keyPressEvent(QKeyEvent *event) override;
