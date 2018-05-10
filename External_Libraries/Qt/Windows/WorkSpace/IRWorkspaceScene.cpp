@@ -218,8 +218,6 @@ void IRWorkspaceScene::keyPressEvent(QKeyEvent *event)
         case Qt::Key_A:
             if(this->key_ctrl_press_flag) { selectAllObj(); }
             break;
-        case Qt::Key_S:
-            break;
         case Qt::Key_D:
             if(this->key_option_press_flag) { duplicateObj(); }
             break;

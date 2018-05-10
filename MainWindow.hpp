@@ -39,15 +39,22 @@ private:
     void hideFileNavigator();
     void hideNodeObjInspector();
     void newWorkSpaceActionFunc();
+    void saveProjectFileActionFunc();
+    void saveAsProjectFileActionFunc();
     
     QMenu *fileMenu;
     QMenu *newFileMenu;
     QMenu *newWorkSpace;
+    QMenu *saveProjectFile;
+    QMenu *saveAsProjectFile;
     
     QAction *newWorkSpaceAction;
     
     QAction *newProjectAction;
     QAction *openProjectAction;
+    
+    QAction *saveProjectFileAction;
+    QAction *saveAsProjectFileAction;
     
     QMenu *windowMenu;
     QAction *hideFileNavigatorAction;

@@ -25,6 +25,10 @@ MainWindow::MainWindow(QWidget *parent)
     connect(hideFileNavigatorAction, &QAction::triggered, this, &MainWindow::hideFileNavigator);
     connect(hideNodeObjInspectorAction, &QAction::triggered, this, &MainWindow::hideNodeObjInspector);
     
+    connect(this->saveProjectFileAction, &QAction::triggered, this, &MainWindow::saveProjectFileActionFunc);
+    this->saveProjectFileAction->setShortcut(Qt::CTRL + Qt::Key_S);
+    connect(this->saveAsProjectFileAction, &QAction::triggered, this, &MainWindow::saveAsProjectFileActionFunc);
+    this->saveAsProjectFileAction->setShortcut(Qt::CTRL + Qt::SHIFT + Qt::Key_S);
     
     
 }
@@ -42,6 +46,9 @@ void MainWindow::createMenus()
     this->newFileMenu = this->fileMenu->addMenu("New");
     this->newWorkSpaceAction = this->newFileMenu->addAction("new Workspace");
     this->newProjectAction = this->newFileMenu->addAction("IRiMaS Project... ");
+    this->saveProjectFileAction = this->fileMenu->addAction("Save Project");
+    this->saveAsProjectFileAction = this->fileMenu->addAction("Save As Project");
+    
     
     this->newFileMenu->addSeparator();
     this->fileMenu->addSeparator();
@@ -102,6 +109,16 @@ void MainWindow::hideNodeObjInspector()
     
 }
 
+void MainWindow::saveProjectFileActionFunc()
+{
+    std::cout << "saveProjectFileAction" << std::endl;
+}
+
+void MainWindow::saveAsProjectFileActionFunc()
+{
+    std::cout << "saveAsProjectFileAction" << std::endl;
+
+}
 
 
 void MainWindow::cleanUpOnQuit()
