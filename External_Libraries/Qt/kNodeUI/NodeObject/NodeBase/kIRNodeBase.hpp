@@ -46,7 +46,7 @@ public:
     
     virtual void objSelectionChanged();
 
-    void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
+    virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
     
     void ItemSelectedHasChanged();
     

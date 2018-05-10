@@ -472,6 +472,7 @@ dependencies: \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/ProjectDataSet/NodeDatabase/NodeDatabase.hpp \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/Windows/WorkSpace/IRWorkspaceScene.hpp \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/IRiMaS_Utility/Tools/Graphics/selectionAreaSquare.hpp \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/AudioNodeObject/WaveformNode/IRWaveformNodeObject.hpp \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/Windows/LeftArea/NavigatorSpace.hpp \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/Windows/MainWindow/IRiMaSFoundation.h \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/ProjectDataSet/ProjectData.hpp \

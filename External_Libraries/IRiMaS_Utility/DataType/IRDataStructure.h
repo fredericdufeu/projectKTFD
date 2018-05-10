@@ -28,10 +28,7 @@ namespace IR {
     struct Frame{
         Origin origin;
         Size size;
-        
-        bool isFrameInside(Frame frame) {
-            return false;
-        }
+
         
         bool isFrameOverlap(Frame frame){
             

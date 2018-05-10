@@ -12,9 +12,10 @@
 kNodeObject::kNodeObject(IR_Object::Name name, IR::Frame frame, IR_Data::INOUTDATA input, IR_Data::INOUTDATA output)
 : kIRNodeBase(frame)
 {
+    
     this->objectName = name;
     this->uniqueID = IRRandomStringsGenerator(IR::RANDOM_STRING_LEN);
-    std::cout << "unieuqID = " << this->uniqueID << std::endl;
+    std::cout << "uniqueID = " << this->uniqueID << std::endl;
     this->frame = frame;
     
     this->inputDataType = input;
@@ -113,4 +114,12 @@ void kNodeObject::objSelectionChanged()
     std::cout << this->uniqueID << " selected." << std::endl;
     emit objSelectionChangedSignal(this->uniqueID);
 }
+
+void kNodeObject::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
+{
+    
+    kIRNodeBase::paint(painter,option,widget);
+    
+}
+
 

@@ -93,13 +93,20 @@ void IRWorkspaceView::createAudioObj(IR::Frame objFrame)
     IR_Data::INOUTDATA inputDataType = IR_Data::INOUTDATA{3, inputTypeArray};
     IR_Data::INOUTDATA outputDataType = IR_Data::INOUTDATA{1, outputTypeArray};
     
-    createObj(IR_Object::NONAME, objFrame, inputDataType, outputDataType);
+    std::string t = "Keitaro";
+
+    IR_Object::Name name = t;
+    
+    createObj(name, objFrame, inputDataType, outputDataType);
     
 }
 
 void IRWorkspaceView::createObj(IR_Object::Name name, IR::Frame objFrame, IR_Data::INOUTDATA input, IR_Data::INOUTDATA output)
 {
-    kNodeObject *obj = new kNodeObject(IR_Object::NONAME, objFrame, input, output);
+    //kNodeObject *obj = new kNodeObject(name, objFrame, input, output);
+    
+    IRWaveformNodeObject *obj = new IRWaveformNodeObject(name, objFrame, input, output);
+    
     
     static_cast<IRWorkspaceScene* >(scene())->createObj(obj);
     

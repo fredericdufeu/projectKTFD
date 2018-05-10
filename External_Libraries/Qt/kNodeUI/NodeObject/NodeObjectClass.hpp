@@ -37,6 +37,9 @@ public:
     
     void setFrameSize(IR::Frame frame) override;
     
+    virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
+
+    
     IR::Frame getFrame();
     IR_Object::Id getUniqueId();
     /*

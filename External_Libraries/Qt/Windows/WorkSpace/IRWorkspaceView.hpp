@@ -19,6 +19,8 @@
 #include "NodeDatabase.hpp"
 #include "IRWorkspaceScene.hpp"
 
+#include "IRWaveformNodeObject.hpp"
+
 
 class IRWorkspaceView : public QGraphicsView
 {

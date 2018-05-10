@@ -34,14 +34,17 @@ void IRWorkspaceScene::mousePressEvent(QGraphicsSceneMouseEvent *event)
     QGraphicsScene::mousePressEvent(event);
     this->mouse_down_flag = true;
     
+    // ==========
+    //  check if this action selects any objects.
+    // ==========
     calcSelectedObjecsts();
-    if(isSelected()) {
+    if(isSelected()) { // if any objects are selected, then we do not have selection square.
         this->isSelectionAreaSquareFlag = false;
-    }else { this->isSelectionAreaSquareFlag = true; }
+    }else { // if no objects are selected, then we draw selection square.
+        this->isSelectionAreaSquareFlag = true;
+    }
     
-    
-    event->setLastScenePos(event->scenePos());
-    
+    // store button down scene position here.
     event->setButtonDownScenePos(Qt::MouseButton::LeftButton, event->scenePos());
 
 }
@@ -68,19 +71,20 @@ void IRWorkspaceScene::mouseReleaseEvent(QGraphicsSceneMouseEvent *event)
     if(this->isSelectionAreaSquareFlag) {
         IR::Frame selectedFrame = this->selectionAreaSquare->getFrameSize();
         
-        for(auto item:this->database->getDatabase()){
-            
-            //std::cout << "square frame " << selectedFrame.origin.x << ", " << selectedFrame.origin.y << " : node frame " << item.second->getFrame().origin.x << ", " << item.second->getFrame().origin.y << "\n";
-            
-            std::cout << "selected area\n";
-            selectedFrame.show();
-            std::cout << "node area\n";
+        if(selectedFrame.size.width != 0 && selectedFrame.size.height != 0){
+            for(auto item:this->database->getDatabase()){
+                
+                //std::cout << "square frame " << selectedFrame.origin.x << ", " << selectedFrame.origin.y << " : node frame " << item.second->getFrame().origin.x << ", " << item.second->getFrame().origin.y << "\n";
+                
+                std::cout << "selected area\n";
+                selectedFrame.show();
+                std::cout << "node area\n";
 
-            item.second->getFrame().show();
-            
-            
-            if(selectedFrame.isFrameOverlap(item.second->getFrame())){
-                item.second->setSelected(true);
+                item.second->getFrame().show();
+                
+                if(selectedFrame.isFrameOverlap(item.second->getFrame())){
+                    item.second->setSelected(true);
+                }
             }
         }
         
@@ -97,11 +101,12 @@ void IRWorkspaceScene::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event)
     
     // remove all double click events when any keys are pressed!!
     if(!event->modifiers()){
-        //get selected objects
-        calcSelectedObjecsts();
-        
-        if(this->selectedObject[0] != nullptr) {
-            this->selectedObject[0]->openEditorWindow();
+        if(this->isSelectedFlag) { // if any objects are selected.
+            //get selected objects
+            calcSelectedObjecsts();
+            if(this->selectedObject[0] != nullptr) {
+                this->selectedObject[0]->openEditorWindow();
+            }
         }
     }
 }
@@ -208,12 +213,13 @@ void IRWorkspaceScene::keyPressEvent(QKeyEvent *event)
         case Qt::Key_S:
             
         case Qt::Key_D:
-            if(this->key_option_press_flag) {duplicateObj();}
+            if(this->key_option_press_flag) { duplicateObj(); }
             break;
         case Qt::Key_Option:
         case Qt::Key_Alt:
             this->key_option_press_flag = true;
             break;
+        default:
             break;
     }
 }

@@ -25,8 +25,6 @@ IRSelectionAreaSquare::~IRSelectionAreaSquare()
 void IRSelectionAreaSquare::drawSelectionArea(QPointF startPos, QPointF currentPos)
 {
     IR::Frame newFrame;
-    
-
 
     newFrame.size.width = fabs(startPos.x() - currentPos.x());
     newFrame.size.height = fabs(startPos.y() - currentPos.y());
@@ -61,6 +59,7 @@ void IRSelectionAreaSquare::deleteSquare()
 {
     IR::Frame newFrame = {{0,0},{0,0}};
     this->frame = newFrame;
+    
 
 }
 
