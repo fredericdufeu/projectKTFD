@@ -10,63 +10,48 @@
 #define IRObjectName_h
 
 #include <iostream>
+#include <vector>
+#include <sstream>
+#include <string>
 
 namespace IR_Object {
     
     class Name {
         std::string name;
+        std::vector<std::string> param;
+        
     public:
        
-        Name(){ SetName(""); }
+        Name();
         
-        Name(const char* name){
-            SetName(std::string(name));
-        }
+        Name(const char* name);
       
-        Name(const std::string name){
-            SetName(name);
-        }
+        Name(const std::string name);
        
         //copy constructor
-        Name(const Name &obj) {
-            SetName(obj.name);
-        }
+        Name(const Name &obj);
+        
+        ~Name();
+
         
         // normal
-        inline Name &operator=(const Name &obj) {
-            SetName(obj.name);
-            return *this;
-        }
+        Name &operator=(const Name &obj);
         
         // std::string
-        Name &operator=(const std::string name) {
-            SetName(name);
-            return *this;
-        }
+        Name &operator=(const std::string name);
         
         //const char*
-        Name &operator=(const char* name) {
-            if(name != nullptr){
-                this->name = std::string(name);
-            }else {this->name = ""; }
-            return *this;
-        }
+        Name &operator=(const char* name);
         
-        inline ~Name(){
-            
-        }
         
-        Name &SetName(const std::string name) {
-            this->name = name;
-            return *this;
-        }
+        Name &SetName(const std::string name);
         
-        std::string getValue() const {
-            return this->name;
-        }
-        void setValue(const std::string value) {
-            this->name = value;
-        }
+        std::string getValue() const;
+        
+        void setValue(const std::string value);
+        
+    private:
+        std::vector<std::string> splitBySpace(const std::string &s);
 
     };
     

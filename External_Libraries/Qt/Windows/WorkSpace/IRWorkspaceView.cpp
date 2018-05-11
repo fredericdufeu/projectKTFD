@@ -114,7 +114,7 @@ void IRWorkspaceView::createAudioObj(IR::Frame objFrame)
     IR_Data::INOUTDATA outputDataType = IR_Data::INOUTDATA{1, outputTypeArray};
     
 
-    IR_Object::Name name = "Keitaro";
+    IR_Object::Name name = "This is IRiMaS Node Object!!    ";
     
     createObj(name, objFrame, inputDataType, outputDataType);
     
