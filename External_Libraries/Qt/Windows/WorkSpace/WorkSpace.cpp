@@ -33,6 +33,8 @@ WorkSpace::~WorkSpace()
     
 }
 
+
+
 IRWorkspaceView *WorkSpace::getView() const
 {
     return this->workspaceView;

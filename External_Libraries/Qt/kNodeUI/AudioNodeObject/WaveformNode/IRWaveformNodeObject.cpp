@@ -9,11 +9,11 @@
 
 
 
-IRWaveformNodeObject::IRWaveformNodeObject(IR_Object::Name name, IR::Frame frame, IR_Data::INOUTDATA input, IR_Data::INOUTDATA output)
-: kNodeObject(name, frame, input, output)
+IRWaveformNodeObject::IRWaveformNodeObject(IR_Object::Name name, IR::Frame frame, IR_Data::INOUTDATA input, IR_Data::INOUTDATA output, QGraphicsScene *parentScene)
+: kNodeObject(name, frame, input, output, parentScene)
 {
     
-    
+    main();
     
 }
 
@@ -21,6 +21,13 @@ IRWaveformNodeObject::~IRWaveformNodeObject()
 {
     
 }
+
+void IRWaveformNodeObject::main()
+{
+    std::cout << "main() in IRWaveformNodeObject called!\n";
+    
+}
+
 
 
 void IRWaveformNodeObject::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)

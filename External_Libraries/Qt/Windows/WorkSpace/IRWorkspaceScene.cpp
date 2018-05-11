@@ -131,6 +131,20 @@ bool IRWorkspaceScene::isSelected()
 {
     return this->isSelectedFlag;
 }
+void IRWorkspaceScene::createObj(IR_Object::Name name, IR::Frame objFrame, IR_Data::INOUTDATA input, IR_Data::INOUTDATA output)
+{
+    IRWaveformNodeObject *obj = new IRWaveformNodeObject(name, objFrame, input, output, this);
+
+    //register to the database
+    this->database->registerObjToDatabase(obj->getUniqueId(), obj);
+    //add
+    addItem(obj);
+    update();
+    
+    //show database
+    this->database->showDatabase();
+}
+
 void IRWorkspaceScene::createObj(kNodeObject *obj)
 {
     //register to the database
@@ -142,6 +156,7 @@ void IRWorkspaceScene::createObj(kNodeObject *obj)
     //show database
     this->database->showDatabase();
 }
+
 
 void IRWorkspaceScene::deleteObj()
 {
@@ -186,7 +201,7 @@ void IRWorkspaceScene::duplicateObj()
         auto input = item->getInputDataType();
         auto output = item->getOutputDataType();
         //create new object here.
-        kNodeObject *obj = new kNodeObject(name,objFrame,input,output);
+        kNodeObject *obj = new kNodeObject(name,objFrame,input,output, this);
         // change the status of duplicated objects to selected.
         obj->setSelected(true);
         // change the status of original objects to unselected
@@ -221,6 +236,8 @@ void IRWorkspaceScene::keyPressEvent(QKeyEvent *event)
         case Qt::Key_D:
             if(this->key_option_press_flag) { duplicateObj(); }
             break;
+        case Qt::Key_R:
+            if(this->key_ctrl_press_flag) { executeObj(); }
         case Qt::Key_Option:
         case Qt::Key_Alt:
             this->key_option_press_flag = true;
@@ -248,4 +265,9 @@ void IRWorkspaceScene::keyReleaseEvent(QKeyEvent *event)
     }
 }
 
+void IRWorkspaceScene::executeObj()
+{
+    std::cout << "IRWorkspaceScene executeObj()\n";
+    emit executeObjSignal();
+}
 

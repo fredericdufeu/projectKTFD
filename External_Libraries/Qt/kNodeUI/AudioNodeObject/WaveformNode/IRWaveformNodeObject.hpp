@@ -15,9 +15,11 @@
 class IRWaveformNodeObject : public kNodeObject
 {
 public:
-    IRWaveformNodeObject(IR_Object::Name name, IR::Frame frame, IR_Data::INOUTDATA input, IR_Data::INOUTDATA output);
+    IRWaveformNodeObject(IR_Object::Name name, IR::Frame frame, IR_Data::INOUTDATA input, IR_Data::INOUTDATA output, QGraphicsScene *parentScene);
     ~IRWaveformNodeObject();
     
+    // main execute function called by CTRL + R by Scene
+    void main() override;
     
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
 

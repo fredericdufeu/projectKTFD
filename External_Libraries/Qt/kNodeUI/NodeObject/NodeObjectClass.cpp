@@ -8,8 +8,9 @@
 
 #include "NodeObjectClass.hpp"
 
+#include "IRWorkspaceScene.hpp"
 
-kNodeObject::kNodeObject(IR_Object::Name name, IR::Frame frame, IR_Data::INOUTDATA input, IR_Data::INOUTDATA output)
+kNodeObject::kNodeObject(IR_Object::Name name, IR::Frame frame, IR_Data::INOUTDATA input, IR_Data::INOUTDATA output, QGraphicsScene *parentScene)
 : kIRNodeBase(frame)
 {
     
@@ -20,6 +21,11 @@ kNodeObject::kNodeObject(IR_Object::Name name, IR::Frame frame, IR_Data::INOUTDA
     
     this->inputDataType = input;
     this->outputDataType = output;
+    
+    //## Connect signal from Workspace to slot of kNodeObject main()
+    IRWorkspaceScene *delegateScene = static_cast<IRWorkspaceScene *>(parentScene);
+    QObject::connect(delegateScene, SIGNAL(executeObjSignal()), this, SLOT(main()));
+    
     
     std::cout << "\n" << std::endl;
     std::cout << "Node Object created!\n" << "\t name = " << this->objectName << "\n" << "\t uniqueID = " << this->uniqueID << std::endl;
@@ -122,4 +128,9 @@ void kNodeObject::paint(QPainter *painter, const QStyleOptionGraphicsItem *optio
     
 }
 
+
+void kNodeObject::main()
+{
+    
+}
 

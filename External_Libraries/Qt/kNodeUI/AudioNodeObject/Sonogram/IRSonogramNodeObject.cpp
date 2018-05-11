@@ -7,8 +7,8 @@
 
 #include "IRSonogramNodeObject.hpp"
 
-IRSonogramNodeObject::IRSonogramNodeObject(IR_Object::Name name, IR::Frame frame, IR_Data::INOUTDATA input, IR_Data::INOUTDATA output)
-: kNodeObject(name,frame,input,output)
+IRSonogramNodeObject::IRSonogramNodeObject(IR_Object::Name name, IR::Frame frame, IR_Data::INOUTDATA input, IR_Data::INOUTDATA output, QGraphicsScene *parentScene)
+: kNodeObject(name,frame,input,output, parentScene)
 {
     
 }

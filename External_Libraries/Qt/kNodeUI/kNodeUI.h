@@ -14,5 +14,8 @@
 #include "NodeOBjectClass.hpp"
 #include "IRDataType.h"
 #include "IRObjectName.h"
+#include "NodeObjectProducer.hpp"
+
+#include "IRWaveformNodeObject.hpp"
 
 #endif /* kNodeUI_h */

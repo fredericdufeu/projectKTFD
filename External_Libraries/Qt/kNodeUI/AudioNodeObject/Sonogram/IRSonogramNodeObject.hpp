@@ -15,7 +15,7 @@
 class IRSonogramNodeObject : public kNodeObject
 {
 public:
-    IRSonogramNodeObject(IR_Object::Name name, IR::Frame frame, IR_Data::INOUTDATA input, IR_Data::INOUTDATA output);
+    IRSonogramNodeObject(IR_Object::Name name, IR::Frame frame, IR_Data::INOUTDATA input, IR_Data::INOUTDATA output, QGraphicsScene *parentScene);
     ~IRSonogramNodeObject();
     
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;

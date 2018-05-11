@@ -36,6 +36,7 @@ public:
     
     std::vector<kNodeObject* > getSelectedObjects();
     
+    void createObj(IR_Object::Name name, IR::Frame objFrame, IR_Data::INOUTDATA input, IR_Data::INOUTDATA output);
     void createObj(kNodeObject *obj);
     void deleteObj();
     void copyObj(kNodeObject *node);
@@ -47,12 +48,22 @@ public:
     
     bool isSelected();
     
+    
+    
+    // method generate signal to call main() method in NodeObject.
+    void executeObj();
+    
+
+    
 signals:
     void deleteObjSignal();
     void copyObjSignal(kNodeObject *node);
     void pasteObjSignal(IR::Frame objFrame);
     void duplicateObjSignal();
     void selectAllObjSignal();
+    
+    // signal to call a slot in NodeObject.
+    void executeObjSignal();
     
 protected:
     void keyPressEvent(QKeyEvent *event) override;

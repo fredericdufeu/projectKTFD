@@ -31,6 +31,8 @@ public:
     IRWorkspaceView *getView() const;
     IRWorkspaceScene *getScene() const;
     
+
+    
     
 private:
     IRWorkspaceView *workspaceView;

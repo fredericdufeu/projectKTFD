@@ -22,6 +22,7 @@ namespace IR_Object {
         
     public:
        
+        //default constructor
         Name();
         
         Name(const char* name);

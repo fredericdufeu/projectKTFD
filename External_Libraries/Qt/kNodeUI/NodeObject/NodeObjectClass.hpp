@@ -19,16 +19,21 @@
 #include "IRUtilities.hpp"
 #include "kEditorWindow.hpp"
 
+
+
 class kNodeObject : public kIRNodeBase
 {
     Q_OBJECT
     
 public:
-    kNodeObject(IR_Object::Name name, IR::Frame frame, IR_Data::INOUTDATA input, IR_Data::INOUTDATA output);
+    kNodeObject(IR_Object::Name name, IR::Frame frame, IR_Data::INOUTDATA input, IR_Data::INOUTDATA output, QGraphicsScene *parentScene);
     ~kNodeObject();
     
     virtual void createObj();
     virtual void deleteObj();
+    
+
+    
     
     IR_Data::INOUTDATA getInputDataType();
     IR_Data::INOUTDATA getOutputDataType();
@@ -54,6 +59,11 @@ signals:
     void deleteObjSignal();
     
     void objSelectionChangedSignal(std::string);
+    
+public slots:
+    //# main() method for overrided by its child class.
+    //# this method is automatically called when the Node object is executed.
+    virtual void main();
     
 private:
     
