@@ -18,8 +18,12 @@ namespace IR_Object {
     public:
        
         Name(){ SetName(""); }
+        
+        Name(const char* name){
+            SetName(std::string(name));
+        }
       
-        Name(std::string name){
+        Name(const std::string name){
             SetName(name);
         }
        
@@ -39,6 +43,7 @@ namespace IR_Object {
             SetName(name);
             return *this;
         }
+        
         //const char*
         Name &operator=(const char* name) {
             if(name != nullptr){
