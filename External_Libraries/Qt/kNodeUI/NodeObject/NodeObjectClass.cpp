@@ -27,7 +27,7 @@ kNodeObject::kNodeObject(IR_Object::Name name, IR::Frame frame, IR_Data::INOUTDA
     QObject::connect(delegateScene, SIGNAL(executeObjSignal()), this, SLOT(main()));
     
     
-    std::cout << "\n" << std::endl;
+    std::c  out << "\n" << std::endl;
     std::cout << "Node Object created!\n" << "\t name = " << this->objectName << "\n" << "\t uniqueID = " << this->uniqueID << std::endl;
     std::cout << "\t frame = origin (" << this->frame.origin.x << ", " << this->frame.origin.y << ") : size (" << this->frame.size.width << ", " << this->frame.size.height << ")" << std::endl;
     std::cout << "\n" << std::endl;
