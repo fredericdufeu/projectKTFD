@@ -87,7 +87,7 @@ void kNodeObject::mouseMoveEvent(QGraphicsSceneMouseEvent *event)
     std::cout << "test" << std::endl;
     kIRNodeBase::mouseMoveEvent(event);
 }
-/*
+
 void kNodeObject::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
     kIRNodeBase::mousePressEvent(event);
@@ -101,7 +101,7 @@ void kNodeObject::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event)
 void kNodeObject::mouseReleaseEvent(QGraphicsSceneMouseEvent *event)
 {
     kIRNodeBase::mouseReleaseEvent(event);
-}*/
+}
 
 std::string kNodeObject::IRRandomStringsGenerator(const int len)
 {

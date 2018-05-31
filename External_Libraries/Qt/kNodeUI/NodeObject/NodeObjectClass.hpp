@@ -50,11 +50,11 @@ public:
     IR_Object::Id getUniqueId();
    
     virtual void mouseMoveEvent(QGraphicsSceneMouseEvent *event) override;
-     /*
+   
     virtual void mousePressEvent(QGraphicsSceneMouseEvent *event) override;
     virtual void mouseReleaseEvent(QGraphicsSceneMouseEvent *event) override;
     virtual void mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event) override;
-    */
+  
     void objSelectionChanged() override;
 
     // label

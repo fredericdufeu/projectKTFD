@@ -83,6 +83,7 @@
 		7D9245892098BCB100CF3A90 /* IRWorkspaceListNavigator.hpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7D9245872098BC5800CF3A90 /* IRWorkspaceListNavigator.hpp */; };
 		7D9FEBD320BD6742006699C4 /* NodeLabel.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7D9FEBD120BD6742006699C4 /* NodeLabel.cpp */; };
 		7D9FEBD620BD7D37006699C4 /* NodeProxyWidget.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7D9FEBD420BD7D37006699C4 /* NodeProxyWidget.cpp */; };
+		7D9FEBDA20C03BE8006699C4 /* IRWaveform.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7D9FEBD820C03BE8006699C4 /* IRWaveform.cpp */; };
 		7DD22CD920972C4C00B7B535 /* kEditorWindow.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7DD22CD720972C4C00B7B535 /* kEditorWindow.cpp */; };
 		7DD22CDC20972D9E00B7B535 /* kEditorWindowScene.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7DD22CDA20972D9E00B7B535 /* kEditorWindowScene.cpp */; };
 		7DD22CDD209732A000B7B535 /* kEditorWindowScene.hpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7DD22CDB20972D9E00B7B535 /* kEditorWindowScene.hpp */; };
@@ -228,6 +229,8 @@
 		7D9FEBD220BD6742006699C4 /* NodeLabel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = NodeLabel.hpp; sourceTree = "<group>"; };
 		7D9FEBD420BD7D37006699C4 /* NodeProxyWidget.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NodeProxyWidget.cpp; sourceTree = "<group>"; };
 		7D9FEBD520BD7D37006699C4 /* NodeProxyWidget.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = NodeProxyWidget.hpp; sourceTree = "<group>"; };
+		7D9FEBD820C03BE8006699C4 /* IRWaveform.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IRWaveform.cpp; sourceTree = "<group>"; };
+		7D9FEBD920C03BE8006699C4 /* IRWaveform.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IRWaveform.hpp; sourceTree = "<group>"; };
 		7DD22CD720972C4C00B7B535 /* kEditorWindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = kEditorWindow.cpp; sourceTree = "<group>"; };
 		7DD22CD820972C4C00B7B535 /* kEditorWindow.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = kEditorWindow.hpp; sourceTree = "<group>"; };
 		7DD22CDA20972D9E00B7B535 /* kEditorWindowScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = kEditorWindowScene.cpp; sourceTree = "<group>"; };
@@ -692,6 +695,15 @@
 			path = NodeLabel;
 			sourceTree = "<group>";
 		};
+		7D9FEBD720C03BD7006699C4 /* Waveform */ = {
+			isa = PBXGroup;
+			children = (
+				7D9FEBD820C03BE8006699C4 /* IRWaveform.cpp */,
+				7D9FEBD920C03BE8006699C4 /* IRWaveform.hpp */,
+			);
+			path = Waveform;
+			sourceTree = "<group>";
+		};
 		7DD22CD2209728C500B7B535 /* WaveformNode */ = {
 			isa = PBXGroup;
 			children = (
@@ -844,6 +856,7 @@
 		7DF9F46220B5A73300990A4A /* DSP */ = {
 			isa = PBXGroup;
 			children = (
+				7D9FEBD720C03BD7006699C4 /* Waveform */,
 				7DF9F46320B5A73E00990A4A /* Sonogram */,
 			);
 			path = DSP;
@@ -1041,6 +1054,7 @@
 				7D7F4789209C9D8C009B37F5 /* IRFileSystem.cpp in Compile Sources */,
 				10C2700E2093435000175F44 /* EditorWindowGraphicsView.cpp in Compile Sources */,
 				7DD4ED8C20A5DC4900BEE58F /* NodeObjectProducer.cpp in Compile Sources */,
+				7D9FEBDA20C03BE8006699C4 /* IRWaveform.cpp in Compile Sources */,
 				10C26FFB2093431400175F44 /* NodeObject.cpp in Compile Sources */,
 				7D9245842098B95C00CF3A90 /* IRWorkspaceNavigatorScene.cpp in Compile Sources */,
 				7D9245812098B95200CF3A90 /* IRWorkspaceNavigatorView.cpp in Compile Sources */,

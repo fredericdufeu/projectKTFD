@@ -10,7 +10,7 @@
 
 
 
-void readSoundFileAtPath(const std::string &path, SoundFile &soundFile);
+void readSoundFileAtPath(const std::string path, SoundFile *soundFile);
 
 
 

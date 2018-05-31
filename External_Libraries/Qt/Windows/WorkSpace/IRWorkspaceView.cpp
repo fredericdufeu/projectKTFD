@@ -68,7 +68,7 @@ void IRWorkspaceView::dropEvent(QDropEvent *event)
     {
         case IR_FILE::FILETYPE::AUDIO:
             //createAudioObj(objFrame);
-            createWaveformObj(objFrame); // Call createWaveformObj();
+            createWaveformObj(objFrame, path); // Call createWaveformObj();
             break;
         case IR_FILE::FILETYPE::IMAGE:
             break;
@@ -87,9 +87,10 @@ void IRWorkspaceView::dropEvent(QDropEvent *event)
 // ##
 // ## ==============================================================
 
-void IRWorkspaceView::createWaveformObj(IR::Frame objFrame)
+void IRWorkspaceView::createWaveformObj(IR::Frame objFrame,std::string path)
 {
     IR_Data::Type inputTypeArray [] = {
+        IR_Data::IR_STR,
         IR_Data::IR_URL, // url of an audio file
         IR_Data::IR_INT32, // begining sample index of the audio data (0 <= begin < end )
         IR_Data::IR_INT32 // ending sample index of the audio data ( end < samples )
@@ -103,7 +104,8 @@ void IRWorkspaceView::createWaveformObj(IR::Frame objFrame)
     IR_Data::INOUTDATA outputDataType = IR_Data::INOUTDATA{1, outputTypeArray};
     
     // give a name of the node object
-    IR_Object::Name name = "IRWaveform sample.wav 44100 88200";
+    std::string list = "IRWaveform " + path + " 0 44100";
+    IR_Object::Name name = list;
     // create object
     createObj(name, objFrame, inputDataType, outputDataType);
     

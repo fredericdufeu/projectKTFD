@@ -9,7 +9,7 @@
 
 
 
-void readSoundFileAtPath(const std::string &path, SoundFile &soundFile) // ASSUMES SOUNDFILE IS EMPTY
+void readSoundFileAtPath(const std::string path, SoundFile *soundFile) // ASSUMES SOUNDFILE IS EMPTY
 {
     // 1) OPEN SOUNDFILE
     
@@ -26,12 +26,12 @@ void readSoundFileAtPath(const std::string &path, SoundFile &soundFile) // ASSUM
     
     // 2) READ INTO FLOAT BUFFER
     
-    soundFile.samples = new float[soundFileInfo.frames]; // note that frames is of type sf_count_t
-    soundFile.numSamples = sf_read_float(openedSoundFile, soundFile.samples, soundFileInfo.frames) / soundFileInfo.channels; // note that return value is of type sf_count_t
-    // soundFile.numSamples /= soundFileInfo.channels;
+    soundFile->samples = new float[soundFileInfo.frames]; // note that frames is of type sf_count_t
+    soundFile->numSamples = sf_read_float(openedSoundFile, soundFile->samples, soundFileInfo.frames) / soundFileInfo.channels; // note that return value is of type sf_count_t
+    // soundFile->numSamples /= soundFileInfo.channels;
     
-    soundFile.samplingRate = soundFileInfo.samplerate;
-    soundFile.numChannels = soundFileInfo.channels;
+    soundFile->samplingRate = soundFileInfo.samplerate;
+    soundFile->numChannels = soundFileInfo.channels;
     
     // 3) CLOSE
     

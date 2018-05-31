@@ -15,7 +15,7 @@ SoundNodeObject::SoundNodeObject(const std::string path)
 : NodeObject(path)
 {
     soundFile = new SoundFile;
-    readSoundFileAtPath(path, *soundFile);
+    readSoundFileAtPath(path, soundFile);
     
     graphicsItem = new SoundNodeObjectGraphicsItem(0, 0, soundFile);
 }

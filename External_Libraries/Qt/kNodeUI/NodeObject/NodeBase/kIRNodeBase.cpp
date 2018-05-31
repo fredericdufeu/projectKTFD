@@ -26,43 +26,28 @@ kIRNodeBase::kIRNodeBase(IR::Frame frame)
 kIRNodeBase::~kIRNodeBase()
 {
 }
-/*
+
 void kIRNodeBase::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
-    //necessary to call it to select this object
     QGraphicsObject::mousePressEvent(event);
-    std::cout << "mouse pressed " << isSelected() << " : " << event->scenePos().x() << std::endl;
-
-    if(isSelected()){
-        objSelectionChanged();
-    }
-    emit mousePressSignal(event);
 }
 
 void kIRNodeBase::mouseMoveEvent(QGraphicsSceneMouseEvent *event)
 {
-    std::cout << "mouse move " << event->scenePos().x() << std::endl;
-    moveBy(event->scenePos().x() - event->lastScenePos().x(), event->scenePos().y() - event->lastScenePos().y());
-    
-    emit mouseMoveSignal(event);
+    QGraphicsObject::mouseMoveEvent(event);
+
 }
 
 void kIRNodeBase::mouseReleaseEvent(QGraphicsSceneMouseEvent *event)
 {
     QGraphicsObject::mouseReleaseEvent(event);
-    std::cout << "mouse released " << isSelected() << " : " << event->scenePos().x() << std::endl;
 
-    emit mouseReleaseSignal(event);
 }
 
 void kIRNodeBase::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event)
 {
-    this->editorWindow->show();
-    this->editorWindow->raise(); // mac
-    this->editorWindow->activateWindow(); // windows??
-    
-    emit mouseDoubleClickSignal(event);
-}*/
+    QGraphicsObject::mouseDoubleClickEvent(event);
+}
 
 
 

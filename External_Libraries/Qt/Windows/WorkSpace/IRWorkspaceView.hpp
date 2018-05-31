@@ -46,7 +46,7 @@ private:
     void createAudioObj(IR::Frame objFrame);
     
     //this is for a test 
-    void createWaveformObj(IR::Frame objFrame);
+    void createWaveformObj(IR::Frame objFrame, std::string path);
 
 };
 

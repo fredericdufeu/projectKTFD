@@ -492,6 +492,8 @@ dependencies: /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/main.cpp \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/kNodeUI.h \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/NodeObject/NodeObjectProducer/NodeObjectProducer.hpp \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/AudioNodeObject/WaveformNode/IRWaveformNodeObject.hpp \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/LibSndFile/SoundFileLoader/readSoundFileAtPath.h \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/LibSndFile/sndfile.h \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/Windows/WorkSpace/IRWorkspaceScene.hpp \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/IRiMaS_Utility/Tools/Graphics/selectionAreaSquare.hpp \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/NodeObject/EditorWindow/kEditorWindowScene.hpp \
