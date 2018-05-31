@@ -10,14 +10,13 @@
 
 #include <stdio.h>
 #include <iostream>
-
+#include <functional>
 #include <QtWidgets>
 
 
-#include "kEditorWindow.hpp"
 #include "IRUtilities.hpp"
 
-
+//class kEditorWindow;
 
 class kIRNodeBase : public QGraphicsObject
 {
@@ -56,11 +55,10 @@ public:
     IR::Frame getFrameSize();
     
     virtual void setFrameSize(IR::Frame frame);
+    virtual void setOrigin(IR::Origin origin);
     
     /* enable to open an editor window when double clickled*/
     bool isOpenEditorWindow = false;
-    
-    kEditorWindow *getEditorWindow();
     
     
     /* give signals to inform events */
@@ -74,9 +72,9 @@ signals:
 
 private:
     IR::Frame frame;
-    kEditorWindow *editorWindow = nullptr;
-    
+
     bool isEnableMultiSelection = false;
+    
 
     
 };

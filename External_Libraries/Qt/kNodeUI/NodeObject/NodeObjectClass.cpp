@@ -8,7 +8,7 @@
 
 #include "NodeObjectClass.hpp"
 
-#include "IRWorkspaceScene.hpp"
+//#include "IRWorkspaceScene.hpp"
 
 kNodeObject::kNodeObject(IR_Object::Name name, IR::Frame frame, IR_Data::INOUTDATA input, IR_Data::INOUTDATA output, QGraphicsScene *parentScene)
 : kIRNodeBase(frame)
@@ -16,18 +16,25 @@ kNodeObject::kNodeObject(IR_Object::Name name, IR::Frame frame, IR_Data::INOUTDA
     
     this->objectName = name;
     this->uniqueID = IRRandomStringsGenerator(IR::RANDOM_STRING_LEN);
-    std::cout << "uniqueID = " << this->uniqueID << std::endl;
     this->frame = frame;
     
     this->inputDataType = input;
     this->outputDataType = output;
     
+    //this->ObjectLabel = new NodeLabel(frame,name);
+    
+    //this->InnerWidget = new NodeProxyWidget(this, frame, name);
+    
+    /*
     //## Connect signal from Workspace to slot of kNodeObject main()
     IRWorkspaceScene *delegateScene = static_cast<IRWorkspaceScene *>(parentScene);
     QObject::connect(delegateScene, SIGNAL(executeObjSignal()), this, SLOT(main()));
+    */
     
     
-    std::c  out << "\n" << std::endl;
+    
+    
+    std::cout << "\n" << std::endl;
     std::cout << "Node Object created!\n" << "\t name = " << this->objectName << "\n" << "\t uniqueID = " << this->uniqueID << std::endl;
     std::cout << "\t frame = origin (" << this->frame.origin.x << ", " << this->frame.origin.y << ") : size (" << this->frame.size.width << ", " << this->frame.size.height << ")" << std::endl;
     std::cout << "\n" << std::endl;
@@ -35,7 +42,7 @@ kNodeObject::kNodeObject(IR_Object::Name name, IR::Frame frame, IR_Data::INOUTDA
 }
 
 kNodeObject::~kNodeObject() {
-    
+    delete this->InnerWidget;
 }
 
 void kNodeObject::createObj() {
@@ -65,12 +72,6 @@ IR_Object::Name kNodeObject::getObjectName() {
 }
 
 
-void kNodeObject::setFrameSize(IR::Frame frame)
-{
-    // call superclass to set frame and update.
-    kIRNodeBase::setFrameSize(frame);
-}
-
 IR::Frame kNodeObject::getFrame()
 {
     return getFrameSize();
@@ -80,13 +81,13 @@ IR_Object::Id kNodeObject::getUniqueId()
 {
     return this->uniqueID;
 }
-/*
+
 void kNodeObject::mouseMoveEvent(QGraphicsSceneMouseEvent *event)
 {
     std::cout << "test" << std::endl;
     kIRNodeBase::mouseMoveEvent(event);
 }
-
+/*
 void kNodeObject::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
     kIRNodeBase::mousePressEvent(event);
@@ -123,8 +124,25 @@ void kNodeObject::objSelectionChanged()
 
 void kNodeObject::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
-    
     kIRNodeBase::paint(painter,option,widget);
+    
+    float x = this->frame.origin.x - this->frame.size.width/2;
+    float y = this->frame.origin.y - this->frame.size.height/2;
+    
+    QPen pen(isSelected()? Qt::darkRed : Qt::blue);
+    pen.setColor(Qt::gray);
+    painter->setPen(pen);
+    
+    QFont font = painter->font();
+    int fontsize = 20;
+    font.setPointSize(fontsize);
+    painter->setFont(font);
+    std::cout << this->frame.size.height/2 << std::endl;
+    painter->drawText(QPoint(x, y+this->frame.size.height/2), QString::fromStdString(this->objectName.getParam()[1]));
+    
+    
+    //painter->setFont("Helvetica")
+    
     
 }
 
@@ -133,4 +151,15 @@ void kNodeObject::main()
 {
     
 }
+
+// label display
+void kNodeObject::setDisplayLabel(bool flag)
+{
+    this->DisplayLabel = flag;
+}
+bool kNodeObject::isDisplayLabel()
+{
+    return this->DisplayLabel;
+}
+
 

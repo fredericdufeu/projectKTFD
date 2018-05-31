@@ -12,7 +12,6 @@
 #include <iostream>
 
 #include <QtWidgets>
-#include "NodeDatabase.hpp"
 #include "kNodeUI.h"
 #include "selectionAreaSquare.hpp"
 
@@ -28,19 +27,17 @@ public:
     /* this method is like DRAG event */
     void mouseMoveEvent(QGraphicsSceneMouseEvent *event) override;
     void mouseReleaseEvent(QGraphicsSceneMouseEvent *event) override;
-    
     // # IMPORTANT : Double click is ignored when any keys are pressed!
     void mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event) override;
-    
-    std::vector<kNodeObject* > selectedObject;
-    
+
     std::vector<kNodeObject* > getSelectedObjects();
     
     void createObj(IR_Object::Name name, IR::Frame objFrame, IR_Data::INOUTDATA input, IR_Data::INOUTDATA output);
     void createObj(kNodeObject *obj);
     void deleteObj();
-    void copyObj(kNodeObject *node);
-    void pasteObj(IR::Frame objFrame);
+    void copyObj();
+    void copyDeleteObj();
+    void pasteObj();
     void duplicateObj();
     void selectAllObj();
     
@@ -56,11 +53,17 @@ public:
 
     
 signals:
-    void deleteObjSignal();
-    void copyObjSignal(kNodeObject *node);
-    void pasteObjSignal(IR::Frame objFrame);
+    void createObjSignal(kNodeObject *obj);
+    void deleteObjSignal(std::string id);
+    void copyObjSignal(std::vector<kNodeObject* > node);
+    void copyDeleteObjSignal();
+    void pasteObjSignal();
     void duplicateObjSignal();
     void selectAllObjSignal();
+    void unselectAllObjSignal();
+    void areaSelectionSignal(IR::Frame selectedFrame);
+    void openEditorWindowSignal(std::string id);
+
     
     // signal to call a slot in NodeObject.
     void executeObjSignal();
@@ -72,8 +75,15 @@ protected:
     
 private:
     
-    NodeDatabase *database;
     void calcSelectedObjecsts();
+    
+    /* store pointers of the copied objects */
+    std::vector<kNodeObject* > copiedObj;
+    /* store pointers of the selected objects */
+    std::vector<kNodeObject* > selectedObject;
+
+    /* unselect all objects */
+    void unselectAll();
     
     /* selection area square flag */
     bool isSelectionAreaSquareFlag = true;
@@ -84,9 +94,11 @@ private:
     
     /* key flag */
     bool key_option_press_flag = false;
-    bool key_ctrl_press_flag = false; // in mac commando
+    bool key_ctrl_press_flag = false;
+    bool key_command_press_flag = false;
     
     /* mouse flag */
     bool mouse_down_flag = false;
+    IR::Frame currentMousePos;
 };
 #endif /* IRWorkspaceScene_hpp */

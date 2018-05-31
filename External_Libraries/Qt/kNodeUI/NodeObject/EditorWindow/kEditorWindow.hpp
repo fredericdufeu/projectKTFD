@@ -13,17 +13,19 @@
 #include <QObject>
 #include <QWidget>
 
-
-#include "IRUtilities.hpp"
 #include "kEditorWindowView.hpp"
 #include "kEditorWindowScene.hpp"
+
+#include "IRUtilities.hpp"
+
+class kNodeObject;
 
 class kEditorWindow : public QWidget
 {
     Q_OBJECT
     
 public:
-    kEditorWindow(QWidget *parent);
+    kEditorWindow(QString &windowTitle, QWidget *parent);
     ~kEditorWindow();
 private:
     QWidget *parent;

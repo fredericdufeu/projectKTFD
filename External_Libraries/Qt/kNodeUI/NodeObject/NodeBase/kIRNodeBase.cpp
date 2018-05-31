@@ -7,18 +7,20 @@
 
 #include "kIRNodeBase.hpp"
 
+
 kIRNodeBase::kIRNodeBase(IR::Frame frame)
 : QGraphicsObject()
 {
     this->frame = frame;
     
-    this->editorWindow = new kEditorWindow(0);
+    //this->editorWindow = new kEditorWindow(0);
     
     // Give ItemSendsGeometryChanges to receive signal when item position has changed. see itemChange()
     setFlags(QGraphicsItem::ItemIsMovable | QGraphicsItem::ItemIsSelectable | QGraphicsItem::ItemIsFocusable | QGraphicsItem::ItemSendsGeometryChanges);
     
     // set Z order value : 0 is buttom
     setZValue(0);
+    
 }
 
 kIRNodeBase::~kIRNodeBase()
@@ -62,12 +64,6 @@ void kIRNodeBase::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event)
     emit mouseDoubleClickSignal(event);
 }*/
 
-void kIRNodeBase::openEditorWindow()
-{
-    this->editorWindow->show();
-    this->editorWindow->raise(); // mac
-    this->editorWindow->activateWindow(); // windows??
-}
 
 
 void kIRNodeBase::paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWidget *)
@@ -83,6 +79,7 @@ void kIRNodeBase::paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWi
     
     auto color = isSelected()? Qt::blue : Qt::lightGray;
     painter->fillRect(x, y, this->frame.size.width, this->frame.size.height, color);
+
 
 }
 
@@ -128,10 +125,26 @@ void kIRNodeBase::setFrameSize(IR::Frame frame)
     update();
 }
 
+void kIRNodeBase::setOrigin(IR::Origin origin)
+{
+    this->frame.origin = origin;
+    update();
+}
+
+void kIRNodeBase::openEditorWindow()
+{
+    /*
+    this->editorWindow->show();
+    this->editorWindow->raise(); // mac
+    this->editorWindow->activateWindow(); // windows??
+     */
+}
+/*
+
 kEditorWindow* kIRNodeBase::getEditorWindow()
 {
     return this->editorWindow;
-}
+}*/
 
 void kIRNodeBase::objSelectionChanged()
 {

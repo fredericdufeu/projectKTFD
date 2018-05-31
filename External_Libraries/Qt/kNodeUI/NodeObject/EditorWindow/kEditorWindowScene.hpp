@@ -14,9 +14,10 @@
 #include <QWidget>
 #include <QGraphicsScene>
 
+#include "IRWorkspaceScene.hpp"
 #include "IRUtilities.hpp"
 
-class kEditorWindowScene : public QGraphicsScene
+class kEditorWindowScene : public IRWorkspaceScene
 {
     Q_OBJECT
     

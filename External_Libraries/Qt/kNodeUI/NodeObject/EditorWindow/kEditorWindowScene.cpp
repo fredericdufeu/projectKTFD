@@ -8,7 +8,7 @@
 #include "kEditorWindowScene.hpp"
 
 kEditorWindowScene::kEditorWindowScene(QWidget *parent)
-: QGraphicsScene(parent)
+: IRWorkspaceScene(parent)
 {
     this->parent = parent;
 }

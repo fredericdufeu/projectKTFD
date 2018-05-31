@@ -52,6 +52,8 @@
 		7D45304D20A459E8008C9B48 /* IRObjectName.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7D45304C20A459E8008C9B48 /* IRObjectName.cpp */; };
 		7D45305020A47F04008C9B48 /* IRWaveformNodeObject.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7D45304E20A47F04008C9B48 /* IRWaveformNodeObject.cpp */; };
 		7D45305420A49B47008C9B48 /* IRSonogramNodeObject.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7D45305220A49B47008C9B48 /* IRSonogramNodeObject.cpp */; };
+		7D5C939320B8610800F70609 /* GraphicNodeObject.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7D5C939120B8610800F70609 /* GraphicNodeObject.cpp */; };
+		7D5C939620B8638200F70609 /* TriangleNodeObject.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7D5C939420B8638200F70609 /* TriangleNodeObject.cpp */; };
 		7D617B8D2097741300E270EE /* ProjectData.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7D617B8B2097741300E270EE /* ProjectData.cpp */; };
 		7D617B962098744500E270EE /* WorkSpace.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7D617B942098744500E270EE /* WorkSpace.cpp */; };
 		7D617B9B209876FD00E270EE /* IRGraphicsScene.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7D617B99209876FD00E270EE /* IRGraphicsScene.cpp */; };
@@ -79,6 +81,8 @@
 		7D9245842098B95C00CF3A90 /* IRWorkspaceNavigatorScene.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7D9245822098B95C00CF3A90 /* IRWorkspaceNavigatorScene.cpp */; };
 		7D9245882098BC5800CF3A90 /* IRWorkspaceListNavigator.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7D9245862098BC5800CF3A90 /* IRWorkspaceListNavigator.cpp */; };
 		7D9245892098BCB100CF3A90 /* IRWorkspaceListNavigator.hpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7D9245872098BC5800CF3A90 /* IRWorkspaceListNavigator.hpp */; };
+		7D9FEBD320BD6742006699C4 /* NodeLabel.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7D9FEBD120BD6742006699C4 /* NodeLabel.cpp */; };
+		7D9FEBD620BD7D37006699C4 /* NodeProxyWidget.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7D9FEBD420BD7D37006699C4 /* NodeProxyWidget.cpp */; };
 		7DD22CD920972C4C00B7B535 /* kEditorWindow.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7DD22CD720972C4C00B7B535 /* kEditorWindow.cpp */; };
 		7DD22CDC20972D9E00B7B535 /* kEditorWindowScene.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7DD22CDA20972D9E00B7B535 /* kEditorWindowScene.cpp */; };
 		7DD22CDD209732A000B7B535 /* kEditorWindowScene.hpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7DD22CDB20972D9E00B7B535 /* kEditorWindowScene.hpp */; };
@@ -183,6 +187,10 @@
 		7D45304F20A47F04008C9B48 /* IRWaveformNodeObject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IRWaveformNodeObject.hpp; sourceTree = "<group>"; };
 		7D45305220A49B47008C9B48 /* IRSonogramNodeObject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IRSonogramNodeObject.cpp; sourceTree = "<group>"; };
 		7D45305320A49B47008C9B48 /* IRSonogramNodeObject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IRSonogramNodeObject.hpp; sourceTree = "<group>"; };
+		7D5C939120B8610800F70609 /* GraphicNodeObject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GraphicNodeObject.cpp; sourceTree = "<group>"; };
+		7D5C939220B8610800F70609 /* GraphicNodeObject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GraphicNodeObject.hpp; sourceTree = "<group>"; };
+		7D5C939420B8638200F70609 /* TriangleNodeObject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TriangleNodeObject.cpp; sourceTree = "<group>"; };
+		7D5C939520B8638200F70609 /* TriangleNodeObject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TriangleNodeObject.hpp; sourceTree = "<group>"; };
 		7D617B8B2097741300E270EE /* ProjectData.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ProjectData.cpp; sourceTree = "<group>"; };
 		7D617B8C2097741300E270EE /* ProjectData.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ProjectData.hpp; sourceTree = "<group>"; };
 		7D617B8E2097751900E270EE /* IRiMaSFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IRiMaSFoundation.h; sourceTree = "<group>"; };
@@ -216,6 +224,10 @@
 		7D9245832098B95C00CF3A90 /* IRWorkspaceNavigatorScene.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IRWorkspaceNavigatorScene.hpp; sourceTree = "<group>"; };
 		7D9245862098BC5800CF3A90 /* IRWorkspaceListNavigator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IRWorkspaceListNavigator.cpp; sourceTree = "<group>"; };
 		7D9245872098BC5800CF3A90 /* IRWorkspaceListNavigator.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IRWorkspaceListNavigator.hpp; sourceTree = "<group>"; };
+		7D9FEBD120BD6742006699C4 /* NodeLabel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NodeLabel.cpp; sourceTree = "<group>"; };
+		7D9FEBD220BD6742006699C4 /* NodeLabel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = NodeLabel.hpp; sourceTree = "<group>"; };
+		7D9FEBD420BD7D37006699C4 /* NodeProxyWidget.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NodeProxyWidget.cpp; sourceTree = "<group>"; };
+		7D9FEBD520BD7D37006699C4 /* NodeProxyWidget.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = NodeProxyWidget.hpp; sourceTree = "<group>"; };
 		7DD22CD720972C4C00B7B535 /* kEditorWindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = kEditorWindow.cpp; sourceTree = "<group>"; };
 		7DD22CD820972C4C00B7B535 /* kEditorWindow.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = kEditorWindow.hpp; sourceTree = "<group>"; };
 		7DD22CDA20972D9E00B7B535 /* kEditorWindowScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = kEditorWindowScene.cpp; sourceTree = "<group>"; };
@@ -282,6 +294,7 @@
 		105CBF4320923A0C0084B3FF /* External_Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				7DF9F46220B5A73300990A4A /* DSP */,
 				7D617B8F20986AD900E270EE /* Preferences */,
 				7DD705DF209350E400495EDA /* IRiMaS_Utility */,
 				105CBF4520923A3E0084B3FF /* LibSndFile */,
@@ -331,6 +344,7 @@
 			children = (
 				10C26FF32093431400175F44 /* NodeObject.hpp */,
 				10C26FF42093431400175F44 /* NodeObject.cpp */,
+				7D5C939020B860F000F70609 /* GraphicNodeObject */,
 				10C26FF52093431400175F44 /* SoundNodeObject */,
 			);
 			path = NodeObject;
@@ -380,8 +394,8 @@
 			children = (
 				10C270042093435000175F44 /* EditorWindow.hpp */,
 				10C2700C2093435000175F44 /* EditorWindow.cpp */,
-				10C270052093435000175F44 /* EditorWindowGraphicsScene */,
 				10C270082093435000175F44 /* EditorWindowGraphicsView */,
+				10C270052093435000175F44 /* EditorWindowGraphicsScene */,
 				10C2700B2093435000175F44 /* EditorWindowInspector */,
 			);
 			path = EditorWindow;
@@ -533,6 +547,15 @@
 			path = Sonogram;
 			sourceTree = "<group>";
 		};
+		7D5C939020B860F000F70609 /* GraphicNodeObject */ = {
+			isa = PBXGroup;
+			children = (
+				7D5C939120B8610800F70609 /* GraphicNodeObject.cpp */,
+				7D5C939220B8610800F70609 /* GraphicNodeObject.hpp */,
+			);
+			path = GraphicNodeObject;
+			sourceTree = "<group>";
+		};
 		7D617B8A209773F600E270EE /* ProjectDataSet */ = {
 			isa = PBXGroup;
 			children = (
@@ -658,6 +681,17 @@
 			path = IRWorkspaceListNavigator;
 			sourceTree = "<group>";
 		};
+		7D9FEBD020BD6734006699C4 /* NodeLabel */ = {
+			isa = PBXGroup;
+			children = (
+				7D9FEBD120BD6742006699C4 /* NodeLabel.cpp */,
+				7D9FEBD220BD6742006699C4 /* NodeLabel.hpp */,
+				7D9FEBD420BD7D37006699C4 /* NodeProxyWidget.cpp */,
+				7D9FEBD520BD7D37006699C4 /* NodeProxyWidget.hpp */,
+			);
+			path = NodeLabel;
+			sourceTree = "<group>";
+		};
 		7DD22CD2209728C500B7B535 /* WaveformNode */ = {
 			isa = PBXGroup;
 			children = (
@@ -713,6 +747,7 @@
 		7DD705F42093645000495EDA /* kNodeUI */ = {
 			isa = PBXGroup;
 			children = (
+				7D9FEBD020BD6734006699C4 /* NodeLabel */,
 				7DD7061F20936E9D00495EDA /* GraphicsClassLib */,
 				7DD705F72093646700495EDA /* ImageNodeObject */,
 				7DD705F62093645F00495EDA /* AudioNodeObject */,
@@ -747,6 +782,8 @@
 		7DD705F72093646700495EDA /* ImageNodeObject */ = {
 			isa = PBXGroup;
 			children = (
+				7D5C939420B8638200F70609 /* TriangleNodeObject.cpp */,
+				7D5C939520B8638200F70609 /* TriangleNodeObject.hpp */,
 			);
 			path = ImageNodeObject;
 			sourceTree = "<group>";
@@ -802,6 +839,21 @@
 				7DF2CE3B2098AA3700438628 /* NavigatorSpace.hpp */,
 			);
 			path = LeftArea;
+			sourceTree = "<group>";
+		};
+		7DF9F46220B5A73300990A4A /* DSP */ = {
+			isa = PBXGroup;
+			children = (
+				7DF9F46320B5A73E00990A4A /* Sonogram */,
+			);
+			path = DSP;
+			sourceTree = "<group>";
+		};
+		7DF9F46320B5A73E00990A4A /* Sonogram */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sonogram;
 			sourceTree = "<group>";
 		};
 		AF39DD055C3EF8226FBE929D /* Frameworks */ = {
@@ -943,6 +995,7 @@
 			files = (
 				10C270252093449A00175F44 /* EditorWindow.hpp in Compile Sources */,
 				10C270262093449D00175F44 /* EditorWindowGraphicsScene.hpp in Compile Sources */,
+				7D9FEBD320BD6742006699C4 /* NodeLabel.cpp in Compile Sources */,
 				10C270272093449F00175F44 /* EditorWindowGraphicsView.hpp in Compile Sources */,
 				7DF2CE3C2098AA3700438628 /* NavigatorSpace.cpp in Compile Sources */,
 				7D92457D2098B3E600CF3A90 /* NavigatorSpace.hpp in Compile Sources */,
@@ -964,6 +1017,7 @@
 				7D7F478C209CAA67009B37F5 /* readSoundFileAtPath.cpp in Compile Sources */,
 				10C27024209343CF00175F44 /* SoundFile.cpp in Compile Sources */,
 				7D7F477D2099F78B009B37F5 /* IRWorkspaceView.hpp in Compile Sources */,
+				7D9FEBD620BD7D37006699C4 /* NodeProxyWidget.cpp in Compile Sources */,
 				7D45305420A49B47008C9B48 /* IRSonogramNodeObject.cpp in Compile Sources */,
 				A2C703BB415706F6735302F6 /* main.cpp in Compile Sources */,
 				10C2701E2093439500175F44 /* GraphicsScene.cpp in Compile Sources */,
@@ -975,6 +1029,7 @@
 				10C2700D2093435000175F44 /* EditorWindowGraphicsScene.cpp in Compile Sources */,
 				10C270012093433100175F44 /* GlobalDatabase.cpp in Compile Sources */,
 				7D7F477C2099F3C4009B37F5 /* IRWorkspaceScene.cpp in Compile Sources */,
+				7D5C939620B8638200F70609 /* TriangleNodeObject.cpp in Compile Sources */,
 				ABA692EC7D08616105FA9500 /* moc_MainWindow.cpp in Compile Sources */,
 				10C26FFD2093431400175F44 /* SoundNodeObject.cpp in Compile Sources */,
 				7D7F478F209CB2F0009B37F5 /* kEditorWindowView.cpp in Compile Sources */,
@@ -1001,6 +1056,7 @@
 				7D7F4785209C9707009B37F5 /* QDirSystem.cpp in Compile Sources */,
 				10C2701F2093439500175F44 /* CentralWidget.cpp in Compile Sources */,
 				7DD22CD920972C4C00B7B535 /* kEditorWindow.cpp in Compile Sources */,
+				7D5C939320B8610800F70609 /* GraphicNodeObject.cpp in Compile Sources */,
 				7DD22CDE209732A900B7B535 /* kEditorWindow.hpp in Compile Sources */,
 				7D617B9E2098771700E270EE /* IRGraphicsView.cpp in Compile Sources */,
 				7D617BA020987ACF00E270EE /* IRGraphicsView.hpp in Compile Sources */,

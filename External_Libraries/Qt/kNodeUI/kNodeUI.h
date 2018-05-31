@@ -11,7 +11,7 @@
 
 #include "kIRNodeBase.hpp"
 
-#include "NodeOBjectClass.hpp"
+#include "NodeObjectClass.hpp"
 #include "IRDataType.h"
 #include "IRObjectName.h"
 #include "NodeObjectProducer.hpp"

@@ -9,7 +9,9 @@
 #define IRDataStructure_h
 
 #include <iostream>
+#include <vector>
 #include "math.h"
+
 //#include "WorkSpace.hpp"
 
 
@@ -55,6 +57,7 @@ namespace IR {
         float x;
         float y;
     };
+    
     
 
 }

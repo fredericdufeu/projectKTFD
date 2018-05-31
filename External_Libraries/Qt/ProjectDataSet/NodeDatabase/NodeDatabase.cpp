@@ -20,14 +20,15 @@ NodeDatabase::~NodeDatabase()
 }
 
 
-bool NodeDatabase::registerObjToDatabase(std::string id, kNodeObject* obj)
+bool NodeDatabase::registerObjToDatabase(std::string id, kNodeObject* obj, kEditorWindow *win)
 {
-    if(this->database.find(id) != this->database.end()) {
+    if(this->database.find(id) != this->database.end() || this->editor.find(id) != this->editor.end()) {
         std::cout << "Error : registerObjToDatabase(): id " << id << " already exists.\n" << std::endl;
         return false;
     }else{
         this->database[id] = obj;
-        std::cout << "registerObjToDatabase(); id " << id << " registered.\n" << std::endl;
+        this->editor[id] = win;
+        std::cout << "registerObjToDatabase(); id " << id << " registered.\n" << this->editor[id] << std::endl;
         return true;
     }
 }
@@ -43,14 +44,27 @@ kNodeObject* NodeDatabase::retrieveObjFromDatabase(std::string id)
     }
 }
 
+kEditorWindow * NodeDatabase::retrieveEditorWinFromDatabase(std::string id)
+{
+    std::cout << "editor window retrieved " << this->editor[id] << std::endl;
+    if(this->editor.find(id) != this->editor.end()){
+        std::cout << "retrieveEditorWinFromDatabase(); id " << id << " retrieved.\n" << std::endl;
+        return this->editor[id];
+    }else{
+        std::cout << "Error : retrieveEditorWinFromDatabase(): id " << id << " does not exist.\n" << std::endl;
+        return nullptr;
+    }
+}
+
 bool NodeDatabase::removeObjFromDatabase(std::string id)
 {
-    if(this->database.find(id) == this->database.end()){
+    if(this->database.find(id) == this->database.end() || this->editor.find(id) == this->editor.end()){
         std::cout << "removeObjFromDatabase(); id " << id << " does not exist.\n" << std::endl;
         return false;
     }else{
         //erase item if it exists.
         this->database.erase(id);
+        this->editor.erase(id);
         return true;
     }
 }
@@ -58,7 +72,10 @@ bool NodeDatabase::removeObjFromDatabase(std::string id)
 void NodeDatabase::showDatabase()
 {
     for(auto itr = this->database.begin(); itr != this->database.end(); ++itr) {
-        std::cout << "key = " << itr->first << " : val = " << itr->second << "\n"<< std::endl;
+        std::cout << "Node Key = " << itr->first << " : NodeObject = " << itr->second << "\n"<< std::endl;
+    }
+    for(auto itr = this->editor.begin(); itr != this->editor.end(); ++itr) {
+        std::cout << "Editor Key = " << itr->first << " : EditorObject = " << itr->second << "\n"<< std::endl;
     }
 }
 
@@ -67,12 +84,16 @@ void NodeDatabase::deleteAllNode()
     for(auto itr = this->database.begin(); itr != this->database.end(); ++itr) {
         delete itr->second;
     }
+    for(auto itr = this->editor.begin(); itr != this->editor.end(); ++itr) {
+        delete itr->second;
+    }
 }
 
 void NodeDatabase::clearDatabase()
 {
     deleteAllNode();
     this->database.clear();
+    this->editor.clear();
 }
 
 void NodeDatabase::showSelectedObj()
@@ -89,4 +110,9 @@ void NodeDatabase::showSelectedObj()
 std::map<std::string, kNodeObject*> NodeDatabase::getDatabase()
 {
     return this->database;
+}
+
+std::map<std::string, kEditorWindow*> NodeDatabase::getEditorWindowDatabase()
+{
+    return this->editor;
 }

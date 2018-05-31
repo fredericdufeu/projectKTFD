@@ -17,7 +17,9 @@
 #include "IRObjectName.h"
 #include "kIRNodeBase.hpp"
 #include "IRUtilities.hpp"
-#include "kEditorWindow.hpp"
+#include "NodeProxyWidget.hpp"
+
+//#include "kEditorWindow.hpp"
 
 
 
@@ -40,20 +42,25 @@ public:
 
     IR_Object::Name getObjectName();
     
-    void setFrameSize(IR::Frame frame) override;
-    
+ 
     virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
 
     
     IR::Frame getFrame();
     IR_Object::Id getUniqueId();
-    /*
+   
     virtual void mouseMoveEvent(QGraphicsSceneMouseEvent *event) override;
+     /*
     virtual void mousePressEvent(QGraphicsSceneMouseEvent *event) override;
     virtual void mouseReleaseEvent(QGraphicsSceneMouseEvent *event) override;
     virtual void mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event) override;
     */
     void objSelectionChanged() override;
+
+    // label
+    void setDisplayLabel(bool flag);
+    bool isDisplayLabel();
+
 
 signals:
     void deleteObjSignal();
@@ -75,6 +82,11 @@ private:
     std::string uniqueID;
     
     IR::Frame frame;
+    
+    bool DisplayLabel = true;
+    
+    NodeProxyWidget *InnerWidget;
+
     
     /* generate ID */
     std::string IRRandomStringsGenerator(const int len);

@@ -63,6 +63,11 @@ namespace IR_Object {
         return this->name;
     }
     
+    std::vector<std::string> Name::getParam() const{
+        return this->param;
+    }
+    
+    
     void Name::setValue(const std::string value) {
         SetName(value);
     }
@@ -78,6 +83,10 @@ namespace IR_Object {
             }
         }
         return elems;
+    }
+    
+    QString Name::toQString(){
+        return QString::fromStdString(this->name);
     }
     
 }

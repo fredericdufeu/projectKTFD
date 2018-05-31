@@ -6,14 +6,17 @@
 //
 
 #include "kEditorWindow.hpp"
+#include "NodeObjectClass.hpp"
 
-kEditorWindow::kEditorWindow(QWidget *parent)
+
+kEditorWindow::kEditorWindow(QString &windowTitle, QWidget *parent)
 : QWidget(parent)
 {
     this->parent = parent;
     setWindowFlag(Qt::WindowStaysOnTopHint);
     setMinimumSize(200,150);
     resize(640, 480);
+    this->setWindowTitle(windowTitle);
 
     
     this->layout = new QHBoxLayout(this);
@@ -28,6 +31,7 @@ kEditorWindow::kEditorWindow(QWidget *parent)
     QShortcut *closeCtrlW = new QShortcut(this);
     closeCtrlW->setKey(Qt::CTRL + Qt::Key_W);
     connect(closeCtrlW, SIGNAL(activated()), this, SLOT(close()));
+    
     
 }
 

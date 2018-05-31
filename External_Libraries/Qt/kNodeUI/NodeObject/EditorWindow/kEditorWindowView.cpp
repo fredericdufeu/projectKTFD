@@ -8,7 +8,7 @@
 #include "kEditorWindowView.hpp"
 
 kEditorWindowView::kEditorWindowView(QGraphicsScene *scene, QWidget *parent)
-: QGraphicsView(scene, parent)
+: IRWorkspaceView(scene, parent)
 {
     setAcceptDrops(true);
 }

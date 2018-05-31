@@ -17,6 +17,7 @@
 #include "IRObjectName.h"
 
 #include "NodeObjectClass.hpp"
+#include "kEditorWindow.hpp"
 
 class NodeDatabase {
     
@@ -26,10 +27,12 @@ public:
     
     // register an Object to the database with id.
     // return false if failed.
-    bool registerObjToDatabase(std::string id, kNodeObject* obj);
+    bool registerObjToDatabase(std::string id, kNodeObject* obj, kEditorWindow *win);
     // retrieve an Object registered in the database.
     // return a pointer of the Object if success, and NULL if failed.
     kNodeObject* retrieveObjFromDatabase(std::string id);
+    kEditorWindow* retrieveEditorWinFromDatabase(std::string id);
+
     // remove an Object regiestered in the database.
     // return false if failed.
     bool removeObjFromDatabase(std::string id);
@@ -37,6 +40,7 @@ public:
     void showDatabase();
     
     std::map<std::string, kNodeObject*> getDatabase();
+    std::map<std::string, kEditorWindow*> getEditorWindowDatabase();
 
     //clear all members
     void clearDatabase();
@@ -47,6 +51,7 @@ public:
 private:
     //database map.
     std::map<std::string, kNodeObject*>database;
+    std::map<std::string, kEditorWindow*> editor;
     
     //deallocate all node pointer
     void deleteAllNode();

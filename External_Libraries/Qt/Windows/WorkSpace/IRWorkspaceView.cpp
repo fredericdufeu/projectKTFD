@@ -13,10 +13,19 @@ IRWorkspaceView::IRWorkspaceView(QGraphicsScene *scene, QWidget *parent)
 {
     setAcceptDrops(true);
     std::cout << "workspace view size = " << this->width() << ", " << this->height() << std::endl;
+    this->setMouseTracking(true);
 }
 
 IRWorkspaceView::~IRWorkspaceView()
 {
+    
+}
+
+void IRWorkspaceView::mouseMoveEvent(QMouseEvent *event)
+{
+    QGraphicsView::mouseMoveEvent(event);
+    //IRWorkspaceScene *sc = static_cast<IRWorkspaceScene* >(scene());
+    //sc->mouseMoveSceneEvent(event);
     
 }
 
@@ -28,7 +37,6 @@ void IRWorkspaceView::dragEnterEvent(QDragEnterEvent *event)
 
 void IRWorkspaceView::dragMoveEvent(QDragMoveEvent *event)
 {
-    std::cout << "dragMoveEvent \n"<< std::endl;
     this->mPos.x = event->pos().x();
     this->mPos.y = event->pos().y();
 }
@@ -133,29 +141,5 @@ void IRWorkspaceView::createObj(IR_Object::Name name, IR::Frame objFrame, IR_Dat
     emit createObjSignal(name, objFrame);
     
 }
-
-void IRWorkspaceView::copyObj()
-{
-    //get selected obj
-    std::vector<kNodeObject* >selectedObj = static_cast<IRWorkspaceScene* >(scene())->getSelectedObjects();
-    if(selectedObj[0] != nullptr) {
-        
-        for(auto obj : selectedObj) {
-            
-        }
-        
-    }
-    
-}
-
-
-void IRWorkspaceView::deleteObj()
-{
-    
-}
-
-
-
-
 
 

@@ -10,10 +10,10 @@
 
 #include <stdio.h>
 #include <iostream>
-
 #include <QtWidgets>
+#include "IRWorkspaceView.hpp"
 
-class kEditorWindowView : public QGraphicsView
+class kEditorWindowView : public IRWorkspaceView
 {
     Q_OBJECT
 public:

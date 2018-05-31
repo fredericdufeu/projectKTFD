@@ -449,7 +449,12 @@ dependencies: \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/Windows/MainWindow/IRiMaSFoundation.h \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/ProjectDataSet/ProjectData.hpp \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/Windows/WorkSpace/WorkSpace.hpp \
-  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/IRGraphicsView/IRGraphicsView.hpp \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/ProjectDataSet/NodeDatabase/NodeDatabase.hpp \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/NodeObject/ObjectType/IRDataType.h \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/NodeObject/ObjectType/IRObjectName.h \
+  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtCore.framework/Headers/QString \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/NodeObject/NodeObjectClass.hpp \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/NodeObject/NodeBase/kIRNodeBase.hpp \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/IRiMaS_Utility/IRUtilities.hpp \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/IRiMaS_Utility/FileIO/IRFileUtility.hpp \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/IRiMaS_Utility/FileIO/IRFileTypeEnum.hpp \
@@ -457,22 +462,20 @@ dependencies: \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/IRFileSystem/IRFileSystem.hpp \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/IRFileSystem/QtDirSystem/QDirSystem.hpp \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Preferences/fundamentalStaticValues.hpp \
-  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/kNodeUI.h \
-  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/NodeObject/NodeBase/kIRNodeBase.hpp \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/NodeLabel/NodeProxyWidget.hpp \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/NodeLabel/NodeLabel.hpp \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/NodeObject/EditorWindow/kEditorWindow.hpp \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/NodeObject/EditorWindow/kEditorWindowView.hpp \
-  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/NodeObject/EditorWindow/kEditorWindowScene.hpp \
-  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/QGraphicsScene \
-  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/NodeObject/NodeObjectClass.hpp \
-  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/NodeObject/ObjectType/IRDataType.h \
-  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/NodeObject/ObjectType/IRObjectName.h \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/Windows/WorkSpace/IRWorkspaceView.hpp \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/kNodeUI.h \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/NodeObject/NodeObjectProducer/NodeObjectProducer.hpp \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/AudioNodeObject/WaveformNode/IRWaveformNodeObject.hpp \
-  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/IRGraphicsScene/IRGraphicsScene.hpp \
-  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/Windows/WorkSpace/IRWorkspaceView.hpp \
-  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/ProjectDataSet/NodeDatabase/NodeDatabase.hpp \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/Windows/WorkSpace/IRWorkspaceScene.hpp \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/IRiMaS_Utility/Tools/Graphics/selectionAreaSquare.hpp \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/NodeObject/EditorWindow/kEditorWindowScene.hpp \
+  /Users/KeitaroTakahashi/Qt/5.10.1/clang_64/lib/QtWidgets.framework/Headers/QGraphicsScene \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/IRGraphicsView/IRGraphicsView.hpp \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/IRGraphicsScene/IRGraphicsScene.hpp \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/ProjectDataSet/WorkSpaceDatabase/WorkSpaceDatabase.hpp \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/IRWorkspaceNavigator/IRWorkspaceNavigatorView.hpp \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/IRWorkspaceNavigator/IRWorkspaceNavigatorScene.hpp \

@@ -13,12 +13,12 @@
 #include <vector>
 #include <sstream>
 #include <string>
+#include <QString>
 
 namespace IR_Object {
     
     class Name {
         std::string name;
-        std::vector<std::string> param;
         
     public:
        
@@ -48,11 +48,16 @@ namespace IR_Object {
         Name &SetName(const std::string name);
         
         std::string getValue() const;
-        
+        std::vector<std::string> getParam() const;
+
         void setValue(const std::string value);
+        
+        QString toQString();
         
     private:
         std::vector<std::string> splitBySpace(const std::string &s);
+        std::vector<std::string> param;
+
 
     };
     
