@@ -18,6 +18,7 @@
 
 #include "IRWorkspaceScene.hpp"
 #include "IRWaveformNodeObject.hpp"
+#include "IRSonogramNodeObject.hpp"
 
 
 class IRWorkspaceView : public QGraphicsView
@@ -47,6 +48,7 @@ private:
     
     //this is for a test 
     void createWaveformObj(IR::Frame objFrame, std::string path);
+    void createSonogramObj(IR::Frame objFrame, std::string path);
 
 };
 

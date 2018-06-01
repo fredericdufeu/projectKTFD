@@ -139,6 +139,23 @@ void IRWorkspaceScene::createObj(IR_Object::Name name, IR::Frame objFrame, IR_Da
 
 }
 
+void IRWorkspaceScene::createObj2(IR_Object::Name name, IR::Frame objFrame, IR_Data::INOUTDATA input, IR_Data::INOUTDATA output)
+{
+    
+    IRSonogramNodeObject *obj = new IRSonogramNodeObject(name, objFrame, input, output, this);
+    
+    //register to the database
+    //this->database->registerObjToDatabase(obj->getUniqueId(), obj);
+    //add
+    addItem(obj);
+    update();
+    
+    //show database
+    //this->database->showDatabase();
+    emit createObjSignal(obj);
+    
+}
+
 void IRWorkspaceScene::createObj(kNodeObject *obj)
 {
     //register to the database

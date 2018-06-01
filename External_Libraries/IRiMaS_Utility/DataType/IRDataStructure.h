@@ -59,6 +59,33 @@ namespace IR {
     };
     
     
+    /* vector data structure */
+    
+    struct vector_float2{
+        float x = 0.0;
+        float y = 0.0;
+    };
+    
+    struct vector_float4{
+        int r = 0.0;
+        int g = 0.0;
+        int b = 0.0;
+        int a = 0.0;
+    };
+    
+    struct Vertex4D{
+        
+        vector_float2 pos1;
+        vector_float2 pos2;
+        vector_float2 pos3;
+        vector_float2 pos4;
+        
+        vector_float4 color1;
+        vector_float4 color2;
+        vector_float4 color3;
+        vector_float4 color4;
+    };
+    
 
 }
 

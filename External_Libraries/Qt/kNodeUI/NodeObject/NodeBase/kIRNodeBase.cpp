@@ -65,7 +65,6 @@ void kIRNodeBase::paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWi
     auto color = isSelected()? Qt::blue : Qt::lightGray;
     painter->fillRect(x, y, this->frame.size.width, this->frame.size.height, color);
 
-
 }
 
 QRectF kIRNodeBase::boundingRect() const
@@ -98,7 +97,6 @@ IR::Frame kIRNodeBase::getFrameSize()
 {
     IR::Frame objFrame = IR::Frame{ {this->frame.origin.x + static_cast<float>(pos().x()), this->frame.origin.y + static_cast<float>(pos().y())} , this->frame.size};
     return objFrame;
-    //return this->frame;
 }
 
 void kIRNodeBase::setFrameSize(IR::Frame frame)

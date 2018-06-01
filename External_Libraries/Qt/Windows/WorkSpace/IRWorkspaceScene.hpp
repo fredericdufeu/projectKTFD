@@ -33,6 +33,8 @@ public:
     std::vector<kNodeObject* > getSelectedObjects();
     
     void createObj(IR_Object::Name name, IR::Frame objFrame, IR_Data::INOUTDATA input, IR_Data::INOUTDATA output);
+    void createObj2(IR_Object::Name name, IR::Frame objFrame, IR_Data::INOUTDATA input, IR_Data::INOUTDATA output);
+
     void createObj(kNodeObject *obj);
     void deleteObj();
     void copyObj();

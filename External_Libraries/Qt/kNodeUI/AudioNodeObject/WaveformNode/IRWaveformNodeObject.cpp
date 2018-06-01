@@ -40,10 +40,7 @@ void IRWaveformNodeObject::main()
     this->soundfile = new SoundFile();
     readSoundFileAtPath(this->url, this->soundfile);
     std::cout << this->soundfile->numSamples << " samples are loaded. "<< std::endl;
-    
-   
-    
-    
+ 
 }
 
 

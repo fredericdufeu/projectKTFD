@@ -60,7 +60,7 @@ void IRWorkspaceView::dropEvent(QDropEvent *event)
     auto fileformat = fileUtility.checkFileType(path);
     
     std::cout << "filename : " << path << " loading... : file format is " << fileformat.format << std::endl;
-    struct IR::Frame objFrame = { { static_cast<float>(pointInSceneCoordinates.x()), static_cast<float>(pointInSceneCoordinates.y()) }, {150, 40} };
+    struct IR::Frame objFrame = { { static_cast<float>(pointInSceneCoordinates.x()), static_cast<float>(pointInSceneCoordinates.y()) }, {600, 150} };
 
     //# call appripriate method depending on the file format.
     //# this process is only the case when any files are droped in a workspace.
@@ -68,7 +68,8 @@ void IRWorkspaceView::dropEvent(QDropEvent *event)
     {
         case IR_FILE::FILETYPE::AUDIO:
             //createAudioObj(objFrame);
-            createWaveformObj(objFrame, path); // Call createWaveformObj();
+            //createWaveformObj(objFrame, path); // Call createWaveformObj();
+            createSonogramObj(objFrame, path);
             break;
         case IR_FILE::FILETYPE::IMAGE:
             break;
@@ -108,7 +109,29 @@ void IRWorkspaceView::createWaveformObj(IR::Frame objFrame,std::string path)
     IR_Object::Name name = list;
     // create object
     createObj(name, objFrame, inputDataType, outputDataType);
+}
+
+void IRWorkspaceView::createSonogramObj(IR::Frame objFrame, std::string path)
+{
+    IR_Data::Type inputTypeArray [] = {
+        IR_Data::IR_STR,
+        IR_Data::IR_URL, // url of an audio file
+        IR_Data::IR_INT32, // begining sample index of the audio data (0 <= begin < end )
+        IR_Data::IR_INT32 // ending sample index of the audio data ( end < samples )
+    };
     
+    IR_Data::Type outputTypeArray [] = {
+        IR_Data::IR_AY_FLT // audio data array
+    };
+    
+    IR_Data::INOUTDATA inputDataType = IR_Data::INOUTDATA{3, inputTypeArray};
+    IR_Data::INOUTDATA outputDataType = IR_Data::INOUTDATA{1, outputTypeArray};
+    
+    // give a name of the node object
+    std::string list = "IRSonogram " + path + " 0 44100";
+    IR_Object::Name name = list;
+    // create object
+    createObj(name, objFrame, inputDataType, outputDataType);
 }
 
 
@@ -138,10 +161,11 @@ void IRWorkspaceView::createAudioObj(IR::Frame objFrame)
 void IRWorkspaceView::createObj(IR_Object::Name name, IR::Frame objFrame, IR_Data::INOUTDATA input, IR_Data::INOUTDATA output)
 {
     //kNodeObject *obj = new kNodeObject(name, objFrame, input, output);
-    static_cast<IRWorkspaceScene* >(scene())->createObj(name,objFrame,input,output);
+    static_cast<IRWorkspaceScene* >(scene())->createObj2(name,objFrame,input,output);
     
     emit createObjSignal(name, objFrame);
     
 }
+
 
 

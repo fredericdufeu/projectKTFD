@@ -17,5 +17,6 @@
 #include "NodeObjectProducer.hpp"
 
 #include "IRWaveformNodeObject.hpp"
+#include "IRSonogramNodeObject.hpp"
 
 #endif /* kNodeUI_h */

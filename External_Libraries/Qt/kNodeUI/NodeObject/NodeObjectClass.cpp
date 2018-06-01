@@ -33,11 +33,12 @@ kNodeObject::kNodeObject(IR_Object::Name name, IR::Frame frame, IR_Data::INOUTDA
     
     
     
-    
+    /*
     std::cout << "\n" << std::endl;
     std::cout << "Node Object created!\n" << "\t name = " << this->objectName << "\n" << "\t uniqueID = " << this->uniqueID << std::endl;
     std::cout << "\t frame = origin (" << this->frame.origin.x << ", " << this->frame.origin.y << ") : size (" << this->frame.size.width << ", " << this->frame.size.height << ")" << std::endl;
     std::cout << "\n" << std::endl;
+     */
 
 }
 
@@ -126,6 +127,7 @@ void kNodeObject::paint(QPainter *painter, const QStyleOptionGraphicsItem *optio
 {
     kIRNodeBase::paint(painter,option,widget);
     
+    /*
     float x = this->frame.origin.x - this->frame.size.width/2;
     float y = this->frame.origin.y - this->frame.size.height/2;
     
@@ -139,10 +141,8 @@ void kNodeObject::paint(QPainter *painter, const QStyleOptionGraphicsItem *optio
     painter->setFont(font);
     std::cout << this->frame.size.height/2 << std::endl;
     painter->drawText(QPoint(x, y+this->frame.size.height/2), QString::fromStdString(this->objectName.getParam()[1]));
-    
-    
-    //painter->setFont("Helvetica")
-    
+    */
+
     
 }
 

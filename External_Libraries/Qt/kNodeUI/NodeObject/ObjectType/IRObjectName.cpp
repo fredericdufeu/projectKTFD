@@ -52,10 +52,10 @@ namespace IR_Object {
     Name &Name::SetName(const std::string name) {
         this->param = splitBySpace(name);
         this->name = name;
-        
+        /*
         for(auto item: this->param) {
             std::cout << item << "\n";
-        }
+        }*/
         return *this;
     }
     
