@@ -16,7 +16,12 @@ kNodeObject::kNodeObject(IR_Object::Name name, IR::Frame frame, IR_Data::INOUTDA
     
     this->objectName = name;
     this->uniqueID = IRRandomStringsGenerator(IR::RANDOM_STRING_LEN);
-    this->frame = frame;
+    
+    // **** DUFEU REPLACE
+    // this->frame = frame;
+    // **** DUFEU WITH
+    // this->setFrame(frame);
+    // **** DUFEU COMMENTS: NO, THIS IS IN SUPERCLASS ALREADY
     
     this->inputDataType = input;
     this->outputDataType = output;
@@ -32,26 +37,30 @@ kNodeObject::kNodeObject(IR_Object::Name name, IR::Frame frame, IR_Data::INOUTDA
     */
     
     
-    
+    /*
     
     std::cout << "\n" << std::endl;
     std::cout << "Node Object created!\n" << "\t name = " << this->objectName << "\n" << "\t uniqueID = " << this->uniqueID << std::endl;
     std::cout << "\t frame = origin (" << this->frame.origin.x << ", " << this->frame.origin.y << ") : size (" << this->frame.size.width << ", " << this->frame.size.height << ")" << std::endl;
     std::cout << "\n" << std::endl;
+     
+     */
 
 }
 
-kNodeObject::~kNodeObject() {
-    delete this->InnerWidget;
+kNodeObject::~kNodeObject()
+{
+    // delete this->InnerWidget;
 }
 
-void kNodeObject::createObj() {
-    std::cout << "kNodeObject created!" << std::endl;
+void kNodeObject::createObj()
+{
+    // std::cout << "kNodeObject created!" << std::endl;
 }
 
-void kNodeObject::deleteObj() {
-    std::cout << "kNodeObject deleted!" << std::endl;
-
+void kNodeObject::deleteObj()
+{
+    // std::cout << "kNodeObject deleted!" << std::endl;
 }
 
 
@@ -67,7 +76,8 @@ IR_Data::INOUTDATA kNodeObject::getOutputDataType()
 
 
 
-IR_Object::Name kNodeObject::getObjectName() {
+IR_Object::Name kNodeObject::getObjectName()
+{
     return this->objectName;
 }
 
@@ -77,10 +87,12 @@ IR::Frame kNodeObject::getFrame()
     return getFrameSize();
 }
 
+
 IR_Object::Id kNodeObject::getUniqueId()
 {
     return this->uniqueID;
 }
+
 
 void kNodeObject::mouseMoveEvent(QGraphicsSceneMouseEvent *event)
 {
@@ -88,20 +100,37 @@ void kNodeObject::mouseMoveEvent(QGraphicsSceneMouseEvent *event)
     kIRNodeBase::mouseMoveEvent(event);
 }
 
+
 void kNodeObject::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
     kIRNodeBase::mousePressEvent(event);
     
 }
 
+
 void kNodeObject::mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event)
 {
     kIRNodeBase::mouseDoubleClickEvent(event);
 }
+
+
 void kNodeObject::mouseReleaseEvent(QGraphicsSceneMouseEvent *event)
 {
     kIRNodeBase::mouseReleaseEvent(event);
 }
+
+
+void kNodeObject::setFrameSize(IR::Size size)
+{
+    kIRNodeBase::setFrameSize(size);
+}
+
+
+void kNodeObject::setFrameOrigin(IR::Origin origin)
+{
+    kIRNodeBase::setFrameOrigin(origin);
+}
+
 
 std::string kNodeObject::IRRandomStringsGenerator(const int len)
 {
@@ -116,16 +145,21 @@ std::string kNodeObject::IRRandomStringsGenerator(const int len)
     return s;
 }
 
+
 void kNodeObject::objSelectionChanged()
 {
     std::cout << this->uniqueID << " selected." << std::endl;
     emit objSelectionChangedSignal(this->uniqueID);
 }
 
+
 void kNodeObject::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
+    
     kIRNodeBase::paint(painter,option,widget);
     
+    /*
+     
     float x = this->frame.origin.x - this->frame.size.width/2;
     float y = this->frame.origin.y - this->frame.size.height/2;
     
@@ -143,7 +177,7 @@ void kNodeObject::paint(QPainter *painter, const QStyleOptionGraphicsItem *optio
     
     //painter->setFont("Helvetica")
     
-    
+    */
 }
 
 
@@ -157,6 +191,8 @@ void kNodeObject::setDisplayLabel(bool flag)
 {
     this->DisplayLabel = flag;
 }
+
+
 bool kNodeObject::isDisplayLabel()
 {
     return this->DisplayLabel;

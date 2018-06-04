@@ -33,6 +33,8 @@ void readSoundFileAtPath(const std::string path, SoundFile *soundFile) // ASSUME
     soundFile->samplingRate = soundFileInfo.samplerate;
     soundFile->numChannels = soundFileInfo.channels;
     
+    std::cout << "from READSOUNDFILE " << soundFileInfo.channels << std::endl;
+    
     // 3) CLOSE
     
     sf_close(openedSoundFile);

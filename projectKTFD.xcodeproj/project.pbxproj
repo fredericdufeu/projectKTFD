@@ -707,8 +707,8 @@
 		7DD22CD2209728C500B7B535 /* WaveformNode */ = {
 			isa = PBXGroup;
 			children = (
-				7D45304E20A47F04008C9B48 /* IRWaveformNodeObject.cpp */,
 				7D45304F20A47F04008C9B48 /* IRWaveformNodeObject.hpp */,
+				7D45304E20A47F04008C9B48 /* IRWaveformNodeObject.cpp */,
 			);
 			path = WaveformNode;
 			sourceTree = "<group>";
@@ -813,8 +813,8 @@
 		7DD7061820936BE600495EDA /* NodeBase */ = {
 			isa = PBXGroup;
 			children = (
-				7DD7061C20936C0A00495EDA /* kIRNodeBase.cpp */,
 				7DD7061D20936C0A00495EDA /* kIRNodeBase.hpp */,
+				7DD7061C20936C0A00495EDA /* kIRNodeBase.cpp */,
 			);
 			path = NodeBase;
 			sourceTree = "<group>";

@@ -11,7 +11,8 @@
 kIRNodeBase::kIRNodeBase(IR::Frame frame)
 : QGraphicsObject()
 {
-    this->frame = frame;
+    // this->frame = frame; // NO: MAKE A SETFRAME
+    this->setFrame(frame);
     
     //this->editorWindow = new kEditorWindow(0);
     
@@ -60,48 +61,61 @@ void kIRNodeBase::paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWi
     
     float x = this->frame.origin.x - this->frame.size.width/2;
     float y = this->frame.origin.y - this->frame.size.height/2;
+    
     painter->drawRect(x, y, this->frame.size.width, this->frame.size.height);
     
-    auto color = isSelected()? Qt::blue : Qt::lightGray;
-    painter->fillRect(x, y, this->frame.size.width, this->frame.size.height, color);
+    //auto color = isSelected()? Qt::blue : Qt::lightGray;
+    //painter->fillRect(x, y, this->frame.size.width, this->frame.size.height, color);
 
 
 }
 
 QRectF kIRNodeBase::boundingRect() const
 {
-    float x = this->frame.origin.x - this->frame.size.width/2;
-    float y = this->frame.origin.y - this->frame.size.height/2;
-    return QRectF(x-1, y-1, this->frame.size.width + 1, this->frame.size.height + 1);
+    float x = this->frame.origin.x - this->frame.size.width * 0.5;
+    float y = this->frame.origin.y - this->frame.size.height * 0.5;
+    
+    return QRectF(x - 1, y - 1, this->frame.size.width + 1, this->frame.size.height + 1);
 }
 
 QPainterPath kIRNodeBase::shape() const
 {
     QPainterPath path;
-    float x = this->frame.origin.x - this->frame.size.width/2;
-    float y = this->frame.origin.y - this->frame.size.height/2;
-    //path.addRect(0 - 0.5, 0 - 0.5, 800 + 1, 800 + 1);
+    
+    float x = this->frame.origin.x - this->frame.size.width * 0.5;
+    float y = this->frame.origin.y - this->frame.size.height * 0.5;
+    
     path.addRect(x, y, this->frame.size.width, this->frame.size.height);
+    
     return path;
 }
 
 
-int kIRNodeBase::getX(){
+int kIRNodeBase::getX() // DUFEU DEPREC
+{
     return this->frame.origin.x + pos().x();
 }
 
-int kIRNodeBase::getY(){
+int kIRNodeBase::getY() // DUFEU DEPREC
+{
     return this->frame.origin.y + pos().y();
 }
 
-IR::Frame kIRNodeBase::getFrameSize()
+IR::Frame kIRNodeBase::getFrameSize() // DUFEU DEPREC
 {
-    IR::Frame objFrame = IR::Frame{ {this->frame.origin.x + static_cast<float>(pos().x()), this->frame.origin.y + static_cast<float>(pos().y())} , this->frame.size};
+    
+    //IR::Frame objFrame = IR::Frame{ { this->frame.origin.x + static_cast<float>(pos().x()),  this->frame.origin.y + static_cast<float>(pos().y())} , this->frame.size};
+    IR::Frame objFrame = IR::Frame{ { static_cast<float>(pos().x()),  static_cast<float>(pos().y())} , this->frame.size};
+
+    // setX(0);
+    // setY(0);
+    
     return objFrame;
     //return this->frame;
 }
 
-void kIRNodeBase::setFrameSize(IR::Frame frame)
+/*
+void kIRNodeBase::setFrameSize(IR::Frame frame) // DUFEU DEPREC
 {
     setX(0);
     setY(0);
@@ -109,6 +123,7 @@ void kIRNodeBase::setFrameSize(IR::Frame frame)
     this->frame = frame;
     update();
 }
+ */
 
 void kIRNodeBase::setOrigin(IR::Origin origin)
 {
@@ -196,6 +211,99 @@ void kIRNodeBase::moveObjBy(IR::Origin pos)
 {
     moveBy(pos.x - this->frame.origin.x, pos.y - this->frame.origin.y);
 }
+
+
+// **** DUFEU ADD ON
+
+/*
+ void setFrame(IR::Frame frame);
+ void setFrameOrigin(IR::Origin origin);
+ // void setFrameSize(IR::Size size); // TO REPLACE FROM THE ABOVE WHEN SURE
+ 
+ IR::Frame getFrame();
+ IR::Origin getFrameOrigin();
+ // IR::Size getFrameSize(); // TO REPLACE FROM THE ABOVE WHEN SURE
+ */
+
+
+void kIRNodeBase::setFrame(IR::Frame frame)
+{
+    this->frame = frame;
+    
+    xc = this->frame.origin.x;
+    yc = this->frame.origin.y;
+    xdim = this->frame.size.width;
+    ydim = this->frame.size.height;
+    
+    xl = xc - xdim * 0.5;
+    yt = yc - ydim * 0.5;
+    
+    xr = xl + xdim;
+    yb = yt + ydim;
+}
+
+
+IR::Frame kIRNodeBase::getFrame()
+{
+    return frame;
+}
+
+
+void kIRNodeBase::setFrameOrigin(IR::Origin origin)
+{
+    this->frame.origin = origin;
+    
+    xc = this->frame.origin.x;
+    yc = this->frame.origin.y;
+    
+    // std::cout << "set frame origin: " << this->frame.origin.x << ", " << this->frame.origin.y << std::endl;
+    
+    xl = xc - xdim * 0.5;
+    yt = yc - ydim * 0.5;
+    
+    xr = xl + xdim;
+    yb = yt + ydim;
+    
+    setPos(0, 0);
+}
+
+
+IR::Origin kIRNodeBase::getFrameOrigin()
+{
+    return frame.origin;
+}
+
+
+
+void kIRNodeBase::setFrameSize(IR::Size size)
+{
+    this->frame.size = size;
+
+    xdim = this->frame.size.width;
+    ydim = this->frame.size.height;
+    
+    xc = xl + xdim * 0.5;
+    yc = yt + ydim * 0.5;
+    
+    xr = xl + xdim;
+    yb = yt + ydim;
+    
+    this->frame.origin.x = xc;
+    this->frame.origin.y = yc;
+}
+
+
+/*
+ 
+ IR::Size kIRNodeBase::getFrameSize()
+ {
+ return frame.size;
+ }
+ 
+*/
+
+
+
 
 
 

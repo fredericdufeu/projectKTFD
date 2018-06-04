@@ -45,7 +45,7 @@ void IRWorkspaceView::dragMoveEvent(QDragMoveEvent *event)
 void IRWorkspaceView::dropEvent(QDropEvent *event)
 {
     event->acceptProposedAction();
-    std::cout << "drop Event \n"<< std::endl;
+    // std::cout << "drop Event \n"<< std::endl;
     
     // File Path received from dropped file.
     std::string path(event->mimeData()->text().toStdString());
@@ -59,8 +59,8 @@ void IRWorkspaceView::dropEvent(QDropEvent *event)
     IRFileUtility fileUtility = IRFileUtility();
     auto fileformat = fileUtility.checkFileType(path);
     
-    std::cout << "filename : " << path << " loading... : file format is " << fileformat.format << std::endl;
-    struct IR::Frame objFrame = { { static_cast<float>(pointInSceneCoordinates.x()), static_cast<float>(pointInSceneCoordinates.y()) }, {150, 40} };
+    // std::cout << "filename : " << path << " loading... : file format is " << fileformat.format << std::endl;
+    struct IR::Frame objFrame = { { static_cast<float>(pointInSceneCoordinates.x()), static_cast<float>(pointInSceneCoordinates.y()) }, {600, 150} };
 
     //# call appripriate method depending on the file format.
     //# this process is only the case when any files are droped in a workspace.

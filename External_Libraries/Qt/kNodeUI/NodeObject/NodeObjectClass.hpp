@@ -42,6 +42,9 @@ public:
 
     IR_Object::Name getObjectName();
     
+    virtual void setFrameOrigin(IR::Origin origin) override;
+    virtual void setFrameSize(IR::Size size) override;
+    
  
     virtual void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget) override;
 

@@ -29,11 +29,53 @@ public:
     void mouseMoveEvent(QGraphicsSceneMouseEvent *event) override;
     void mouseReleaseEvent(QGraphicsSceneMouseEvent *event) override;
     void mouseDoubleClickEvent(QGraphicsSceneMouseEvent *event) override;
+    
+    // DUFEU ADD-ON
+    void setFrameOrigin(IR::Origin origin) override;
+    void setFrameSize(IR::Size size) override;
 
 private:
     std::string url;
     SoundFile *soundfile;
+    IR::Frame frame;
     
+    // DUFEU STUFF
+    
+    // layout stuff
+    
+    int leftMarginDimX;
+    int rightMarginDimX;
+    int headerDimY;
+    int footerDimY;
+    
+    int minWaveformDimX;
+    int minWaveformDimY;
+    
+    int waveformDimX;
+    int waveformDimY;
+    int waveformYcenter;
+    
+    int minimumSpaceBetweenRulerTicks;
+    int minimumSpaceBetweenLabeledRulerTicks;
+    
+    bool isSelectionArea;
+    
+    int selectionStart;
+    int selectionEnd;
+    
+    // functional stuff
+    
+    double zoomFactor;
+    int translateFactor;
+    
+    QColor waveformColor;
+    
+    // SoundFile *soundFile;
+    
+    int initialClickX;
+    int initialClickY;
+    bool clickedInCorner;
+    bool clickedInFrame;
     
 };
 #endif /* IRWaveformNodeObject_hpp */

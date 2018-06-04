@@ -29,8 +29,8 @@ public:
     QPainterPath shape() const override;
     
     /* move object to the indicated position */
-    void setObjPos(IR::Origin pos);
-    void moveObjBy(IR::Origin pos);
+    void setObjPos(IR::Origin pos); // FD TO CLARIFY
+    void moveObjBy(IR::Origin pos); // FD TO CLARIFY
 
     void keyPressEvent(QKeyEvent *event) override;
     void keyReleaseEvent(QKeyEvent *event) override;
@@ -54,17 +54,26 @@ public:
     
     void ItemSelectedHasChanged();
     
-    int getX();
-    int getY();
+    int getX(); // FD TO CLARIFY
+    int getY(); // FD TO CLARIFY
     
-    IR::Frame getFrameSize();
+    IR::Frame getFrameSize(); // FD TO CLARIFY
     
-    virtual void setFrameSize(IR::Frame frame);
+    // virtual void setFrameSize(IR::Frame frame);
     virtual void setOrigin(IR::Origin origin);
     
-    /* enable to open an editor window when double clickled*/
+    /* enable to open an editor window when double clickled */
     bool isOpenEditorWindow = false;
     
+    // DUFEU ADD ON
+    
+    void setFrame(IR::Frame frame);
+    virtual void setFrameOrigin(IR::Origin origin);
+    virtual void setFrameSize(IR::Size size); // TO REPLACE FROM THE ABOVE WHEN SURE
+    
+    IR::Frame getFrame();
+    IR::Origin getFrameOrigin();
+    // IR::Size getFrameSize(); // TO REPLACE FROM THE ABOVE WHEN SURE
     
     /* give signals to inform events */
 signals:
@@ -77,6 +86,24 @@ signals:
 
 private:
     IR::Frame frame;
+    
+    // *** COORD STUFF ADDED BY FD
+    
+    public:
+    
+    float xc;
+    float yc;
+    
+    float xdim;
+    float ydim;
+    
+    float xl;
+    float xr;
+    float yt;
+    float yb;
+    
+    private:
+    // *** (end) COORD STUFF ADDED BY FD
 
     bool isEnableMultiSelection = false;
     
