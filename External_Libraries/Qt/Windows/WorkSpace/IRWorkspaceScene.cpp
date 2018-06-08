@@ -28,20 +28,29 @@ void IRWorkspaceScene::setSelectionAreaSquare(bool flag)
 void IRWorkspaceScene::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
     QGraphicsScene::mousePressEvent(event);
-    this->mouse_down_flag = true;
     
-    // ==========
-    //  check if this action selects any objects.
-    // ==========
-    calcSelectedObjecsts();
-    if(isSelected()) { // if any objects are selected, then we do not have selection square.
-        this->isSelectionAreaSquareFlag = false;
-    }else { // if no objects are selected, then we draw selection square.
-        this->isSelectionAreaSquareFlag = true;
+    if(this->key_ctrl_press_flag){
+        createPopUpWindow(QCursor::pos());
+        this->key_ctrl_press_flag = false;
+    }else{
+        
+        this->mouse_down_flag = true;
+
+        // ==========
+        //  check if this action selects any objects.
+        // ==========
+        calcSelectedObjecsts();
+        if(isSelected()) { // if any objects are selected, then we do not have selection square.
+            this->isSelectionAreaSquareFlag = false;
+        }else { // if no objects are selected, then we draw selection square.
+            this->isSelectionAreaSquareFlag = true;
+        }
+        
+       
+        
+        // store button down scene position here.
+        event->setButtonDownScenePos(Qt::MouseButton::LeftButton, event->scenePos());
     }
-    
-    // store button down scene position here.
-    event->setButtonDownScenePos(Qt::MouseButton::LeftButton, event->scenePos());
 
 }
 
@@ -271,7 +280,7 @@ void IRWorkspaceScene::unselectAll()
 void IRWorkspaceScene::keyPressEvent(QKeyEvent *event)
 {
     
-    std::cout << "key pressed! in view " << event->key() << " : alt option " << Qt::Key_Option << std::endl;
+    std::cout << "key pressed! in view " << event->key() << " : alt option " << Qt::Key_Control << std::endl;
     
     std::cout <<  " c = " << Qt::Key_C << " d = " << Qt::Key_D << " v = " << Qt::Key_V << std::endl;
     
@@ -304,6 +313,7 @@ void IRWorkspaceScene::keyPressEvent(QKeyEvent *event)
             this->key_option_press_flag = true;
             break;
         case Qt::Key_Control:
+        case 16777250:
             this->key_ctrl_press_flag = true;
             break;
         default:
@@ -321,6 +331,7 @@ void IRWorkspaceScene::keyReleaseEvent(QKeyEvent *event)
             this->key_option_press_flag = false;
             break;
         case Qt::Key_Control:
+        case 16777250:
             this->key_ctrl_press_flag = false;
             break;
         default:
@@ -332,5 +343,17 @@ void IRWorkspaceScene::executeObj()
 {
     std::cout << "IRWorkspaceScene executeObj()\n";
     emit executeObjSignal();
+}
+
+void IRWorkspaceScene::createPopUpWindow(QPointF pos)
+{
+    QWidget *popup = new QWidget(0);
+    popup->setWindowOpacity(0.7);
+    popup->setWindowFlag(Qt::Popup);
+    int w = 260; int h = 480;
+    popup->resize(w, h);
+    popup->move(pos.x(), pos.y());
+    popup->show();
+    
 }
 

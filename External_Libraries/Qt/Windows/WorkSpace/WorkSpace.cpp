@@ -20,10 +20,11 @@ WorkSpace::WorkSpace(QWidget *parent)
     this->workspaceScene = new IRWorkspaceScene(this);
     this->workspaceView = new IRWorkspaceView(this->workspaceScene, this);
     this->layout->addWidget(this->workspaceView,5);
-    
+    /*
     this->InspectorScene = new IRGraphicsScene(this);
     this->InspectorView = new IRGraphicsView(this->InspectorScene,this);
     this->layout->addWidget(this->InspectorView,1);
+     */
     
     this->layout->setSpacing(4);
     this->layout->setContentsMargins(4, 4, 4, 4);   

@@ -54,7 +54,7 @@ IRProjectWindow::IRProjectWindow(QString id, QWidget *parent)
     this->layout = new QHBoxLayout(this);
     this->layout->addWidget(this->navigatorspace,1);
     /* add stackeWidget instead of WorkSpace object. */
-    this->layout->addWidget(this->stackeWidget,5);
+    this->layout->addWidget(this->stackeWidget,7);
     /* setup layout spacing */
     this->layout->setSpacing(4);
     this->layout->setContentsMargins(1, 1, 1, 1);

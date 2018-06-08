@@ -46,6 +46,7 @@ public:
     void setSelectionAreaSquare(bool flag);
     
     bool isSelected();
+    void createPopUpWindow(QPointF pos);
     
     
     
