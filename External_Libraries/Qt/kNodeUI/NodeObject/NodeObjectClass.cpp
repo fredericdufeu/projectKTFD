@@ -43,7 +43,7 @@ kNodeObject::kNodeObject(IR_Object::Name name, IR::Frame frame, IR_Data::INOUTDA
 }
 
 kNodeObject::~kNodeObject() {
-    delete this->InnerWidget;
+    //delete this->InnerWidget;
 }
 
 void kNodeObject::createObj() {

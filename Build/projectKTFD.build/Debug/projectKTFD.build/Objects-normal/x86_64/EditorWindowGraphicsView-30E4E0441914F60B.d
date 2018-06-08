@@ -498,6 +498,11 @@ dependencies: \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/LibSndFile/SoundFileLoader/readSoundFileAtPath.h \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/LibSndFile/sndfile.h \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/AudioNodeObject/Sonogram/IRSonogramNodeObject.hpp \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/AudioNodeObject/SpectrumNode/IRSpectrumNodeObject.hpp \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/DSP/FFT/IRFFT.hpp \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/DSP/FFT/../../../../../../../../usr/local/Cellar/fftw/3.3.4_1/include/fftw3.h \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/DSP/Windowing/IRWindow.hpp \
+  /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/DSP/IRGraphData/IRGraphDataStructure.hpp \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/Windows/WorkSpace/IRWorkspaceScene.hpp \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/IRiMaS_Utility/Tools/Graphics/selectionAreaSquare.hpp \
   /Users/KeitaroTakahashi/program/IRiMaS/projectKTFD/External_Libraries/Qt/kNodeUI/NodeObject/EditorWindow/kEditorWindowScene.hpp \

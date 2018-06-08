@@ -87,6 +87,10 @@
 		7D9FEBDD20C04239006699C4 /* IRSonogram.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7D9FEBDB20C04239006699C4 /* IRSonogram.cpp */; };
 		7D9FEBE120C048BB006699C4 /* IRGraphDataStructure.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7D9FEBDF20C048BB006699C4 /* IRGraphDataStructure.cpp */; };
 		7D9FEBFC20C189B3006699C4 /* IRFFT.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7D9FEBFA20C189B3006699C4 /* IRFFT.cpp */; };
+		7D9FEBFF20C18A1A006699C4 /* libfftw3.a in Link Binary With Libraries */ = {isa = PBXBuildFile; fileRef = 7D9FEBFE20C18A1A006699C4 /* libfftw3.a */; };
+		7D9FEC0620C19343006699C4 /* IRWindow.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7D9FEC0420C19343006699C4 /* IRWindow.cpp */; };
+		7D9FEC0A20C198FF006699C4 /* IRSpectrum.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7D9FEC0820C198FF006699C4 /* IRSpectrum.cpp */; };
+		7D9FEC0F20C19A31006699C4 /* IRSpectrumNodeObject.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7D9FEC0D20C19A31006699C4 /* IRSpectrumNodeObject.cpp */; };
 		7DD22CD920972C4C00B7B535 /* kEditorWindow.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7DD22CD720972C4C00B7B535 /* kEditorWindow.cpp */; };
 		7DD22CDC20972D9E00B7B535 /* kEditorWindowScene.cpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7DD22CDA20972D9E00B7B535 /* kEditorWindowScene.cpp */; };
 		7DD22CDD209732A000B7B535 /* kEditorWindowScene.hpp in Compile Sources */ = {isa = PBXBuildFile; fileRef = 7DD22CDB20972D9E00B7B535 /* kEditorWindowScene.hpp */; };
@@ -240,6 +244,14 @@
 		7D9FEBE020C048BB006699C4 /* IRGraphDataStructure.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IRGraphDataStructure.hpp; sourceTree = "<group>"; };
 		7D9FEBFA20C189B3006699C4 /* IRFFT.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IRFFT.cpp; sourceTree = "<group>"; };
 		7D9FEBFB20C189B3006699C4 /* IRFFT.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IRFFT.hpp; sourceTree = "<group>"; };
+		7D9FEBFD20C18A01006699C4 /* fftw3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = fftw3.h; path = ../../../../../../../../usr/local/Cellar/fftw/3.3.4_1/include/fftw3.h; sourceTree = "<group>"; };
+		7D9FEBFE20C18A1A006699C4 /* libfftw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfftw3.a; path = ../../../../../usr/local/Cellar/fftw/3.3.4_1/lib/libfftw3.a; sourceTree = "<group>"; };
+		7D9FEC0420C19343006699C4 /* IRWindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IRWindow.cpp; sourceTree = "<group>"; };
+		7D9FEC0520C19343006699C4 /* IRWindow.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IRWindow.hpp; sourceTree = "<group>"; };
+		7D9FEC0820C198FF006699C4 /* IRSpectrum.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IRSpectrum.cpp; sourceTree = "<group>"; };
+		7D9FEC0920C198FF006699C4 /* IRSpectrum.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IRSpectrum.hpp; sourceTree = "<group>"; };
+		7D9FEC0D20C19A31006699C4 /* IRSpectrumNodeObject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IRSpectrumNodeObject.cpp; sourceTree = "<group>"; };
+		7D9FEC0E20C19A31006699C4 /* IRSpectrumNodeObject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IRSpectrumNodeObject.hpp; sourceTree = "<group>"; };
 		7DD22CD720972C4C00B7B535 /* kEditorWindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = kEditorWindow.cpp; sourceTree = "<group>"; };
 		7DD22CD820972C4C00B7B535 /* kEditorWindow.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = kEditorWindow.hpp; sourceTree = "<group>"; };
 		7DD22CDA20972D9E00B7B535 /* kEditorWindowScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = kEditorWindowScene.cpp; sourceTree = "<group>"; };
@@ -278,6 +290,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D9FEBFF20C18A1A006699C4 /* libfftw3.a in Link Binary With Libraries */,
 				1037D3942093359E00324B79 /* libsndfile.a in Link Binary With Libraries */,
 				1037D396209335BA00324B79 /* libportaudio.a in Link Binary With Libraries */,
 				C95B2D280AC930479E49CD66 /* QtWidgets.framework in Link Binary With Libraries */,
@@ -727,8 +740,36 @@
 			children = (
 				7D9FEBFA20C189B3006699C4 /* IRFFT.cpp */,
 				7D9FEBFB20C189B3006699C4 /* IRFFT.hpp */,
+				7D9FEBFD20C18A01006699C4 /* fftw3.h */,
 			);
 			path = FFT;
+			sourceTree = "<group>";
+		};
+		7D9FEC0320C1933B006699C4 /* Windowing */ = {
+			isa = PBXGroup;
+			children = (
+				7D9FEC0420C19343006699C4 /* IRWindow.cpp */,
+				7D9FEC0520C19343006699C4 /* IRWindow.hpp */,
+			);
+			path = Windowing;
+			sourceTree = "<group>";
+		};
+		7D9FEC0720C198EF006699C4 /* Spectrum */ = {
+			isa = PBXGroup;
+			children = (
+				7D9FEC0820C198FF006699C4 /* IRSpectrum.cpp */,
+				7D9FEC0920C198FF006699C4 /* IRSpectrum.hpp */,
+			);
+			path = Spectrum;
+			sourceTree = "<group>";
+		};
+		7D9FEC0C20C19A27006699C4 /* SpectrumNode */ = {
+			isa = PBXGroup;
+			children = (
+				7D9FEC0D20C19A31006699C4 /* IRSpectrumNodeObject.cpp */,
+				7D9FEC0E20C19A31006699C4 /* IRSpectrumNodeObject.hpp */,
+			);
+			path = SpectrumNode;
 			sourceTree = "<group>";
 		};
 		7DD22CD2209728C500B7B535 /* WaveformNode */ = {
@@ -812,6 +853,7 @@
 		7DD705F62093645F00495EDA /* AudioNodeObject */ = {
 			isa = PBXGroup;
 			children = (
+				7D9FEC0C20C19A27006699C4 /* SpectrumNode */,
 				7D45305120A49B33008C9B48 /* Sonogram */,
 				7DD22CD2209728C500B7B535 /* WaveformNode */,
 			);
@@ -883,6 +925,8 @@
 		7DF9F46220B5A73300990A4A /* DSP */ = {
 			isa = PBXGroup;
 			children = (
+				7D9FEC0720C198EF006699C4 /* Spectrum */,
+				7D9FEC0320C1933B006699C4 /* Windowing */,
 				7D9FEBF920C189A9006699C4 /* FFT */,
 				7D9FEBDE20C048AD006699C4 /* IRGraphData */,
 				7D9FEBD720C03BD7006699C4 /* Waveform */,
@@ -903,6 +947,7 @@
 		AF39DD055C3EF8226FBE929D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7D9FEBFE20C18A1A006699C4 /* libfftw3.a */,
 				1037D395209335BA00324B79 /* libportaudio.a */,
 				1037D3932093359E00324B79 /* libsndfile.a */,
 				60D12DD5AF98EB30B3EBD182 /* QtWidgets.framework */,
@@ -1054,8 +1099,10 @@
 				7D9245892098BCB100CF3A90 /* IRWorkspaceListNavigator.hpp in Compile Sources */,
 				7D617BAE2098A13F00E270EE /* WorkSpace.hpp in Compile Sources */,
 				7D9FEBDD20C04239006699C4 /* IRSonogram.cpp in Compile Sources */,
+				7D9FEC0620C19343006699C4 /* IRWindow.cpp in Compile Sources */,
 				7D7F477E2099F78D009B37F5 /* IRWorkspaceScene.hpp in Compile Sources */,
 				7D31E01F20A1CF420052F252 /* NodeObjectClass.hpp in Compile Sources */,
+				7D9FEC0F20C19A31006699C4 /* IRSpectrumNodeObject.cpp in Compile Sources */,
 				7D7F2E6020A2F3720007928C /* selectionAreaSquare.cpp in Compile Sources */,
 				7D7F2E6120A317E50007928C /* selectionAreaSquare.hpp in Compile Sources */,
 				7D7F4790209CB3C8009B37F5 /* kEditorWindowView.hpp in Compile Sources */,
@@ -1077,6 +1124,7 @@
 				7D5C939620B8638200F70609 /* TriangleNodeObject.cpp in Compile Sources */,
 				ABA692EC7D08616105FA9500 /* moc_MainWindow.cpp in Compile Sources */,
 				10C26FFD2093431400175F44 /* SoundNodeObject.cpp in Compile Sources */,
+				7D9FEC0A20C198FF006699C4 /* IRSpectrum.cpp in Compile Sources */,
 				7D7F478F209CB2F0009B37F5 /* kEditorWindowView.cpp in Compile Sources */,
 				7D45304D20A459E8008C9B48 /* IRObjectName.cpp in Compile Sources */,
 				10DBDF53209341CA0091DD1B /* soundFilePlayer.cpp in Compile Sources */,
@@ -1351,6 +1399,7 @@
 					/System/Library/Frameworks/,
 					"$(PORTAUDIO_PATH)/",
 					"$(LIBSOUNDFILE_PATH)/",
+					/usr/local/Cellar/fftw/3.3.4_1/lib,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_LDFLAGS = (
@@ -1394,6 +1443,7 @@
 					/System/Library/Frameworks/,
 					"$(PORTAUDIO_PATH)/",
 					"$(LIBSOUNDFILE_PATH)/",
+					/usr/local/Cellar/fftw/3.3.4_1/lib,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
